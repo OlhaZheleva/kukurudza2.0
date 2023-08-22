@@ -351,8 +351,6 @@ section {
   }
 }
 
-
-
 .back-blue {
   background-color: $blue;
 }
@@ -800,26 +798,27 @@ section {
     }
   }
 
-  .middle {
-    .nav {
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-      margin-top: 33px;
+  .nav {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 33px;
 
-      .nav-link {
-        font-family: "Commissioner";
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 300;
-        line-height: normal;
+    .nav-link {
+      font-family: "Commissioner";
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: normal;
 
-        &:hover {
-          font-weight: 600;
-        }
+      &:hover {
+        font-weight: 600;
       }
     }
   }
+  .mob { 
+    display: none;
+  } 
   .right {
     display: flex;
     flex-direction: column;
@@ -955,13 +954,14 @@ section {
     padding: 0;
     border-radius: 0px;
     border-radius: 30px 30px 0px 0px;
+    background-color: #000000;
 
     .container {
       padding: 0;
     }
 
     .content {
-      border-radius: 30px 30px 0px 0px;
+      border-radius: 30px;
       padding: 60px 35px 135px 35px;
       grid-template-columns: 1fr;
       gap: 0px;
@@ -972,12 +972,13 @@ section {
       p {
         font-size: 14px;
         line-height: 16px; /* 114.286% */
-        margin-top: 20px;
+        margin-top: 30px;
       }
       .logo {
         font-size: 25px;
         text-transform: uppercase;
         margin-bottom: 20px;
+        display: inline-block;
       }
 
       .button {
@@ -1001,14 +1002,21 @@ section {
       }
     }
 
-    .middle {
-      .nav {
-        gap: 10px;
-        .nav-link {
-          font-size: 12px;
-          line-height: 14px; /* 116.667% */
-        }
+    .nav {
+      gap: 10px;
+      margin: 0;
+
+      .nav-link {
+        font-size: 12px;
+        line-height: 14px; /* 116.667% */
       }
+    }
+
+    .desck {
+      display: none;
+    }
+    .mob { 
+      display: flex;
     }
     .right {
       gap: 10px;
