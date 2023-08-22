@@ -1,0 +1,1048 @@
+/***
+   style reset 
+***/
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+a {
+  cursor: pointer;
+  color: #1a1a1a;
+}
+ol,
+ul,
+menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-inline-size: 100%;
+  max-block-size: 100%;
+}
+table {
+  border-collapse: collapse;
+}
+input,
+textarea {
+  -webkit-user-select: auto;
+}
+textarea {
+  white-space: revert;
+}
+meter {
+  -webkit-appearance: revert;
+  appearance: revert;
+}
+:where(pre) {
+  all: revert;
+}
+::placeholder {
+  color: unset;
+}
+::marker {
+  content: initial;
+}
+
+html,
+body {
+  overflow-x: hidden;
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+@font-face {
+  font-family: "Commissioner";
+  src: url("../fonts/Commissioner-Light.eot");
+  src: local("Commissioner Light"), local("../fonts/Commissioner-Light"),
+    url("../fonts/Commissioner-Light.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/Commissioner-Light.woff2") format("woff2"),
+    url("../fonts/Commissioner-Light.woff") format("woff"),
+    url("../fonts/Commissioner-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Commissioner";
+  src: url("../fonts/Commissioner-Medium.eot");
+  src: local("Commissioner Medium"), local("../fonts/Commissioner-Medium"),
+    url("../fonts/Commissioner-Medium.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/Commissioner-Medium.woff2") format("woff2"),
+    url("../fonts/Commissioner-Medium.woff") format("woff"),
+    url("../fonts/Commissioner-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Kukurudza";
+  src: url("../fonts/Kukurudza-Regular.otf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Commissioner";
+  src: url("../fonts/Commissioner-Regular.eot");
+  src: local("Commissioner Regular"), local("../fonts/Commissioner-Regular"),
+    url("../fonts/Commissioner-Regular.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/Commissioner-Regular.woff2") format("woff2"),
+    url("../fonts/Commissioner-Regular.woff") format("woff"),
+    url("../fonts/Commissioner-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Commissioner";
+  src: url("../fonts/Commissioner-SemiBold.eot");
+  src: local("Commissioner SemiBold"), local("../fonts/Commissioner-SemiBold"),
+    url("../fonts/Commissioner-SemiBold.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/Commissioner-SemiBold.woff2") format("woff2"),
+    url("../fonts/Commissioner-SemiBold.woff") format("woff"),
+    url("../fonts/Commissioner-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Ermilov-Bold";
+  src: url("../fonts/ermilov-bold.eot");
+  /* IE 9 Compatibility Mode */
+  src: url("../fonts/ermilov-bold.eot?#iefix") format("embedded-opentype"),
+    /* IE < 9 */ url("../fonts/ermilov-bold.woff2") format("woff2"),
+    /* Super Modern Browsers */ url("../fonts/ermilov-bold.woff") format("woff"),
+    /* Firefox >= 3.6, any other modern browser */
+      url("../fonts/ermilov-bold.ttf") format("truetype"),
+    /* Safari, Android, iOS */ url("../fonts/ermilov-bold.svg#ermilov-bold")
+      format("svg");
+  /* Chrome < 4, Legacy iOS */
+}
+
+/* The animation code */
+
+@keyframes animTitle {
+  from {
+    /* Add starting values for animation */
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    /* Add Ending values for animation */
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes move {
+  0% {
+    transform: translateY(-5px);
+  }
+  50% {
+    transform: translateY(5px);
+  }
+  100% {
+    transform: translateY(-5px);
+  }
+}
+
+/* colors */
+
+$black: #1a1a1a;
+$orange: #ff6b00;
+$purple: #6736d0;
+$white: #f7f7f7;
+$blue: #5668e6;
+$grey: #b9b9b9;
+
+/* general styles */
+
+body {
+  font-family: "Commissioner";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 20px; /* 125% */
+
+  color: $black;
+  background: $white;
+  scroll-behavior: smooth;
+  position: relative;
+}
+
+._lock {
+  overflow: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Ermilov-Bold";
+  font-style: normal;
+  font-weight: 700;
+}
+h1 {
+  font-size: 142.424px;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 55px;
+  line-height: 50px; /* 90.909% */
+}
+section {
+  overflow: hidden;
+}
+
+.container {
+  width: 100%;
+  padding: 0 100px;
+  margin: 0 auto;
+  max-width: 1440px;
+  position: relative;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button {
+  color: $white;
+  font-family: "Ermilov-Bold";
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px; /* 80% */
+  text-transform: uppercase;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  height: 75px;
+  border-radius: 100px;
+  width: 100%;
+  cursor: pointer;
+  border: none;
+  transition: all 0.5s ease;
+
+  span {
+    z-index: 3;
+    position: inherit;
+
+    &:nth-child(2) {
+      display: none;
+      background-image: url(../img/finger.svg);
+      width: 23px;
+      height: 28px;
+      margin-left: 10px;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    will-change: transform;
+    transition-timing-function: cubic-bezier(0.12, 0.77, 0.16, 0.93);
+    transition-duration: 0.5s;
+    z-index: 1;
+  }
+
+  &:hover {
+    transition: all 0.5s ease;
+
+    &::after {
+      height: 100%;
+      transition: all 0.5s ease;
+    }
+  }
+
+  &:hover {
+    span {
+      display: block;
+      transition: all 0.5s ease;
+    }
+  }
+}
+
+.button-orange {
+  background-color: $orange;
+
+  &::after {
+    content: "";
+    background-color: #ff8b37;
+  }
+
+  &:hover {
+    &::after {
+      height: 100%;
+    }
+  }
+}
+
+.button-purple {
+  background-color: $purple;
+
+  &::after {
+    content: "";
+    background-color: #8656e6;
+  }
+
+  &:hover {
+    &::after {
+      height: 100%;
+    }
+  }
+}
+
+.button-black {
+  background-color: $black;
+
+  &::after {
+    content: "";
+    background-color: #858585;
+  }
+
+  &:hover {
+    &::after {
+      height: 100%;
+    }
+  }
+}
+
+.button-white {
+  color: $black;
+  background-color: $white;
+  border: 1px solid $black;
+
+  span {
+    :nth-child(2) {
+      display: none;
+      transition: all 0.5s ease;
+    }
+  }
+
+  &::after {
+    content: "";
+    background-color: $black;
+  }
+
+  &:hover {
+    color: $white;
+  }
+}
+
+
+
+.back-blue {
+  background-color: $blue;
+}
+.back-black {
+  background-color: $black;
+}
+
+.back-grey {
+  background-color: $grey;
+}
+
+.back-orange {
+  background-color: $orange;
+}
+
+.back-purple {
+  background-color: $purple;
+}
+
+/* header  block*/
+
+.header {
+  border-radius: 0px 0px 1000px 1000px;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+
+  .logo {
+    font-family: "Ermilov-Bold";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+    margin-right: auto;
+    margin-bottom: -4px;
+  }
+
+  .button {
+    width: 150px;
+    height: 35px;
+    font-size: 15px;
+    margin-left: auto;
+    font-family: "Commissioner";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: none;
+    padding-bottom: 2px;
+  }
+
+  .nav {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+
+    .nav-link {
+      font-family: "Commissioner";
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: 20px; /* 125% */
+
+      color: $black;
+      display: inline-block;
+
+      &:hover {
+        transform: scale(1.1);
+        color: $orange;
+        text-shadow: 0 0 1px $orange;
+      }
+    }
+  }
+
+  .header-menu {
+    display: flex;
+    gap: 3px;
+    align-items: center;
+    background-color: $white;
+    position: relative;
+    z-index: 20;
+  }
+
+  .header-menu p {
+    font-family: "Commissioner";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+  }
+
+  ._hidden {
+    display: none;
+  }
+
+  .open {
+  }
+
+  .back-white {
+    background-color: #fefefe !important;
+
+    .header-menu {
+      background-color: #fefefe !important;
+      border-radius: 25px;
+    }
+  }
+
+  .menu {
+    height: calc(100vh - 50px);
+    position: fixed;
+    top: -100vh;
+    right: 0;
+    width: 100vw;
+    background-color: #000000;
+    transition: all 0.5s ease-out;
+    z-index: 10;
+  }
+
+  ._active {
+    top: 50px;
+    transition: all 0.5s ease-out;
+  }
+
+  .menu-body {
+    background-color: #fff;
+    height: 100%;
+    border-top: none;
+    border-radius: 0 0 20px 20px;
+    padding: 60px 35px 50px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: end;
+
+    .nav {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      align-items: flex-end;
+      margin-bottom: 50px;
+
+      .nav-link {
+        color: #1a1a1a;
+        text-align: right;
+        font-family: "Ermilov-Bold";
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 25px; /* 83.333% */
+        letter-spacing: -0.6px;
+      }
+    }
+
+    .right {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      a {
+        color: #b9b9b9;
+        text-align: right;
+        font-family: "Commissioner";
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 14px; /* 116.667% */
+      }
+    }
+    .button {
+      height: 30px;
+      font-family: "Commissioner";
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: 16px; /* 114.286% */
+      display: flex;
+      max-width: none;
+      width: 233px;
+      margin-top: 15px;
+    }
+    p {
+      margin-top: auto;
+      color: #1a1a1a;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 16px; /* 114.286% */
+      text-transform: none;
+      text-align: right;
+    }
+  }
+
+  .menu-btn {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+    background: none;
+    border: none;
+  }
+
+  .menu-btn span {
+    width: 22px;
+    height: 0px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid #000000;
+    transition: all 0.5s;
+  }
+
+  .menu-btn span:nth-of-type(2) {
+    top: calc(50% - 5px);
+  }
+
+  .menu-btn span:nth-of-type(3) {
+    top: calc(50% + 5px);
+  }
+
+  .menu-btn.rotate span:nth-of-type(1) {
+    display: none;
+  }
+
+  .menu-btn.rotate span:nth-of-type(2) {
+    top: 50%;
+    transform: translate(-50%, 0%) rotate(30deg);
+  }
+
+  .menu-btn.rotate span:nth-of-type(3) {
+    top: 50%;
+    transform: translate(-50%, 0%) rotate(-30deg);
+  }
+}
+.word {
+}
+
+.social {
+  display: flex;
+  gap: 10px;
+
+  img {
+    height: 26px;
+    width: auto;
+  }
+}
+
+/* slider slick */
+
+.slick-slider {
+  position: relative;
+}
+
+/* Слайдер запущен */
+.slick-slider.slick-initialized {
+}
+/* Слайдер с точками */
+.slick-slider.slick-dotted {
+}
+/* Ограничивающая оболочка */
+
+.slick-list {
+  display: block;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent;
+}
+/* Лента слайдов */
+.slick-track {
+  display: flex;
+  gap: 20px;
+}
+/* Слайд */
+.slick-slide {
+}
+/* Слайд активный (показывается) */
+.slick-slide.slick-active {
+}
+/* Слайд основной */
+.slick-slide.slick-current {
+}
+/* Слайд по центру */
+.slick-slide.slick-center {
+}
+/* Клонированный слайд */
+.slick-slide.slick-cloned {
+}
+
+/* Стрелка */
+.slick-arrow {
+  border-radius: 50px;
+  height: 60px;
+  width: 60px;
+  position: absolute;
+  font-size: 0;
+  z-index: 20;
+  cursor: pointer;
+  background-color: $black;
+  bottom: -90px;
+  transition: all 0.5s ease;
+  overflow: hidden;
+  border: none;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 2;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 101%;
+    height: 0%;
+    will-change: transform;
+    transition-timing-function: cubic-bezier(0.12, 0.77, 0.16, 0.93);
+    transition-duration: 0.5s;
+    z-index: 1;
+    background-color: $orange;
+  }
+
+  &:hover {
+    transition: all 0.5s ease;
+
+    &::after {
+      height: 101%;
+    }
+  }
+}
+
+/* Стрелка влево */
+
+.slick-arrow.slick-prev {
+  right: 70px;
+
+  &::before {
+    background-image: url(../img/prev.svg);
+  }
+
+  &:hover {
+    transition: all 0.5s ease;
+
+    &::after {
+      height: 100%;
+    }
+  }
+}
+/* Стрелка вправо */
+.slick-arrow.slick-next {
+  right: 0;
+
+  &::before {
+    background-image: url(../img/next.svg);
+  }
+
+  &:hover {
+    transition: all 0.5s ease;
+
+    &::after {
+      height: 100%;
+    }
+  }
+}
+
+/* footer */
+
+.footer {
+  padding: 100px 0;
+  border-radius: 30px 30px 0px 0px;
+  background-color: $black;
+  position: relative;
+  z-index: 3;
+
+  .content {
+    border-radius: 30px;
+    background-color: $white;
+    padding: 50px 60px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 150px;
+    align-items: end;
+    justify-content: start;
+  }
+
+  .left {
+    p {
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+      margin-top: 22px;
+    }
+    .logo {
+      font-size: 50px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      text-transform: uppercase;
+      font-family: "Ermilov-Bold";
+    }
+
+    .button {
+      max-width: 278px;
+      height: 42px;
+      font-family: "Commissioner";
+      font-size: 15px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      text-transform: none;
+      margin-top: 20px;
+    }
+  }
+  .social {
+    display: flex;
+    gap: 15px;
+
+    img {
+      height: 36px;
+      width: auto;
+
+      filter: brightness(0) saturate(100%) invert(6%) sepia(17%) saturate(192%)
+        hue-rotate(314deg) brightness(105%) contrast(92%);
+
+      &:hover {
+        filter: brightness(0) saturate(100%) invert(40%) sepia(62%)
+          saturate(1650%) hue-rotate(1deg) brightness(105%) contrast(105%);
+      }
+    }
+  }
+
+  .middle {
+    .nav {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      margin-top: 33px;
+
+      .nav-link {
+        font-family: "Commissioner";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+
+        &:hover {
+          font-weight: 600;
+        }
+      }
+    }
+  }
+  .right {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    a {
+      color: #b9b9b9;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: normal;
+
+      &:hover {
+        color: $black;
+      }
+
+      &:nth-of-type(1) {
+        text-decoration-line: underline;
+      }
+    }
+  }
+}
+
+/* Iphone 5 */
+@media (max-width: 320px) {
+}
+
+/* Portrait phones and smaller */
+@media (max-width: 480px) {
+}
+
+/* Landscape phones and portrait tablets */
+@media (max-width: 768px) {
+  /* general styles */
+
+  h1 {
+    font-size: 30px;
+    line-height: 27px; /* 90% */
+    letter-spacing: -0.6px;
+  }
+
+  h2 {
+    font-size: 30px;
+    line-height: 25px; /* 83.333% */
+    letter-spacing: -0.6px;
+  }
+
+  .container {
+    padding: 0 35px;
+  }
+
+  .button {
+    font-size: 16px;
+    line-height: 10px; /* 62.5% */
+    letter-spacing: -0.32px;
+    line-height: normal;
+    height: 50px;
+    max-width: none;
+  }
+
+  /* header  block*/
+
+  .header {
+    background-color: $black;
+    box-shadow: none;
+    border: none;
+    margin: 0 -2px;
+
+    .container {
+      background-color: $white;
+      overflow: hidden;
+      padding-top: 25px;
+      padding-bottom: 0px;
+      border-radius: 20px 20px 0 0;
+    }
+
+    .logo {
+      font-size: 13.343px;
+      margin-bottom: 0;
+    }
+
+    .button {
+      display: none;
+    }
+
+    .nav {
+      display: none;
+    }
+  }
+
+  /* slider slick */
+
+  .slick-arrow {
+    height: 50px;
+    width: 50px;
+    background-size: 30px;
+  }
+
+  /* Лента слайдов */
+  .slick-track {
+    display: flex;
+    gap: 10px;
+  }
+
+  /* Стрелка */
+  .slick-arrow {
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    bottom: -25px;
+  }
+
+  /* Стрелка влево */
+
+  .slick-arrow.slick-prev {
+    right: 55px;
+
+    &::before {
+      background-image: url(../img/prev.svg);
+      background-size: 14px;
+    }
+  }
+
+  .slick-arrow.slick-next {
+    &::before {
+      background-size: 14px;
+    }
+  }
+
+  /* footer */
+
+  .footer {
+    padding: 0;
+    border-radius: 0px;
+    border-radius: 30px 30px 0px 0px;
+
+    .container {
+      padding: 0;
+    }
+
+    .content {
+      border-radius: 30px 30px 0px 0px;
+      padding: 60px 35px 135px 35px;
+      grid-template-columns: 1fr;
+      gap: 0px;
+      align-items: start;
+    }
+
+    .left {
+      p {
+        font-size: 14px;
+        line-height: 16px; /* 114.286% */
+        margin-top: 20px;
+      }
+      .logo {
+        font-size: 25px;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+      }
+
+      .button {
+        max-width: 233px;
+        height: 30px;
+        font-size: 14px;
+        line-height: 16px; /* 114.286% */
+        margin-top: 15px;
+      }
+    }
+    .social {
+      display: flex;
+      gap: 12px;
+      position: absolute;
+      top: 60px;
+      right: 35px;
+
+      img {
+        height: 26px;
+        width: auto;
+      }
+    }
+
+    .middle {
+      .nav {
+        gap: 10px;
+        .nav-link {
+          font-size: 12px;
+          line-height: 14px; /* 116.667% */
+        }
+      }
+    }
+    .right {
+      gap: 10px;
+      margin-top: 50px;
+
+      a {
+        font-size: 12px;
+        line-height: 14px; /* 116.667% */
+      }
+    }
+  }
+}
+/* Portrait tablets and small desktops */
+@media (min-width: 769px) {
+  .header {
+    .open-menu {
+      display: none;
+    }
+    .header-menu {
+      display: none;
+    }
+  }
+}
+
+/* Landscape tablets and medium desktops */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .nav {
+    gap: 20px;
+  }
+}
+
+/* Large desktops and laptops */
+@media (min-width: 1200px) {
+}
+
+@media (min-width: 1450px) {
+}
