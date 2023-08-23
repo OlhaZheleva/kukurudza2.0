@@ -41,20 +41,14 @@ videos.forEach((video) => {
 
 // sliders
 $(document).ready(function () {
+  
   // events
   $(".events-slider").slick({
-    variableWidth: true,
-    autoplaySpeed: 2000,
-    pauseOnHover: true,
     slidesToScroll: 1,
+    variableWidth: true,
     autoplay: false,
-    infinite: false,
-    responsive: [
-      {
-        breakpoint: 769,
-        settings: {},
-      },
-    ],
+    infinite: true,
+    autoplaySpeed: 2000,
   });
 
   // cases
@@ -64,13 +58,7 @@ $(document).ready(function () {
     pauseOnHover: true,
     slidesToScroll: 1,
     autoplay: false,
-    infinite: false,
-    responsive: [
-      {
-        breakpoint: 769,
-        settings: {},
-      },
-    ],
+    infinite: true,
   });
 
   // medias
@@ -80,31 +68,19 @@ $(document).ready(function () {
     pauseOnHover: true,
     slidesToScroll: 1,
     autoplay: false,
-    infinite: false,
-    responsive: [
-      {
-        breakpoint: 769,
-        settings: {},
-      },
-    ],
+    infinite: true,
   });
 
   // partners
   $(".partner-slider").slick({
-    variableWidth: true,
-    pauseOnHover: false,
-    autoplay: true,
-    autoplaySpeed: 1500,
+    slidesToShow: 5,
     slidesToScroll: 1,
-    infinite: true,
-    prevArrow: null,
-    nextArrow: null,
-    responsive: [
-      {
-        breakpoint: 769,
-        settings: {},
-      },
-    ],
+    autoplay: true,
+    autoplaySpeed: 0,
+    speed: 7000,
+    pauseOnHover: false,
+    cssEase: 'linear', 
+    arrows: false,
   });
 
   // blog
@@ -114,12 +90,12 @@ $(document).ready(function () {
     pauseOnHover: true,
     slidesToScroll: 1,
     autoplay: false,
-    infinite: false,
+    infinite: true,
     responsive: [
       {
-        breakpoint: 769,
-        settings: {},
-      },
+        breakpoint: 768,
+        settings: "unslick"
+      }
     ],
   });
 });
