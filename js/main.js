@@ -15,7 +15,7 @@ iconMenu.addEventListener("click", function (event) {
   menuBody.classList.toggle("_active");
   menuWord.classList.toggle("_hidden");
   iconMenu.classList.toggle("rotate");
-  containerHeader.classList.toggle("back-white");
+  header.classList.toggle("back-white");
 });
 
 if (navLinks) {
@@ -25,7 +25,7 @@ if (navLinks) {
       menuBody.classList.remove("_active");
       menuWord.classList.remove("_hidden");
       iconMenu.classList.remove("rotate");
-      containerHeader.classList.remove("back-white");
+      header.classList.remove("back-white");
     });
   });
 }
@@ -98,9 +98,19 @@ $(document).ready(function () {
       }
     ],
   });
-});
-// animation
 
+  $(".popular-slider").slick({
+    variableWidth: true,
+    autoplaySpeed: 2000,
+    pauseOnHover: true,
+    slidesToScroll: 1,
+    autoplay: false,
+    infinite: true,
+  });
+
+});
+
+// animation
 const callback = (entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
@@ -117,3 +127,31 @@ const animationItems = document.querySelectorAll(".animate");
 animationItems.forEach((item) => {
   observer.observe(item);
 });
+
+
+// filter bar
+
+const selectNames = document.querySelectorAll('.select-name');
+const selectBlocks = document.querySelectorAll('.select-block');
+
+// selectNames.forEach((selectName) => {
+//   selectName.addEventListener('click', function(event){
+//     event.preventDefault;
+
+//   })
+// } )
+
+
+for (i = 0; i < selectNames.length; i++) {
+  selectNames[i].addEventListener("click", toggleItem, false);
+}
+
+function toggleItem() {
+  let itemClass = this.parentNode.className;
+  for (i = 0; i < selectBlocks.length; i++) {
+    selectBlocks[i].className = "select-block close";
+  }
+  if (itemClass == "select-block close") {
+    this.parentNode.className = "select-block open";
+  }
+}
