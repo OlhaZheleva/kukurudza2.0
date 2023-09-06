@@ -134,13 +134,6 @@ animationItems.forEach((item) => {
 const selectNames = document.querySelectorAll('.select-name');
 const selectBlocks = document.querySelectorAll('.select-block');
 
-// selectNames.forEach((selectName) => {
-//   selectName.addEventListener('click', function(event){
-//     event.preventDefault;
-
-//   })
-// } )
-
 
 for (i = 0; i < selectNames.length; i++) {
   selectNames[i].addEventListener("click", toggleItem, false);
@@ -155,3 +148,13 @@ function toggleItem() {
     this.parentNode.className = "select-block open";
   }
 }
+
+// search form 
+
+const searchForm = document.querySelector('.search');
+const searchBtn = document.querySelector('.search-button');
+
+
+searchBtn.addEventListener("click", function () {
+  searchForm.classList.toggle("open-search");
+});
