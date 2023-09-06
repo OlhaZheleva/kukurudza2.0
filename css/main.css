@@ -221,7 +221,7 @@ section {
 }
 .button span:nth-child(2) {
   display: none;
-  background-image: url(.../../img/finger.svg);
+  background-image: url(../img/finger.svg);
   width: 23px;
   height: 28px;
   margin-left: 10px;
@@ -252,7 +252,7 @@ section {
   transition: all 0.3s ease;
 }
 .button-read span {
-  background-image: url(.../../img/read-more.svg);
+  background-image: url(../img/read-more.svg);
   background-size: contain;
   width: 15px;
   height: 11px;
@@ -607,7 +607,7 @@ section {
   margin-right: 50px;
 }
 .header-bottom .container select option::after {
-  content: url(.../../img/select-vector.svg);
+  content: url(../img/select-vector.svg);
   width: 14px;
   height: 8px;
   margin-left: 5px;
@@ -625,7 +625,7 @@ section {
 }
 .search::after {
   content: "";
-  background-image: url(.../../img/search.svg);
+  background-image: url(../img/search.svg);
   background-size: 12px;
   background-repeat: no-repeat;
   background-position: right;
@@ -759,7 +759,7 @@ section {
   right: 0;
 }
 .slick-arrow.slick-prev::before {
-  background-image: url(.../../img/prev.svg);
+  background-image: url(../img/prev.svg);
 }
 .slick-arrow.slick-prev:hover {
   transition: all 0.5s ease;
@@ -774,7 +774,7 @@ section {
   right: inherit;
 }
 .slick-arrow.slick-next::before {
-  background-image: url(.../../img/next.svg);
+  background-image: url(../img/next.svg);
 }
 .slick-arrow.slick-next:hover {
   transition: all 0.5s ease;
@@ -1037,14 +1037,14 @@ section {
     box-sizing: border-box;
   }
   .header-bottom .container .filter-form .open .select-name::after {
-    content: url(.../../img/select-vector.svg);
+    content: url(../img/select-vector.svg);
     margin-left: 5px;
     position: absolute;
     transform: rotate(180deg);
   }
   .header-bottom .container .filter-form .open .select-name::before {
     content: "";
-    background-image: url(.../../img/polygon.svg);
+    background-image: url(../img/polygon.svg);
     background-size: 100%;
     left: calc(100% - 20px);
     bottom: calc(-100% - 6px);
@@ -1078,7 +1078,7 @@ section {
     margin-right: 50px;
   }
   .header-bottom .container select option::after {
-    content: url(.../../img/select-vector.svg);
+    content: url(../img/select-vector.svg);
     width: 14px;
     height: 8px;
     margin-left: 5px;
@@ -1164,7 +1164,7 @@ section {
     left: inherit;
   }
   .slick-arrow.slick-prev::before {
-    background-image: url(.../../img/prev.svg);
+    background-image: url(../img/prev.svg);
     background-size: 14px;
   }
   .slick-arrow.slick-next {
@@ -1266,7 +1266,7 @@ section {
     right: 0;
   }
   .slick-arrow.slick-prev::before {
-    background-image: url(.../../img/prev.svg);
+    background-image: url(../img/prev.svg);
   }
   .slick-arrow.slick-prev:hover {
     transition: all 0.5s ease;
@@ -1280,7 +1280,7 @@ section {
     right: inherit;
   }
   .slick-arrow.slick-next::before {
-    background-image: url(.../../img/next.svg);
+    background-image: url(../img/next.svg);
   }
   .slick-arrow.slick-next:hover {
     transition: all 0.5s ease;
@@ -1378,7 +1378,7 @@ section {
 }
 .values::after, .values::before {
   position: absolute;
-  content: url(.../../img/xxxx-desck.svg);
+  content: url(../img/xxxx-desck.svg);
   z-index: 10;
 }
 .values::after {
@@ -1453,7 +1453,7 @@ section {
   width: 78.5%;
   max-width: 479px;
   height: 171px;
-  background-image: url(./.../../img/text-back-pc.svg);
+  background-image: url(./../img/text-back-pc.svg);
   background-size: contain;
   background-repeat: no-repeat;
   position: absolute;
@@ -1481,7 +1481,7 @@ section {
 
 /* products section */
 .products {
-  background-image: url(.../../img/back-products.png);
+  background-image: url(../img/back-products.png);
   background-size: 100%;
   border-radius: 30px;
   padding: 100px 50px;
@@ -1508,7 +1508,7 @@ section {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  background-image: url(.../../img/back-img-products.svg);
+  background-image: url(../img/back-img-products.svg);
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -1592,7 +1592,7 @@ section {
 }
 .club::before {
   position: absolute;
-  content: url(.../../img/xxxx-desck-purple.svg);
+  content: url(../img/xxxx-desck-purple.svg);
   top: -11px;
   left: 100px;
 }
@@ -1739,13 +1739,13 @@ section {
   bottom: 0;
   height: 2px;
   width: 100%;
-  background-image: url(.../../img/under-line.svg);
+  background-image: url(../img/under-line.svg);
   background-repeat: no-repeat;
 }
 .events .event .name a {
   width: 13px;
   height: 11px;
-  background-image: url(.../../img/info-icon.svg);
+  background-image: url(../img/info-icon.svg);
   background-size: cover;
 }
 .events .event .position {
@@ -1778,7 +1778,7 @@ section {
   z-index: 1;
   border-radius: 30px;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  background-image: url(.../../img/back-limitation.svg);
+  background-image: url(../img/back-limitation.svg);
 }
 .limitation .container {
   display: flex;
@@ -1796,7 +1796,7 @@ section {
   width: 45px;
   height: 52px;
   content: "";
-  background-image: url(.../../img/Vector.svg);
+  background-image: url(../img/Vector.svg);
   background-size: contain;
   left: 67px;
   top: -21px;
@@ -1829,7 +1829,7 @@ section {
 }
 .limitation .right::before {
   position: absolute;
-  content: url(.../../img/separator.svg);
+  content: url(../img/separator.svg);
   left: -10px;
   top: 50%;
   transform: translate(0, -50%);
@@ -1936,7 +1936,7 @@ section {
   grid-column: 1/2;
 }
 .cases .info::before {
-  content: url(.../../img/*.svg);
+  content: url(../img/*.svg);
   position: absolute;
   left: 0;
   top: -13px;
@@ -1957,7 +1957,7 @@ section {
 }
 .partners h2::after {
   position: absolute;
-  content: url(.../../img/light.png);
+  content: url(../img/light.png);
   bottom: -142px;
   left: 213px;
   width: 363px;
@@ -2084,7 +2084,7 @@ section {
   border-radius: 84.55px;
 }
 .blog .article .article-about .tags .category span {
-  content: url(.../../img/article.svg);
+  content: url(../img/article.svg);
   width: 12px;
   height: 10px;
   margin-right: 5px;
@@ -2108,7 +2108,7 @@ section {
   margin-left: auto;
 }
 .blog .article .article-about .views::before {
-  content: url(.../../img/views.svg);
+  content: url(../img/views.svg);
   margin-right: 5px;
 }
 .blog .button {
@@ -2166,7 +2166,7 @@ section {
   border-radius: 84.55px;
 }
 .article .article-about .tags .category span {
-  content: url(.../../img/article.svg);
+  content: url(../img/article.svg);
   width: 12px;
   height: 10px;
   margin-right: 5px;
@@ -2190,7 +2190,7 @@ section {
   margin-left: auto;
 }
 .article .article-about .views::before {
-  content: url(.../../img/views.svg);
+  content: url(../img/views.svg);
   margin-right: 5px;
 }
 
@@ -2202,7 +2202,7 @@ section {
   background-color: #ff6b00;
   z-index: 0;
   border-radius: 30px;
-  background-image: url(.../../img/for-free-back.svg);
+  background-image: url(../img/for-free-back.svg);
 }
 .for-free .container {
   display: flex;
@@ -2250,7 +2250,7 @@ section {
 }
 .for-free .right::before {
   position: absolute;
-  content: url(.../../img/separator.svg);
+  content: url(../img/separator.svg);
   left: -10px;
   top: 50%;
   transform: translate(0, -50%);
@@ -2353,7 +2353,7 @@ section {
     z-index: 3;
   }
   .values::after, .values::before {
-    content: url(./.../../img/xxxx-mob.svg);
+    content: url(./../img/xxxx-mob.svg);
     z-index: 10;
   }
   .values::after {
@@ -2414,7 +2414,7 @@ section {
   }
   .values .video-block .text {
     width: 100%;
-    background-image: url(./.../../img/text-back-mob.svg);
+    background-image: url(./../img/text-back-mob.svg);
     padding-top: 40px;
     bottom: -58px;
     max-width: 350px;
@@ -2492,7 +2492,7 @@ section {
     background-color: #e8e8e8;
     background-position: top;
     background-size: 100%;
-    background-image: url(.../../img/products-back.svg);
+    background-image: url(../img/products-back.svg);
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 73%, 0 100%);
             clip-path: polygon(0 0, 100% 0, 100% 73%, 0 100%);
     overflow: hidden;
@@ -2551,7 +2551,7 @@ section {
     padding-bottom: 90px;
   }
   .club::before {
-    content: url(.../../img/xxxx-mob.svg);
+    content: url(../img/xxxx-mob.svg);
     top: -9px;
     left: 35px;
   }
@@ -2637,7 +2637,7 @@ section {
     bottom: 0;
     height: 2px;
     width: 100%;
-    background-image: url(.../../img/under-line.svg);
+    background-image: url(../img/under-line.svg);
     background-repeat: no-repeat;
   }
   .events .event .position {
@@ -2694,7 +2694,7 @@ section {
   }
   .limitation .right::before {
     position: absolute;
-    content: url(.../../img/separator-mob.svg);
+    content: url(../img/separator-mob.svg);
     top: -10px;
     left: 50%;
     transform: translate(-50%, 0);
@@ -2769,7 +2769,7 @@ section {
     grid-column: inherit;
   }
   .cases .buttons .info::before {
-    content: url(.../../img/*.svg);
+    content: url(../img/*.svg);
     width: 10px;
     height: 10px;
     position: absolute;
@@ -2793,7 +2793,7 @@ section {
     overflow: visible;
   }
   .partners h2::after {
-    content: url(.../../img/light-mob.svg);
+    content: url(../img/light-mob.svg);
     bottom: -20px;
     left: 34px;
     width: 232px;
@@ -2890,7 +2890,7 @@ section {
     border-radius: 84.55px;
   }
   .blog .article .article-about .tags .category span {
-    content: url(.../../img/article.svg);
+    content: url(../img/article.svg);
     width: 12px;
     height: 10px;
     margin-right: 5px;
@@ -2967,7 +2967,7 @@ section {
   }
   .for-free .right::before {
     position: absolute;
-    content: url(.../../img/separator-mob.svg);
+    content: url(../img/separator-mob.svg);
     top: -10px;
     left: 50%;
     transform: translate(-50%, 0);
@@ -3219,7 +3219,7 @@ section {
     background-color: #e8e8e8;
     background-position: top;
     background-size: 100%;
-    background-image: url(.../../img/products-back.svg);
+    background-image: url(../img/products-back.svg);
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 73%, 0 100%);
             clip-path: polygon(0 0, 100% 0, 100% 73%, 0 100%);
     overflow: hidden;
@@ -3278,7 +3278,7 @@ section {
     padding-bottom: 90px;
   }
   .club::before {
-    content: url(.../../img/xxxx-mob.svg);
+    content: url(../img/xxxx-mob.svg);
     top: -9px;
     left: 35px;
   }
@@ -3364,7 +3364,7 @@ section {
     bottom: 0;
     height: 2px;
     width: 100%;
-    background-image: url(.../../img/under-line.svg);
+    background-image: url(../img/under-line.svg);
     background-repeat: no-repeat;
   }
   .events .event .position {
@@ -3421,7 +3421,7 @@ section {
   }
   .limitation .right::before {
     position: absolute;
-    content: url(.../../img/separator-mob.svg);
+    content: url(../img/separator-mob.svg);
     top: -10px;
     left: 50%;
     transform: translate(-50%, 0);
@@ -3496,7 +3496,7 @@ section {
     grid-column: inherit;
   }
   .cases .buttons .info::before {
-    content: url(.../../img/*.svg);
+    content: url(../img/*.svg);
     width: 10px;
     height: 10px;
     position: absolute;
@@ -3520,7 +3520,7 @@ section {
     overflow: visible;
   }
   .partners h2::after {
-    content: url(.../../img/light-mob.svg);
+    content: url(../img/light-mob.svg);
     bottom: -20px;
     left: 34px;
     width: 232px;
@@ -3617,7 +3617,7 @@ section {
     border-radius: 84.55px;
   }
   .blog .article .article-about .tags .category span {
-    content: url(.../../img/article.svg);
+    content: url(../img/article.svg);
     width: 12px;
     height: 10px;
     margin-right: 5px;
@@ -3694,7 +3694,7 @@ section {
   }
   .for-free .right::before {
     position: absolute;
-    content: url(.../../img/separator-mob.svg);
+    content: url(../img/separator-mob.svg);
     top: -10px;
     left: 50%;
     transform: translate(-50%, 0);
@@ -3827,7 +3827,7 @@ section {
   cursor: pointer;
 }
 .filter-form .select-name::after {
-  content: url(.../../img/select-vector.svg);
+  content: url(../img/select-vector.svg);
   margin-left: 5px;
   position: absolute;
 }
@@ -3899,13 +3899,13 @@ section {
   height: 0px;
 }
 .filter-form .open .select-name::after {
-  content: url(.../../img/select-vector.svg);
+  content: url(../img/select-vector.svg);
   margin-left: 5px;
   position: absolute;
   transform: rotate(180deg);
 }
 .filter-form .open .select-name::before {
-  content: url(.../../img/polygon.svg);
+  content: url(../img/polygon.svg);
   left: calc(100% - 7px);
   bottom: calc(-100% - 13px);
   position: absolute;
@@ -4001,10 +4001,10 @@ section {
   background-repeat: no-repeat;
 }
 .pagination .prev {
-  background-image: url(.../../img/prev.svg);
+  background-image: url(../img/prev.svg);
 }
 .pagination .next {
-  background-image: url(.../../img/next.svg);
+  background-image: url(../img/next.svg);
 }
 
 /*  Email  subscription    */
@@ -4036,7 +4036,7 @@ section {
 }
 .mailing-block .right::before {
   position: absolute;
-  content: url(.../../img/mailing-decor.svg);
+  content: url(../img/mailing-decor.svg);
   left: -10px;
   top: 50%;
   transform: translate(0, -50%);
@@ -4106,7 +4106,7 @@ section {
   line-height: 14px; /* 116.667% */
 }
 .mailing-block .subscription .agree-input label::before {
-  content: url(.../../img/*-agree.svg);
+  content: url(../img/*-agree.svg);
   position: absolute;
   height: 10px;
   width: 10px;
@@ -4232,13 +4232,13 @@ section {
     height: 0px;
   }
   .filter-form .open .select-name::after {
-    content: url(.../../img/select-vector.svg);
+    content: url(../img/select-vector.svg);
     margin-left: 5px;
     position: absolute;
     transform: rotate(180deg);
   }
   .filter-form .open .select-name::before {
-    content: url(.../../img/polygon.svg);
+    content: url(../img/polygon.svg);
     left: calc(100% - 7px);
     bottom: calc(-100% - 13px);
     position: absolute;
@@ -4339,7 +4339,7 @@ section {
     border-radius: 84.55px;
   }
   .article .article-about .tags .category span {
-    content: url(.../../img/article.svg);
+    content: url(../img/article.svg);
     width: 12px;
     height: 10px;
     margin-right: 5px;
@@ -4412,7 +4412,7 @@ section {
   }
   .mailing-block .right::before {
     position: absolute;
-    content: url(.../../img/mailing-decor.svg);
+    content: url(../img/mailing-decor.svg);
     left: -10px;
     top: 50%;
     transform: translate(0, -50%);
@@ -4482,7 +4482,7 @@ section {
     line-height: 14px; /* 116.667% */
   }
   .mailing-block .subscription .agree-input label::before {
-    content: url(.../../img/*-agree.svg);
+    content: url(../img/*-agree.svg);
     position: absolute;
     height: 10px;
     width: 10px;

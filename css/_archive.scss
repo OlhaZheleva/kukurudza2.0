@@ -133,7 +133,7 @@ $grey: #b9b9b9;
     cursor: pointer;
 
     &::after {
-      content: url(.../../img/select-vector.svg);
+      content: url(../img/select-vector.svg);
       margin-left: 5px;
       position: absolute;
     }
@@ -224,14 +224,14 @@ $grey: #b9b9b9;
   .open {
     .select-name {
       &::after {
-        content: url(.../../img/select-vector.svg);
+        content: url(../img/select-vector.svg);
         margin-left: 5px;
         position: absolute;
         transform: rotate(180deg);
       }
 
       &::before {
-        content: url(.../../img/polygon.svg);
+        content: url(../img/polygon.svg);
         left: calc(100% - 7px);
         bottom: calc(-100% - 13px);
         position: absolute;
@@ -348,10 +348,10 @@ $grey: #b9b9b9;
   }
 
   .prev {
-    background-image: url(.../../img/prev.svg);
+    background-image: url(../img/prev.svg);
   }
   .next {
-    background-image: url(.../../img/next.svg);
+    background-image: url(../img/next.svg);
   }
 }
 
@@ -389,7 +389,7 @@ $grey: #b9b9b9;
 
     &::before {
       position: absolute;
-      content: url(.../../img/mailing-decor.svg);
+      content: url(../img/mailing-decor.svg);
       left: -10px;
       top: 50%;
       transform: translate(0, -50%);
@@ -468,7 +468,7 @@ $grey: #b9b9b9;
         line-height: 14px; /* 116.667% */
 
         &::before {
-          content: url(.../../img/*-agree.svg);
+          content: url(../img/*-agree.svg);
           position: absolute;
           height: 10px;
           width: 10px;
@@ -642,14 +642,14 @@ $grey: #b9b9b9;
     .open {
       .select-name {
         &::after {
-          content: url(.../../img/select-vector.svg);
+          content: url(../img/select-vector.svg);
           margin-left: 5px;
           position: absolute;
           transform: rotate(180deg);
         }
 
         &::before {
-          content: url(.../../img/polygon.svg);
+          content: url(../img/polygon.svg);
           left: calc(100% - 7px);
           bottom: calc(-100% - 13px);
           position: absolute;
@@ -786,7 +786,7 @@ $grey: #b9b9b9;
 
         .category {
           span {
-            content: url(.../../img/article.svg);
+            content: url(../img/article.svg);
             width: 12px;
             height: 10px;
             margin-right: 5px;
@@ -880,7 +880,7 @@ $grey: #b9b9b9;
 
       &::before {
         position: absolute;
-        content: url(.../../img/mailing-decor.svg);
+        content: url(../img/mailing-decor.svg);
         left: -10px;
         top: 50%;
         transform: translate(0, -50%);
@@ -959,7 +959,7 @@ $grey: #b9b9b9;
           line-height: 14px; /* 116.667% */
 
           &::before {
-            content: url(.../../img/*-agree.svg);
+            content: url(../img/*-agree.svg);
             position: absolute;
             height: 10px;
             width: 10px;

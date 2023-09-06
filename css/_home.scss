@@ -109,7 +109,7 @@ $grey: #b9b9b9;
   &::after,
   &::before {
     position: absolute;
-    content: url(.../../img/xxxx-desck.svg);
+    content: url(../img/xxxx-desck.svg);
     z-index: 10;
   }
   &::after {
@@ -193,7 +193,7 @@ $grey: #b9b9b9;
       width: 78.5%;
       max-width: 479px;
       height: 171px;
-      background-image: url(./.../../img/text-back-pc.svg);
+      background-image: url(./../img/text-back-pc.svg);
       background-size: contain;
       background-repeat: no-repeat;
       position: absolute;
@@ -228,7 +228,7 @@ $grey: #b9b9b9;
 /* products section */
 
 .products {
-  background-image: url(.../../img/back-products.png);
+  background-image: url(../img/back-products.png);
   background-size: 100%;
   border-radius: 30px;
   padding: 100px 50px;
@@ -256,7 +256,7 @@ $grey: #b9b9b9;
       left: 50%;
       top: 50%;
       transform: translate(-50%, -50%);
-      background-image: url(.../../img/back-img-products.svg);
+      background-image: url(../img/back-img-products.svg);
       background-size: contain;
       background-position: center;
       background-repeat: no-repeat;
@@ -358,7 +358,7 @@ $grey: #b9b9b9;
 
   &::before {
     position: absolute;
-    content: url(.../../img/xxxx-desck-purple.svg);
+    content: url(../img/xxxx-desck-purple.svg);
     top: -11px;
     left: 100px;
   }
@@ -525,7 +525,7 @@ $grey: #b9b9b9;
           bottom: 0;
           height: 2px;
           width: 100%;
-          background-image: url(.../../img/under-line.svg);
+          background-image: url(../img/under-line.svg);
           background-repeat: no-repeat;
         }
       }
@@ -533,7 +533,7 @@ $grey: #b9b9b9;
       a {
         width: 13px;
         height: 11px;
-        background-image: url(.../../img/info-icon.svg);
+        background-image: url(../img/info-icon.svg);
         background-size: cover;
       }
     }
@@ -576,7 +576,7 @@ $grey: #b9b9b9;
 
   border-radius: 30px;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  background-image: url(.../../img/back-limitation.svg);
+  background-image: url(../img/back-limitation.svg);
 
   .container {
     display: flex;
@@ -594,7 +594,7 @@ $grey: #b9b9b9;
       width: 45px;
       height: 52px;
       content: "";
-      background-image: url(.../../img/Vector.svg);
+      background-image: url(../img/Vector.svg);
       background-size: contain;
       left: 67px;
       top: -21px;
@@ -632,7 +632,7 @@ $grey: #b9b9b9;
 
     &::before {
       position: absolute;
-      content: url(.../../img/separator.svg);
+      content: url(../img/separator.svg);
       left: -10px;
       top: 50%;
       transform: translate(0, -50%);
@@ -757,7 +757,7 @@ $grey: #b9b9b9;
     grid-column: 1/2;
 
     &::before {
-      content: url(.../../img/*.svg);
+      content: url(../img/*.svg);
       position: absolute;
       left: 0;
       top: -13px;
@@ -781,7 +781,7 @@ $grey: #b9b9b9;
 
     &::after {
       position: absolute;
-      content: url(.../../img/light.png);
+      content: url(../img/light.png);
       bottom: -142px;
       left: 213px;
       width: 363px;
@@ -929,7 +929,7 @@ $grey: #b9b9b9;
 
         .category {
           span {
-            content: url(.../../img/article.svg);
+            content: url(../img/article.svg);
             width: 12px;
             height: 10px;
             margin-right: 5px;
@@ -963,7 +963,7 @@ $grey: #b9b9b9;
         margin-left: auto;
 
         &::before {
-          content: url(.../../img/views.svg);
+          content: url(../img/views.svg);
           margin-right: 5px;
         }
       }
@@ -1033,7 +1033,7 @@ $grey: #b9b9b9;
 
       .category {
         span {
-          content: url(.../../img/article.svg);
+          content: url(../img/article.svg);
           width: 12px;
           height: 10px;
           margin-right: 5px;
@@ -1067,7 +1067,7 @@ $grey: #b9b9b9;
       margin-left: auto;
 
       &::before {
-        content: url(.../../img/views.svg);
+        content: url(../img/views.svg);
         margin-right: 5px;
       }
     }
@@ -1082,7 +1082,7 @@ $grey: #b9b9b9;
   background-color: $orange;
   z-index: 0;
   border-radius: 30px;
-  background-image: url(.../../img/for-free-back.svg);
+  background-image: url(../img/for-free-back.svg);
 
   .container {
     display: flex;
@@ -1135,7 +1135,7 @@ $grey: #b9b9b9;
 
     &::before {
       position: absolute;
-      content: url(.../../img/separator.svg);
+      content: url(../img/separator.svg);
       left: -10px;
       top: 50%;
       transform: translate(0, -50%);
@@ -1283,7 +1283,7 @@ $grey: #b9b9b9;
 
     &::after,
     &::before {
-      content: url(./.../../img/xxxx-mob.svg);
+      content: url(./../img/xxxx-mob.svg);
       z-index: 10;
     }
     &::after {
@@ -1353,7 +1353,7 @@ $grey: #b9b9b9;
 
       .text {
         width: 100%;
-        background-image: url(./.../../img/text-back-mob.svg);
+        background-image: url(./../img/text-back-mob.svg);
         padding-top: 40px;
         bottom: -58px;
         max-width: 350px;
@@ -1443,7 +1443,7 @@ $grey: #b9b9b9;
         background-color: #e8e8e8;
         background-position: top;
         background-size: 100%;
-        background-image: url(.../../img/products-back.svg);
+        background-image: url(../img/products-back.svg);
         clip-path: polygon(0 0, 100% 0, 100% 73%, 0 100%);
         overflow: hidden;
         box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
@@ -1520,7 +1520,7 @@ $grey: #b9b9b9;
     padding-bottom: 90px;
 
     &::before {
-      content: url(.../../img/xxxx-mob.svg);
+      content: url(../img/xxxx-mob.svg);
       top: -9px;
       left: 35px;
     }
@@ -1626,7 +1626,7 @@ $grey: #b9b9b9;
             bottom: 0;
             height: 2px;
             width: 100%;
-            background-image: url(.../../img/under-line.svg);
+            background-image: url(../img/under-line.svg);
             background-repeat: no-repeat;
           }
         }
@@ -1698,7 +1698,7 @@ $grey: #b9b9b9;
 
       &::before {
         position: absolute;
-        content: url(.../../img/separator-mob.svg);
+        content: url(../img/separator-mob.svg);
         top: -10px;
         left: 50%;
         transform: translate(-50%, 0);
@@ -1788,7 +1788,7 @@ $grey: #b9b9b9;
         grid-column: inherit;
 
         &::before {
-          content: url(.../../img/*.svg);
+          content: url(../img/*.svg);
           width: 10px;
           height: 10px;
           position: absolute;
@@ -1820,7 +1820,7 @@ $grey: #b9b9b9;
 
     h2 {
       &::after {
-        content: url(.../../img/light-mob.svg);
+        content: url(../img/light-mob.svg);
         bottom: -20px;
         left: 34px;
         width: 232px;
@@ -1943,7 +1943,7 @@ $grey: #b9b9b9;
 
           .category {
             span {
-              content: url(.../../img/article.svg);
+              content: url(../img/article.svg);
               width: 12px;
               height: 10px;
               margin-right: 5px;
@@ -2038,7 +2038,7 @@ $grey: #b9b9b9;
 
       &::before {
         position: absolute;
-        content: url(.../../img/separator-mob.svg);
+        content: url(../img/separator-mob.svg);
         top: -10px;
         left: 50%;
         transform: translate(-50%, 0);
