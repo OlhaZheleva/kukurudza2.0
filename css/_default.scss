@@ -113,6 +113,17 @@ body {
 }
 
 @font-face {
+  font-family: "Commissioner";
+  src: url("../fonts/Commissioner-Italic.otf");
+  src: local("Commissioner Italic"), local("../fonts/Commissioner-Italic"),
+    url("../fonts/Commissioner-Italic.woff2") format("woff2"),
+    url("../fonts/Commissioner-Italic.woff") format("woff"),
+    url("../fonts/Commissioner-Italic.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
   font-family: "Ermilov-Bold";
   src: url("../fonts/ermilov-bold.eot");
   /* IE 9 Compatibility Mode */
@@ -192,7 +203,7 @@ h6 {
   font-weight: 700;
 }
 h1 {
-  font-size: 142.424px;
+  font-size: 142px;
   line-height: normal;
   text-transform: uppercase;
 }
@@ -213,7 +224,9 @@ section {
   position: relative;
 }
 
-.flex {
+/* mixin */
+
+@mixin flexible() {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -286,11 +299,9 @@ section {
 }
 
 .button-read {
+  @include flexible();
   height: 36px;
   width: fit-content;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   gap: 10px;
   border-radius: 95.17px;
   border: 1px solid #1a1a1a;
@@ -486,17 +497,52 @@ section {
 
       color: $black;
       display: inline-block;
+      position: relative;
+      transition: all 0.3s;
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: -20px;
+        height: 2px;
+        background-color: $orange;
+        left: 50%;
+        right: 50%;
+        transition: all 0.5s ease;
+      }
 
       &:hover {
         transform: scale(1.1);
         color: $orange;
-        text-shadow: 0 0 1px $orange;
+        text-shadow: 0 0 0.5px $orange;
+        transition: all 0.3s;
+
+        &::after {
+          left: 0;
+          right: 0;
+          transition: all 0.5s ease;
+        }
+      }
+    }
+    .current {
+      
+      .nav-link {
+        transform: scale(1.1);
+        color: $orange;
+        text-shadow: 0 0 0.5px $orange;
+        transition: all 0.3s;
+
+        &::after {
+          left: 0;
+          right: 0;
+          transition: all 0.5s ease;
+        }
       }
     }
   }
 
   .header-menu {
-    display: flex;
+    display: none;
     gap: 3px;
     align-items: end;
     background-color: $white;
@@ -888,6 +934,7 @@ section {
 
   &::before {
     background-image: url(../img/prev.svg);
+    background-position: 17px;
   }
 
   &:hover {
@@ -905,6 +952,7 @@ section {
 
   &::before {
     background-image: url(../img/next.svg);
+    background-position: 22px;
   }
 
   &:hover {
@@ -963,6 +1011,7 @@ section {
       line-height: normal;
       text-transform: none;
       margin-top: 20px;
+      padding-bottom: 5px;
     }
   }
   .social {
@@ -1087,6 +1136,10 @@ section {
     .nav {
       display: none;
     }
+
+    .header-menu {
+      display: flex;
+    }
   }
 
   .back-white {
@@ -1096,14 +1149,14 @@ section {
     border-radius: none;
     margin: 0 -2px;
 
-    .container {
-      background-color: #fefefe;
-      border-radius: 25px 25px 0 0;
-    }
-
     .header-menu {
       background-color: #fefefe;
       border-radius: 25px;
+    }
+
+    .container {
+      background-color: #fefefe;
+      border-radius: 25px 25px 0 0;
     }
   }
 
@@ -1244,7 +1297,7 @@ section {
             }
 
             &::before {
-              content: '';
+              content: "";
               background-image: url(../img/polygon.svg);
               background-size: 100%;
               left: calc(100% - 20px);
@@ -1356,7 +1409,7 @@ section {
       background: #f7f7f7;
     }
   }
-  /* slider slick */
+  /* ------- slider slick ----------- */
 
   .slick-slider {
     width: calc(100vw - 35px);
@@ -1368,21 +1421,17 @@ section {
     background-size: 30px;
   }
 
-  /* Лента слайдов */
   .slick-track {
     display: flex;
     gap: 10px;
   }
 
-  /* Стрелка */
   .slick-arrow {
     height: 50px;
     width: 50px;
     cursor: pointer;
     bottom: -25px;
   }
-
-  /* Стрелка влево */
 
   .slick-arrow.slick-prev {
     right: 90px;
@@ -1480,12 +1529,74 @@ section {
       a {
         font-size: 12px;
         line-height: 14px; /* 116.667% */
+
+        &:hover {
+          font-weight: 500;
+        }
+      }
+    }
+  }
+
+  /* footer black for all pages exept home page */
+
+  .black {
+    background-color: $black;
+    .container {
+      .content {
+        background-color: $black;
+        color: $white;
+
+        .social {
+          img {
+            filter: brightness(0) saturate(100%) invert(99%) sepia(3%)
+              saturate(13%) hue-rotate(320deg) brightness(114%) contrast(94%);
+
+            &:hover {
+              filter: brightness(0) saturate(100%) invert(40%) sepia(62%)
+                saturate(1650%) hue-rotate(1deg) brightness(105%) contrast(105%);
+            }
+          }
+        }
+
+        .logo {
+          color: $white;
+        }
+        .nav {
+          a {
+            color: $white;
+          }
+        }
+
+        .right {
+          gap: 10px;
+          margin-top: 50px;
+
+          a {
+            font-size: 12px;
+            line-height: 14px; /* 116.667% */
+
+            &:hover {
+              font-weight: 500;
+              color: $white;
+            }
+          }
+        }
       }
     }
   }
 }
 /* Portrait tablets and small desktops */
-@media (min-width: 769px) {
+@media (min-width: 769px) and (max-width: 991px) {
+  h1 {
+    font-size: 10vw;
+  }
+  h2 {
+    font-size: 5vw;
+  }
+  .container {
+    padding: 0 50px;
+  }
+
   .header {
     .open-menu {
       display: none;
@@ -1494,12 +1605,42 @@ section {
       display: none;
     }
   }
+  .footer {
+    .content {
+      grid-template-columns: auto auto;
+      gap: 50px;
+    }
+  }
+  .values {
+    .container {
+      grid-template-columns: 1fr;
+    }
+  }
 }
 
 /* Landscape tablets and medium desktops */
 @media (min-width: 992px) and (max-width: 1199px) {
+  h1 {
+    font-size: 10vw;
+  }
+
+  h2 {
+    font-size: 5vw;
+  }
+
+  .container {
+    padding: 0 50px;
+  }
+
   .nav {
     gap: 20px;
+  }
+
+  .footer {
+    .content {
+      grid-template-columns: auto auto;
+      gap: 50px;
+    }
   }
 }
 

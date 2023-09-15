@@ -148,7 +148,7 @@ $grey: #b9b9b9;
     }
 
     h4 {
-      font-family: 'Commissioner';
+      font-family: "Commissioner";
       font-size: 20px;
       font-weight: 600;
       line-height: 30px; /* 150% */
@@ -198,7 +198,7 @@ $grey: #b9b9b9;
       background-repeat: no-repeat;
       position: absolute;
       left: 50%;
-      bottom: -70px;
+      bottom: -40px;
       transform: translate(-50%, 0);
     }
   }
@@ -248,6 +248,8 @@ $grey: #b9b9b9;
     overflow: hidden;
 
     .image {
+      display: none;
+      /* не актуальний в новому макеті */
       position: absolute;
       width: 42vw;
       height: 30vw;
@@ -267,29 +269,28 @@ $grey: #b9b9b9;
     }
 
     .left {
-      max-width: 450px;
-      width: 32vw;
+      max-width: 382px;
+      width: 27vw;
       min-width: 247px;
       position: absolute;
-      bottom: -157px;
+      bottom: -100px;
       left: 50%;
       transform: translate(0%, 0%);
-      z-index: 3;
+      z-index: -1;
       max-block-size: inherit;
     }
 
     .right {
       position: absolute;
-      max-width: 400px;
-      width: 29vw;
+      max-width: 343px;
+      width: 24vw;
       min-width: 233px;
-      bottom: -247px;
+      bottom: -100px;
       right: 50%;
-      transform: translate(-27%, 0%);
-      z-index: 2;
+      transform: translate(-58%, 0%);
+      z-index: -1;
       max-block-size: inherit;
     }
-
 
     .courses {
       position: inherit;
@@ -366,11 +367,14 @@ $grey: #b9b9b9;
   .container {
     img {
       width: 43vw;
+      height: 27vw;
+      max-height: 397px;
       max-width: 620px;
       position: absolute;
       right: 100px;
       z-index: -1;
-      bottom: -42px;
+      bottom: 50%;
+      transform: translate(0, 50%);
 
       &:nth-last-of-type(1) {
         display: none;
@@ -518,6 +522,9 @@ $grey: #b9b9b9;
         display: inline-block;
 
         &::after {
+          display: none;
+          /* буде реалізовано в наступній ітерації сайту */
+
           content: "";
           left: 0;
           position: absolute;
@@ -719,7 +726,6 @@ $grey: #b9b9b9;
         line-height: 20px; /* 125% */
         margin-bottom: 30px;
       }
-
     }
   }
 
@@ -855,7 +861,6 @@ $grey: #b9b9b9;
       font-size: 20px;
       line-height: 20px; /* 100% */
     }
-
   }
 }
 
@@ -941,7 +946,6 @@ $grey: #b9b9b9;
       .title {
       }
 
-
       .info {
         color: #b9b9b9;
         font-family: "Commissioner";
@@ -1007,44 +1011,9 @@ $grey: #b9b9b9;
     background: #fff;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 
-    .tags {
-      position: absolute;
-      display: flex;
-      gap: 5px;
-      left: 30px;
-      top: -15px;
-
-      p {
-        color: #fff;
-        font-family: "Kukurudza";
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 109.6%; /* 17.536px */
-        display: inline-flex;
-        height: 29px;
-        justify-content: center;
-        padding: 3px 10px 0 10px;
-        border-radius: 84.55px;
-      }
-
-      .tag {
-      }
-
-      .category {
-        span {
-          content: url(../img/article.svg);
-          width: 12px;
-          height: 10px;
-          margin-right: 5px;
-          margin-top: 6px;
-        }
-      }
-    }
 
     .title {
     }
-
 
     .info {
       color: #b9b9b9;
@@ -1070,6 +1039,41 @@ $grey: #b9b9b9;
         content: url(../img/views.svg);
         margin-right: 5px;
       }
+    }
+  }
+}
+
+.tags {
+  position: absolute;
+  display: flex;
+  gap: 5px;
+  left: 30px;
+  top: -15px;
+
+  p {
+    color: #fff;
+    font-family: "Kukurudza";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 109.6%; /* 17.536px */
+    display: inline-flex;
+    height: 29px;
+    justify-content: center;
+    padding: 3px 10px 0 10px;
+    border-radius: 84.55px;
+  }
+
+  .tag {
+  }
+
+  .category {
+    span {
+      content: url(../img/article.svg);
+      width: 12px;
+      height: 10px;
+      margin-right: 5px;
+      margin-top: 6px;
     }
   }
 }
@@ -1149,10 +1153,7 @@ $grey: #b9b9b9;
   }
 }
 
-
-
-
-/* media for ome page */ 
+/* media for ome page */
 
 /* colors */
 
@@ -1174,11 +1175,77 @@ $grey: #b9b9b9;
 }
 
 /* Landscape tablets and medium desktops */
-@media (min-width: 992px) and (max-width: 1199px) {
-}
+@media (min-width: 769px) and (max-width: 1199px) {
+  .products {
+    .container {
+      .left {
+        transform: translate(-10%, 0%);
+      }
+      .right {
+        transform: translate(-10%, 0%);
+      }
+    }
+  }
+  .values {
+    .container {
+      grid-template-columns: 1fr;
+      p {
+        max-width: 90%;
+      }
+      .video-block {
+        width: 100%;
+        height: 40.82vw;
+        .video {
+          height: 40vw;
+        }
+      }
+    }
 
-/* Portrait tablets and small desktops */
-@media (min-width: 769px) {
+  }
+
+  .club {
+    .container {
+      img {
+        right: 50px;
+        bottom: inherit;
+        top: 0;
+        transform: translate(0, 0%);
+      }
+    }
+  }
+
+  /* main section */
+
+  .main {
+    .content-right {
+      img {
+        z-index: -1;
+      }
+
+      .item {
+        &:nth-of-type(1) {
+          left: -50px;
+          bottom: 105px;
+        }
+
+        &:nth-of-type(2) {
+          left: -50px;
+
+          right: inherit;
+          bottom: -10px;
+        }
+
+        &:nth-of-type(3) {
+          right: -20px;
+          bottom: -20px;
+        }
+      }
+      .number {
+        font-size: 25px;
+      }
+    }
+  }
+
 }
 
 /* Landscape phones and portrait tablets */
@@ -1311,8 +1378,8 @@ $grey: #b9b9b9;
       .icon {
         width: 30px;
         height: 30px;
-        border-radius: 30px;
         min-width: 30px;
+        justify-content: center;
       }
 
       h4 {
@@ -1391,7 +1458,7 @@ $grey: #b9b9b9;
     border-radius: 0 0 30px 30px;
     z-index: 1;
     padding-bottom: -10px;
-    background: linear-gradient(180deg, #FFF 0%, #E8E8E8 100%);
+    background: linear-gradient(180deg, #fff 0%, #e8e8e8 100%);
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 
     .container {
@@ -1408,11 +1475,12 @@ $grey: #b9b9b9;
       }
 
       .left {
-        max-width: 247px;
-        top: 48px;
-        bottom: inherit;
+        max-width: 330px;
+        width: 80vw;
+        top: inherit;
+        bottom: 48px;
         left: inherit;
-        right: -52px;
+        right: -59px;
         transform: none;
         z-index: 1;
       }
@@ -1420,11 +1488,11 @@ $grey: #b9b9b9;
       .right {
         width: 70vw;
         height: auto;
-        max-width: 233px;
+        max-width: 300px;
         top: inherit;
         right: inherit;
-        left: -11px;
-        bottom: -24px;
+        left: -50px;
+        bottom: 0px;
         transform: none;
         z-index: 3;
         max-block-size: none;
@@ -1477,7 +1545,6 @@ $grey: #b9b9b9;
         border-radius: 0 0 30px 30px;
         width: 100%;
         padding: 0 35px 90px 35px;
-
 
         ul {
           list-style: none;
@@ -1535,6 +1602,8 @@ $grey: #b9b9b9;
         margin-top: 30px;
         margin-left: auto;
         margin-right: auto;
+        transform: none;
+        height: auto;
 
         &:nth-last-of-type(2) {
           display: none;
@@ -2070,5 +2139,4 @@ $grey: #b9b9b9;
 
 /* Iphone 5 */
 @media (max-width: 330px) {
-  
 }

@@ -1,5 +1,8 @@
 ("use strict");
 
+// navigation
+$("[data-menu-underline-from-center] a").addClass("underline-from-center");
+
 // mobile menu
 const iconMenu = document.querySelector(".menu-btn");
 const menuBody = document.querySelector(".menu");
@@ -30,6 +33,14 @@ if (navLinks) {
   });
 }
 
+// When the user scrolls the page, execute myFunction
+$(window).scroll(function () {
+  var ratio =
+    $(document).scrollTop() /
+    (($(document).height() - $(window).height()) / 100);
+  $("#myBar").width(ratio + "%");
+});
+
 // video scale effect
 const videos = document.querySelectorAll(".video");
 
@@ -41,7 +52,6 @@ videos.forEach((video) => {
 
 // sliders
 $(document).ready(function () {
-  
   // events
   $(".events-slider").slick({
     slidesToScroll: 1,
@@ -79,7 +89,7 @@ $(document).ready(function () {
     autoplaySpeed: 0,
     speed: 7000,
     pauseOnHover: false,
-    cssEase: 'linear', 
+    cssEase: "linear",
     arrows: false,
   });
 
@@ -94,8 +104,8 @@ $(document).ready(function () {
     responsive: [
       {
         breakpoint: 768,
-        settings: "unslick"
-      }
+        settings: "unslick",
+      },
     ],
   });
 
@@ -108,6 +118,41 @@ $(document).ready(function () {
     infinite: true,
   });
 
+  // courses
+  $(".courses-items").slick({
+    slidesToScroll: 1,
+    variableWidth: true,
+    autoplay: false,
+    infinite: true,
+    autoplaySpeed: 2000,
+  });
+
+  // courses
+  $(".video-slider").slick({
+    slidesToScroll: 1,
+    variableWidth: true,
+    autoplay: false,
+    infinite: true,
+    autoplaySpeed: 2000,
+    responsive: [
+      {
+        breakpoint: 769,
+        settings: { 
+        }
+      },
+    ],
+  });
+
+    // courses
+    $(".speakers-slider").slick({
+      slidesToScroll: 1,
+      variableWidth: true,
+      autoplay: false,
+      infinite: true,
+      autoplaySpeed: 2000,
+    });
+
+    
 });
 
 // animation
@@ -128,12 +173,10 @@ animationItems.forEach((item) => {
   observer.observe(item);
 });
 
-
 // filter bar
 
-const selectNames = document.querySelectorAll('.select-name');
-const selectBlocks = document.querySelectorAll('.select-block');
-
+const selectNames = document.querySelectorAll(".select-name");
+const selectBlocks = document.querySelectorAll(".select-block");
 
 for (i = 0; i < selectNames.length; i++) {
   selectNames[i].addEventListener("click", toggleItem, false);
@@ -149,12 +192,31 @@ function toggleItem() {
   }
 }
 
-// search form 
+// // search form
 
-const searchForm = document.querySelector('.search');
-const searchBtn = document.querySelector('.search-button');
+// const searchForm = document.querySelector('.search');
+// const searchBtn = document.querySelector('.search-button');
 
+// searchBtn.addEventListener("click", function () {
+//   searchForm.classList.toggle("open-search");
+// });
 
-searchBtn.addEventListener("click", function () {
-  searchForm.classList.toggle("open-search");
-});
+// faq section
+
+const questions = document.querySelectorAll(".question");
+const faqItems = document.querySelectorAll(".faq-item");
+
+for (i = 0; i < questions.length; i++) {
+  questions[i].addEventListener("click", toggleItem, false);
+}
+
+function toggleItem() {
+  let itemClass = this.parentNode.className;
+  for (i = 0; i < faqItems.length; i++) {
+    faqItems[i].className = "faq-item close";
+  }
+  if (itemClass == "faq-item close") {
+    this.parentNode.className = "faq-item open";
+  }
+}
+
