@@ -5129,6 +5129,9 @@ section {
 .about .item:nth-of-type(6) img {
   margin: auto 0 -2px auto;
 }
+.about .item:nth-of-type(4) img {
+  border-radius: 10px;
+}
 .about .item img {
   margin: auto 0 auto auto;
 }
@@ -5919,7 +5922,7 @@ section {
   .about .item:nth-of-type(7) img {
     max-width: 151px;
   }
-  .about .item:nth-of-type(6) img {
+  .about .item:nth-of-type(8) img {
     margin: auto 0 -2px auto;
     max-width: 144px;
   }
@@ -5928,8 +5931,8 @@ section {
     position: absolute;
     left: 50%;
     top: inherit;
-    bottom: 50%;
-    transform: translate(-50%, calc(0% - 30px));
+    bottom: calc(50% + 30px);
+    transform: translate(-50%, 0);
   }
   .about .content {
     padding: 133px 15px 30px 20px;
@@ -5974,6 +5977,7 @@ section {
     font-size: 20px;
     line-height: 20px; /* 100% */
     margin-bottom: 30px;
+    max-width: 80%;
   }
   .video-reviews .reviews {
     grid-row: inherit;
@@ -6036,6 +6040,7 @@ section {
     padding: 65px 14px 50px 30px;
     min-width: 290px;
     width: calc(100vw - 70px);
+    max-width: 500px;
     margin-top: 46px;
   }
   .speakers .items .speaker .text {
