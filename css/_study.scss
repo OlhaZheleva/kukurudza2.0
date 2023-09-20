@@ -38,6 +38,17 @@ $light-purple: #c7b4ff;
       }
     }
   }
+  .left {
+    .button {
+      background-color: $purple;
+
+      &:hover {
+        background-color: $white;
+        color: $purple;
+        border: solid 1px $purple;
+      }
+    }
+  }
 }
 
 /* main section */
@@ -173,7 +184,7 @@ $light-purple: #c7b4ff;
 }
 
 /* video  section */
-.video-block {
+.video-section {
   padding: 130px 0 100px 0;
   border-radius: 30px;
   background: #1a1a1a;
@@ -183,7 +194,7 @@ $light-purple: #c7b4ff;
   &::after,
   &::before {
     position: absolute;
-    content: url(../img/xxxx-study-desck.svg);
+    content: url(./../img/xxxx-study-desck.svg);
     z-index: 10;
   }
   &::after {
@@ -217,7 +228,7 @@ $light-purple: #c7b4ff;
 
     &::after {
       position: absolute;
-      content: url(../img/video-text-back-top.svg);
+      content: url(./../img/video-text-back-top.svg);
       width: 100%;
       top: 0;
       left: 0;
@@ -225,7 +236,7 @@ $light-purple: #c7b4ff;
 
     &::before {
       position: absolute;
-      content: url(../img/video-text-back-bottom.svg);
+      content: url(./../img/video-text-back-bottom.svg);
       width: 100%;
       bottom: 0;
       left: 0;
@@ -311,6 +322,8 @@ $light-purple: #c7b4ff;
 
       img {
         min-width: 100%;
+        width: 100%;
+        height: 100%;
         min-height: 100%;
       }
     }
@@ -370,7 +383,7 @@ $light-purple: #c7b4ff;
 .about {
   padding: 100px 0;
   background-color: #e8e8e8;
-  background-image: url(../img/about-back.svg);
+  background-image: url(./../img/about-back.svg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -572,7 +585,7 @@ $light-purple: #c7b4ff;
     border: 1px solid #e8e8e8;
     background: #fff;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    background-image: url(../img/become-mentor-back.svg);
+    background-image: url(./../img/become-mentor-back.svg);
     background-size: cover;
     background-position: center;
     padding: 50px 70px;
@@ -617,7 +630,7 @@ $light-purple: #c7b4ff;
 .ticket {
   padding: 200px 0 100px 0;
   margin-top: -100px;
-  background-image: url(../img/ticket-back.svg);
+  background-image: url(./../img/ticket-back.svg);
   background-size: contain;
   border-radius: 30px;
   background-color: #1a1a1a;
@@ -637,7 +650,7 @@ $light-purple: #c7b4ff;
 
     &::before {
       content: " ";
-      background-image: url(../img/flag.svg);
+      background-image: url(./../img/flag.svg);
       background-repeat: no-repeat;
       background-size: cover;
       position: absolute;
@@ -676,7 +689,7 @@ $light-purple: #c7b4ff;
 
     &::before {
       position: absolute;
-      content: url(../img/separator-ticket.svg);
+      content: url(./../img/separator-ticket.svg);
       left: -10px;
       top: 50%;
       transform: translate(0, -50%);
@@ -710,7 +723,7 @@ $light-purple: #c7b4ff;
     &::after,
     &::before {
       position: absolute;
-      content: url(../img/xxx-reviews-desck.svg);
+      content: url(./../img/xxx-reviews-desck.svg);
       z-index: 10;
       left: 70px;
     }
@@ -747,7 +760,7 @@ $light-purple: #c7b4ff;
     position: relative;
 
     &::before {
-      content: url(../img/phone.svg);
+      content: url(./../img/phone.svg);
       position: absolute;
       left: -126px;
       bottom: 0;
@@ -781,7 +794,7 @@ $light-purple: #c7b4ff;
 
       span {
         position: absolute;
-        background: url(../img/muted.png) center no-repeat,
+        background: url(./../img/muted.png) center no-repeat,
           rgba(228, 225, 225, 0.6);
         background-size: 20px;
 
@@ -794,7 +807,7 @@ $light-purple: #c7b4ff;
         cursor: pointer;
       }
       .unmute {
-        background: url(../img/unmute.png) center no-repeat,
+        background: url(./../img/unmute.png) center no-repeat,
           rgba(228, 225, 225, 0.6);
         background-size: 20px;
       }
@@ -838,7 +851,7 @@ $light-purple: #c7b4ff;
         position: absolute;
         width: 50px;
         height: 50px;
-        background: url(../img/insta-purple.svg) no-repeat center #fff;
+        background: url(./../img/insta-purple.svg) no-repeat center #fff;
         border-radius: 50%;
         overflow: hidden;
         top: -25px;
@@ -894,7 +907,7 @@ $light-purple: #c7b4ff;
         border-radius: 50%;
         top: 60px;
         right: 0;
-        background-image: url(../img/faq-arrow.svg);
+        background-image: url(./../img/faq-arrow.svg);
         background-position: center;
         background-size: 21px;
         background-repeat: no-repeat;
@@ -969,6 +982,15 @@ $light-purple: #c7b4ff;
 }
 
 @media (max-width: 1040px) {
+
+  /* speaker section */
+  .speakers {
+    .become-mentor {
+      padding: 30px 40px;
+      gap: 0 10px;
+      grid-template-columns: auto auto;
+    }
+  }
 }
 
 /* Landscape tablets and medium desktops */
@@ -1011,19 +1033,20 @@ $light-purple: #c7b4ff;
           z-index: 1;
 
           &:nth-of-type(1) {
-            right: -30px;
-            left: inherit;
-            bottom: 211px;
+            right: inherit;
+            left: -40px;
+            bottom: 200px;
           }
 
           &:nth-of-type(2) {
-            right: 0px;
-            bottom: 30px;
+            right: inherit;
+            left: -40px;
+            bottom: 20px;
           }
-
           &:nth-of-type(3) {
-            left: -46px;
-            bottom: 211px;
+            left: -40px;
+            right: inherit;
+            bottom: 110px;
           }
         }
         .number {
@@ -1205,7 +1228,7 @@ $light-purple: #c7b4ff;
 
     &::after,
     &::before {
-      content: url(../img/xxxx-study-mob.svg);
+      content: url(./../img/xxxx-study-mob.svg);
     }
     &::after {
       display: none;
@@ -1317,9 +1340,8 @@ $light-purple: #c7b4ff;
   /* about training section */
   .about {
     padding: 90px 0;
-
     background-size: cover;
-    background-image: url(../img/about-back-mob.svg);
+    background-image: url(./../img/about-back-mob.svg);
 
     .about-items {
       grid-template-columns: 100%;
@@ -1335,11 +1357,45 @@ $light-purple: #c7b4ff;
       &:nth-of-type(1) {
         img {
           margin: auto auto;
+          max-width: 143px;
+        }
+      }
+      &:nth-of-type(2) {
+        img {
+          max-width: 173px;
+        }
+      }
+      &:nth-of-type(3) {
+        img {
+          max-width: 154px;
+        }
+      }
+      &:nth-of-type(4) {
+        img {
+          max-width: 163px;
+          transform: translate(-50%, calc(0% - 30px)) rotate(-10deg);
+        }
+      }
+      &:nth-of-type(5) {
+        img {
+          max-width: 153px;
         }
       }
       &:nth-of-type(6) {
         img {
+          max-width: 184px;
+        }
+      }
+      &:nth-of-type(7) {
+        img {
+          max-width: 151px;
+        }
+      }
+
+      &:nth-of-type(6) {
+        img {
           margin: auto 0 -2px auto;
+          max-width: 144px;
         }
       }
 
@@ -1347,8 +1403,9 @@ $light-purple: #c7b4ff;
         margin: auto;
         position: absolute;
         left: 50%;
-        top: -50%;
-        transform: translate(-50%, 25%);
+        top: inherit;
+        bottom: 50%;
+        transform: translate(-50%, calc(0% - 30px));
       }
     }
     .content {
@@ -1382,7 +1439,7 @@ $light-purple: #c7b4ff;
 
       &::after,
       &::before {
-        content: url(../img/xxx-reviews-mob.svg);
+        content: url(./../img/xxx-reviews-mob.svg);
         left: 20px;
       }
       &::after {
@@ -1411,7 +1468,7 @@ $light-purple: #c7b4ff;
       justify-content: center;
 
       &::before {
-        content: url(../img/phone-mob.svg);
+        content: url(./../img/phone-mob.svg);
         left: inherit;
         right: -14px;
         bottom: inherit;
@@ -1479,7 +1536,7 @@ $light-purple: #c7b4ff;
         padding: 65px 14px 50px 30px;
         min-width: 290px;
         width: calc(100vw - 70px);
-        margin-top:46px;
+        margin-top: 46px;
 
         .text {
           position: absolute;
@@ -1622,7 +1679,7 @@ $light-purple: #c7b4ff;
       &::before {
         position: absolute;
         content: "";
-        background-image: url(../img/separator-ticket.svg);
+        background-image: url(./../img/separator-ticket.svg);
         left: -10px;
         top: 50%;
         transform: translate(0, -50%);

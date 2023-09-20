@@ -146,7 +146,7 @@ $grey: #b9b9b9;
     border-left: solid 1px #707070;
 
     &::before {
-      content: url(../img/views.svg);
+      content: url(./../img/views.svg);
       margin-right: 5px;
     }
   }
@@ -165,13 +165,13 @@ $grey: #b9b9b9;
     background-repeat: no-repeat;
   }
   .twitter {
-    background-image: url(../img/share-twitter.png);
+    background-image: url(./../img/share-twitter.png);
   }
   .facebook {
-    background-image: url(../img/share-facebook.png);
+    background-image: url(./../img/share-facebook.png);
   }
   .telegram {
-    background-image: url(../img/share-telegram.png);
+    background-image: url(./../img/share-telegram.png);
   }
 }
 
@@ -238,7 +238,7 @@ $grey: #b9b9b9;
   background: #fff;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   margin-bottom: 60px;
-  background-image: url(../img/become-author-back.svg);
+  background-image: url(./../img/become-author-back.svg);
   background-size: cover;
   background-repeat: no-repeat;
 
@@ -270,7 +270,7 @@ $grey: #b9b9b9;
 .promo-course {
   background-color: $orange;
   border-radius: 30px;
-  background-image: url(../img/promo-back.svg);
+  background-image: url(./../img/promo-back.svg);
   background-size: cover;
   padding: 100px 60px 60px 60px;
   position: relative;
@@ -302,7 +302,7 @@ $grey: #b9b9b9;
     max-width: 330px;
   }
   &::after {
-    content: url(../img/promo-after.svg);
+    content: url(./../img/promo-after.svg);
     position: absolute;
     left: -4px;
     top: 28px;
@@ -348,7 +348,7 @@ $grey: #b9b9b9;
     &::before {
       content: "";
       display: inline-block;
-      background-image: url(../img/message.svg);
+      background-image: url(./../img/message.svg);
       background-size: contain;
       background-repeat: no-repeat;
       margin-right: 6px;
@@ -371,7 +371,7 @@ $grey: #b9b9b9;
 /*------share block -------*/
 .share-block {
   position: relative;
-  background-image: url(../img/become-author-back.svg);
+  background-image: url(./../img/become-author-back.svg);
   background-size: cover;
   background-repeat: no-repeat;
 
@@ -472,7 +472,7 @@ $grey: #b9b9b9;
       &::before {
         content: "";
         display: inline-block;
-        background-image: url(../img/check.svg);
+        background-image: url(./../img/check.svg);
         background-size: contain;
         background-repeat: no-repeat;
         margin-right: 6px;
@@ -539,7 +539,7 @@ $grey: #b9b9b9;
       z-index: 2;
       display: block;
       background-color: $orange;
-      background-image: url(../img/insta.svg);
+      background-image: url(./../img/insta.svg);
       background-position: center;
       background-repeat: no-repeat;
       background-size: 20px;
@@ -602,7 +602,7 @@ $grey: #b9b9b9;
       &::after {
         position: absolute;
         content: "";
-        background-image: url(../img/blockquote.svg);
+        background-image: url(./../img/blockquote.svg);
         background-size: contain;
         background-repeat: no-repeat;
         bottom: -2px;
@@ -616,7 +616,7 @@ $grey: #b9b9b9;
       &::before {
         position: absolute;
         content: "";
-        background-image: url(../img/blockquote.svg);
+        background-image: url(./../img/blockquote.svg);
         background-size: contain;
         top: 0;
         left: 0;
@@ -642,7 +642,7 @@ $grey: #b9b9b9;
 
     &::before {
       position: absolute;
-      content: url(../img/separator-from-author.svg);
+      content: url(./../img/separator-from-author.svg);
       top: -11px;
       left: 50%;
       transform: translate(-50%, 0%);

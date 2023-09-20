@@ -259,7 +259,7 @@ section {
 
     &:nth-child(2) {
       display: none;
-      background-image: url(../img/finger.svg);
+      background-image: url(./../img/finger.svg);
       width: 23px;
       height: 28px;
       margin-left: 10px;
@@ -316,7 +316,7 @@ section {
   transition: all 0.3s ease;
 
   span {
-    background-image: url(../img/read-more.svg);
+    background-image: url(./../img/read-more.svg);
     background-size: contain;
     width: 15px;
     height: 11px;
@@ -760,7 +760,7 @@ section {
 
       option {
         &::after {
-          content: url(../img/select-vector.svg);
+          content: url(./../img/select-vector.svg);
           width: 14px;
           height: 8px;
           margin-left: 5px;
@@ -783,7 +783,7 @@ section {
 
   &::after {
     content: "";
-    background-image: url(../img/search.svg);
+    background-image: url(./../img/search.svg);
     background-size: 12px;
     background-repeat: no-repeat;
     background-position: right;
@@ -933,7 +933,7 @@ section {
   right: 0;
 
   &::before {
-    background-image: url(../img/prev.svg);
+    background-image: url(./../img/prev.svg);
     background-position: 17px;
   }
 
@@ -951,7 +951,7 @@ section {
   right: inherit;
 
   &::before {
-    background-image: url(../img/next.svg);
+    background-image: url(./../img/next.svg);
     background-position: 22px;
   }
 
@@ -1290,7 +1290,7 @@ section {
 
           .select-name {
             &::after {
-              content: url(../img/select-vector.svg);
+              content: url(./../img/select-vector.svg);
               margin-left: 5px;
               position: absolute;
               transform: rotate(180deg);
@@ -1298,7 +1298,7 @@ section {
 
             &::before {
               content: "";
-              background-image: url(../img/polygon.svg);
+              background-image: url(./../img/polygon.svg);
               background-size: 100%;
               left: calc(100% - 20px);
               bottom: calc(-100% - 6px);
@@ -1338,7 +1338,7 @@ section {
 
         option {
           &::after {
-            content: url(../img/select-vector.svg);
+            content: url(./../img/select-vector.svg);
             width: 14px;
             height: 8px;
             margin-left: 5px;
@@ -1438,7 +1438,7 @@ section {
     left: inherit;
 
     &::before {
-      background-image: url(../img/prev.svg);
+      background-image: url(./../img/prev.svg);
       background-size: 14px;
     }
   }
@@ -1656,7 +1656,7 @@ section {
     right: 0;
 
     &::before {
-      background-image: url(../img/prev.svg);
+      background-image: url(./../img/prev.svg);
     }
 
     &:hover {
@@ -1673,7 +1673,7 @@ section {
     right: inherit;
 
     &::before {
-      background-image: url(../img/next.svg);
+      background-image: url(./../img/next.svg);
     }
 
     &:hover {

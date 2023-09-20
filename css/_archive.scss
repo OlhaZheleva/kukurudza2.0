@@ -137,7 +137,7 @@ $grey: #b9b9b9;
     cursor: pointer;
 
     &::after {
-      content: url(../img/select-vector.svg);
+      content: url(./../img/select-vector.svg);
       margin-left: 5px;
       position: absolute;
     }
@@ -227,14 +227,14 @@ $grey: #b9b9b9;
   .open {
     .select-name {
       &::after {
-        content: url(../img/select-vector.svg);
+        content: url(./../img/select-vector.svg);
         margin-left: 5px;
         position: absolute;
         transform: rotate(180deg);
       }
 
       &::before {
-        content: url(../img/polygon.svg);
+        content: url(./../img/polygon.svg);
         left: calc(100% - 7px);
         bottom: calc(-100% - 13px);
         position: absolute;
@@ -355,10 +355,10 @@ $grey: #b9b9b9;
   }
 
   .prev {
-    background-image: url(../img/prev.svg);
+    background-image: url(./../img/prev.svg);
   }
   .next {
-    background-image: url(../img/next.svg);
+    background-image: url(./../img/next.svg);
   }
 }
 
@@ -375,7 +375,7 @@ $grey: #b9b9b9;
   .left {
     border-radius: 30px;
     background-color: $black;
-    padding: 50px 20px 96px 60px;
+    padding: 50px 20px 50px 60px;
     color: $white;
 
     h3 {
@@ -387,6 +387,19 @@ $grey: #b9b9b9;
       margin-bottom: 30px;
       max-width: 335px;
     }
+
+    .button {
+      font-family: "Commissioner";
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: 20px; /* 125% */
+      border-radius: 95px;
+      width: 153px;
+      height: 36px;
+      text-transform: none;
+      padding-bottom: 4px;
+    }
   }
 
   .right {
@@ -396,7 +409,7 @@ $grey: #b9b9b9;
 
     &::before {
       position: absolute;
-      content: url(../img/mailing-decor.svg);
+      content: url(./../img/mailing-decor.svg);
       left: -10px;
       top: 50%;
       transform: translate(0, -50%);
@@ -477,7 +490,7 @@ $grey: #b9b9b9;
         line-height: 14px; /* 116.667% */
 
         &::before {
-          content: url(../img/*-agree.svg);
+          content: url(./../img/*-agree.svg);
           position: absolute;
           height: 10px;
           width: 10px;
@@ -707,14 +720,14 @@ $grey: #b9b9b9;
     .open {
       .select-name {
         &::after {
-          content: url(../img/select-vector.svg);
+          content: url(./../img/select-vector.svg);
           margin-left: 5px;
           position: absolute;
           transform: rotate(180deg);
         }
 
         &::before {
-          content: url(../img/polygon.svg);
+          content: url(./../img/polygon.svg);
           left: calc(100% - 7px);
           bottom: calc(-100% - 13px);
           position: absolute;
@@ -856,7 +869,7 @@ $grey: #b9b9b9;
 
         .category {
           span {
-            content: url(../img/article.svg);
+            content: url(./../img/article.svg);
             width: 12px;
             height: 10px;
             margin-right: 5px;
@@ -929,7 +942,7 @@ $grey: #b9b9b9;
       padding: 0;
     }
     .social-subscription {
-      background-image: url(../img/cell.svg);
+      background-image: url(./../img/cell.svg);
       background-repeat: no-repeat;
       background-size: cover;
       border-radius: 20px;
@@ -1000,7 +1013,7 @@ $grey: #b9b9b9;
 
     .left {
       border-radius: 20px;
-      padding: 50px 20px 110px 20px;
+      padding: 50px 20px 50px 20px;
 
       h3 {
         font-size: 20px;
@@ -1016,6 +1029,7 @@ $grey: #b9b9b9;
     .right {
       border-radius: 20px;
       height: 198px;
+      margin-top: -1px;
 
       &::before {
         top: -72%;
@@ -1076,7 +1090,6 @@ $grey: #b9b9b9;
 
           li {
             min-width: 100%;
-
           }
         }
 
@@ -1088,7 +1101,6 @@ $grey: #b9b9b9;
               width: 18px;
               background-repeat: no-repeat;
               bottom: calc(-100% - 10px);
-          
             }
           }
         }
