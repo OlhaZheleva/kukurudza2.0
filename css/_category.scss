@@ -1,8 +1,9 @@
 // style for categoty page 
 
-.promo-block {
 
-    .desck {
+.promo-block  {
+    &.mobile { 
+        display: none;
     }
     .container {
     }
@@ -39,6 +40,20 @@
 
 /* Landscape phones and portrait tablets */
 @media (max-width: 768px) {
+    .promo-block {
+        .container { 
+            padding: 0;
+          }
+    
+        &.desck {
+            display: none;
+        }
+        &.mobile { 
+            display: block;
+        }
+    
+    }
+    
 }
 
 /* Portrait phones and smaller */

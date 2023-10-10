@@ -155,6 +155,7 @@ $grey: #b9b9b9;
 .share {
   display: flex;
   gap: 15px;
+  justify-content: end;
 
   a {
     width: 31px;
@@ -302,7 +303,12 @@ $grey: #b9b9b9;
     max-width: 330px;
   }
   &::after {
-    content: url(./../img/promo-after.svg);
+    content: "";
+    background-image: url(./../img/promo-after.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 550px;
+    height: 304px;
     position: absolute;
     left: -4px;
     top: 28px;
@@ -708,10 +714,11 @@ $grey: #b9b9b9;
     }
   }
 }
+
 /* ---------other article ---------*/
 
 .other-articles {
- padding: 100px 0;
+  padding: 100px 0;
 
   .container {
     h3 {
@@ -733,6 +740,98 @@ $grey: #b9b9b9;
       height: 60px;
       font-size: 20px;
       line-height: 15px; /* 75% */
+    }
+  }
+}
+
+/*------- sidebar -----*/
+
+.sidebar {
+
+  .mailing {
+    position: relative;
+
+    &::after {
+
+      content: "";
+      position: absolute;
+      background-image: url(./../img/mail-box-decor.svg);
+      width: 76px;
+      height: 72px;
+      z-index: 1;
+      bottom: 66px;
+      left: 175px;
+    }
+
+    &.desck {
+    }
+    &.mobile {
+      display: none;
+    }
+
+    border-radius: 30px;
+    border: 1px solid #e8e8e8;
+    background: #fff;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    padding: 50px 53px 60px 50px;
+    display: block;
+    position: relative;
+    overflow: hidden;
+
+    h3 {
+      font-size: 20px;
+      line-height: 20px; /* 100% */
+    }
+    img {
+      position: absolute;
+      width: 167px;
+      bottom: -30px;
+      right: 8px;
+      z-index: 3;
+    }
+
+    .button {
+      margin-top: 30px;
+      width: 153px;
+      height: 36px;
+      font-family: "Commissioner";
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 20px; /* 125% */
+      text-transform: none;
+      padding-bottom: 4px;
+      z-index: 2;
+    }
+  }
+
+  .same-category { 
+    margin-top: 220px;
+    text-align: end;
+
+    h3 { 
+      font-size: 30px;
+      font-weight: 700;
+      line-height: 30px; /* 100% */
+      margin-bottom: 30px;
+      text-align: start;
+    }
+
+    .article { 
+      margin-bottom: 20px;
+      text-align: start;
+
+    }
+
+    .button { 
+      margin-top: 10px;
+      height: 60px;
+      font-size: 20px;
+      line-height: 15px; /* 75% */
+      max-width: fit-content;
+      padding-left: 30px;
+      padding-right: 30px;
+      margin-left: auto;
+
     }
   }
 }
@@ -845,7 +944,6 @@ $grey: #b9b9b9;
   }
 
   /*-----other  courses  -----*/
-
   .other-courses {
     padding: 60px 0 0 0;
     h3 {
@@ -875,11 +973,108 @@ $grey: #b9b9b9;
       }
     }
   }
+
+  /*-----prormo courses  -----*/
+  .promo-course {
+    background-image: none;
+    padding: 70px 20px 156px 20px;
+    margin-bottom: 40px;
+    overflow: hidden;
+
+    img {
+      max-width: 236px;
+      bottom: -43px;
+      left: 38px;
+      z-index: 1;
+    }
+
+    h3 {
+      font-size: 20px;
+      line-height: 18px; /* 90% */
+      letter-spacing: -0.4px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 14px;
+      line-height: 16px; /* 114.286% */
+      max-width: 220px;
+    }
+
+    &::after {
+      content: "";
+      left: -1px;
+      right: inherit;
+      top: 28px;
+      z-index: 1;
+      width: 390px;
+      height: 267px;
+    }
+
+    .button {
+      font-size: 16px;
+      line-height: 10px; /* 62.5% */
+      letter-spacing: -0.32px;
+      margin-top: 20px;
+      height: 50px;
+      z-index: 2;
+      position: inherit;
+      max-width: 340px;
+
+    }
+  }
+
+  .sidebar {
+    display: none;
+    .mailing {
+      &.desck {
+        display: none;
+      }
+    }
+  }
+
+  .article-block { 
+    .article-content { 
+      flex: auto;
+    }
+  }
+
+
+/* ---------other article ---------*/
+
+.other-articles {
+  padding: 90px 0;
+
+  .container {
+
+    .articles {
+      display: block;
+      margin-bottom: 55px;
+    }
+
+    .button {
+      margin-left: 0;
+      max-width: none;
+    }
+  }
+}
+
+
 }
 
 /* Portrait phones and smaller */
 
 @media (max-width: 480px) {
+  .promo-course {
+    &::after { 
+      left: inherit;
+      right: 20px;
+    }
+
+    .button { 
+      max-width: none;
+    }
+  }
 }
 
 /* Iphone 5 */

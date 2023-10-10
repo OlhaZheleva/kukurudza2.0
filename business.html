@@ -1,15 +1,546 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ua">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Бізнес послуги</title>
+    <title>сторінка бізнесу</title>
+    <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
-    Developing
-    <a href="index.html">back to home page</a>
+    <div class="zoom-container">
+        <!--------- header ------------>
+        <header class="header" id="header">
+            <div class="container">
+                <a href="index.html" class="logo">kukurudza</a>
+                <ul class="nav">
+                    <li>
+                        <a href="study.html" class="nav-link">Навчання</a>
+                    </li>
+                    <li class="current">
+                        <a href="business.html" class="nav-link">Для бізнесу</a>
+                    </li>
+                    <li>
+                        <a href="#footer" class="nav-link">Закритий клуб</a>
+                    </li>
+                    <li>
+                        <a href="archive.html" class="nav-link">Блог</a>
+                    </li>
+                </ul>
+                <a href="" class="button button-orange"><span>Зв’язатися</span></a>
+                <div class="header-menu">
+                    <p class="word">Меню</p>
+                    <button class="menu-btn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <div class="menu">
+                        <div class="menu-body">
+                            <ul class="menu-nav nav">
+                                <li>
+                                    <a href="study.html" class="nav-link">Навчання</a>
+                                </li>
+                                <li>
+                                    <a href="business.html" class="nav-link">Для бізнесу</a>
+                                    <!---- sub-menu відображається тільки на сторінках базнес та окремі послуги -->
+                                    <ul class="sub-menu">
+                                        <li>
+                                            <a href="consulting.html" class="nav-link">Консалтинг</a>
+                                        </li>
+                                        <li>
+                                            <a href="strategy.html" class="nav-link">Стратегія</a>
+                                        </li>
+                                        <li>
+                                            <a href="full-management.html" class="nav-link">Повне ведення</a>
+                                        </li>
+                                        <li>
+                                            <a href="branding.html" class="nav-link">Брендинг</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#footer" class="nav-link">Закритий клуб</a>
+                                </li>
+                                <li>
+                                    <a href="archive.html" class="nav-link">Блог</a>
+                                </li>
+                            </ul>
+                            <div class="social">
+                                <a href=""><img src="img/Telegram.svg" alt=""></a>
+                                <a href=""><img src="img/Instagram.svg" alt=""></a>
+                                <a href=""><img src="img/TikTok.svg" alt=""></a>
+                            </div>
+                            <p>Маєш з нашим менеджером розмову<br>щодо навчання чи співпраці?</p>
+                            <a href="" class="button button-orange"><span>Тицяй сюди — все влаштуємо!</span></a>
+                            <div class="right">
+                                <a href="">Договір публічної оферти</a>
+                                <a href="">Політика конфіденційності</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!--------- header-bottom for business page------------>
+        <div class="header-bottom business-page">
+            <div class="container">
+                <ul class="menu-nav nav">
+                    <li>
+                        <a href="consulting.html" class="nav-link">Консалтинг</a>
+                    </li>
+                    <li>
+                        <a href="strategy.html" class="nav-link">Стратегія</a>
+                    </li>
+                    <li>
+                        <a href="full-management.html" class="nav-link">Повне ведення</a>
+                    </li>
+                    <li>
+                        <a href="branding.html" class="nav-link">Брендинг</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!---------- main section / голосний екран ----------->
+        <section class="main business-page" id="bl1">
+            <div class="container">
+                <h1 class="main-title">SMM <span>просування</span><br>by KUKURUDZA!</h1>
+                <p class="sub-title">Ти тут — а отже знаєш, що соцмережі мають виконувати цілі та формувати
+                    адвокатів
+                    твого бренду. Ми теж. Але тільки знати мало, тому <b>ми робимо усе від прожарок та консультацій
+                        до
+                        повноцінного ведення.</b></p>
+                <div class="main-image">
+                    <img class="desck" src="img/business-main-desck.png" alt="">
+                    <img class="mobile" src="img/business-main-modile.png" alt="">
+                </div>
+                <div class="main-buttons">
+                    <a class="button button-orange" href="https://forms.gle/SGtM6TCVmt1SYwBQ6"><span>Заповнити
+                            бриф</span><span></span></a>
+                    <a class="button button-white" href=""><span>Дізнатися більше</span><span></span></a>
+                </div>
+            </div>
+        </section>
+        <!----------------for-business / Що ми робимодля бізнесу--------->
+        <section class="for-business " id="bl2">
+            <div class="container ">
+                <h2>Що ми робимо<br>для бізнесу</h2>
+                <div class="horizontal-section">
+                    <div class="sticky-wrapper">
+                        <div class="items element-wrapper">
+                            <div class="item">
+                                <img class="icon" src="img/for-business-1.svg" alt="">
+                                <h4>Консультуємо</h4>
+                                <p>Якщо не знаєш, з чого почати та куди рухатися — <span>почни з SMM-консалтингу.</span>
+                                    А
+                                    ми —
+                                    розберемо твою сторінку та дамо влучні рекомендації з просування.</p>
+                                <a href="" class="button button-white">Обираю <span></span></a>
+                            </div>
+                            <div class="item">
+                                <img class="icon" src="img/for-business-2.svg" alt="">
+                                <h4>Ведемо соціальні мережі</h4>
+                                <p><span>Креативимо, розробляємо, постимо, втілюємо в життя.</span> Перетворимо твій
+                                    бренд
+                                    на
+                                    lovemark в Instagram, Facebook, Telegram, ТікТок та інших соцмережах.</p>
+                                <a href="" class="button button-white">Обираю <span></span></a>
+                            </div>
+                            <div class="item">
+                                <img class="icon" src="img/for-business-3.svg" alt="">
+                                <h4>Створюємо<br>стратегії</h4>
+                                <p>«У нас була якась тактика і ми її дотримувалися» — не працює. <span>Розробимо
+                                        маршрутну
+                                        карту
+                                        для розвитку бренду,</span> що не дасть загубитись у вирі соцмереж.</p>
+                                <a href="" class="button button-white">Обираю <span></span></a>
+                            </div>
+                            <div class="item">
+                                <img class="icon" src="img/for-business-4.svg" alt="">
+                                <h4>Робимо брендинг</h4>
+                                <p><span>Чітка дизайн-система, впізнаваний стиль,</span> візуальний код бренду, брендбук
+                                    та
+                                    виведемо оформлення контенту на принципово новий рівень.</p>
+                                <a href="" class="button button-white">Обираю <span></span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <img class="image desck" src="img/for-business-image-desck.png" alt="">
+                <img class="image mobile" src="img/for-business-image-mob.png" alt="">
+            </div>
+        </section>
+        <!-------values section /  Наші цінності:----------->
+        <section class="values business-page" id="bl3">
+            <div class="container">
+                <div class="content">
+                    <h2>Наш підхід:</h2>
+                    <div class="faq-items">
+                        <div class="faq-item open">
+                            <div class="question">
+                                <span>(1)</span>
+                                <p>Повністю занурюємося у ваш бізнес.</p>
+                                <div class="icon"></div>
+                            </div>
+                            <div class="answer">
+                                <p>Все, що робиться поверхово — не робиться взагалі. Тому ми вивчаємо нішу та заходимо в
+                                    проєкт підготовленими та обізнаними щодо підводних каменів.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item close">
+                            <div class="question">
+                                <span>(2)</span>
+                                <p>Ставимо перед собою чіткі цілі.</p>
+                                <div class="icon"></div>
+                            </div>
+                            <div class="answer">
+                                <p>Ми працюємо за системою OKR — це допомагає побудувати дерево цілей від стратегічно
+                                    рівня до кожного окремого працівника. </p>
+                            </div>
+                        </div>
+                        <div class="faq-item close">
+                            <div class="question">
+                                <span>(3)</span>
+                                <p>Орієнтовані на результат.</p>
+                                <div class="icon"></div>
+                            </div>
+                            <div class="answer">
+                                <p>Психологи кажуть, що щастя — це процес. Проте ми впевнені, що у бізнесі щастя — це
+                                    результат та гроші. </p>
+                            </div>
+                        </div>
+                        <div class="faq-item close">
+                            <div class="question">
+                                <span>(4)</span>
+                                <p>Поєднуємо креатив, стратегію і детальну аналітику.</p>
+                                <div class="icon"></div>
+                            </div>
+                            <div class="answer">
+                                <p>За спиною кожного сильного креативника стоїть мудрий аналітик. Тому перед тим, як
+                                    створювати маркетинговий меджик, ми занурюємося в аналіз. </p>
+                            </div>
+                        </div>
+                        <div class="faq-item close">
+                            <div class="question">
+                                <span>(5)</span>
+                                <p>Беремо орієнтир не тривалу співпрацю. </p>
+                                <div class="icon"></div>
+                            </div>
+                            <div class="answer">
+                                <p>Клієнти стають нашими друзями, тому ми не втрачаємо інтерес до проєкту після оплати
+                                    та договору. </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="video-block">
+                    <div class="video flex">
+                        <iframe width="102%" height="102%"
+                            src="https://www.youtube.com/embed/yrma-zbqims?autoplay=1&mute=1"
+                            title="Kukurudza Agency —  Showreel" frameborder="0"
+                            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
+                    </div>
+                    <div class="text">
+                        <!-- <p>Занурся у світ кукурудзи<br>за <span>60 секунд!</span></p> -->
+                    </div>
+                </div>
+                <a class="button button-orange" href="https://forms.gle/SGtM6TCVmt1SYwBQ6">ЗАПОВНЮй БРИФ</a>
+            </div>
+        </section>
+        <!-----------skills section ------->
+        <section class="skills" id="bl4">
+            <div class="container">
+                <h2>Як будемо <br>працювати?</h2>
+                <div class="content">
+                    <div class="items " id="scroll-box">
+                        <div class="image " id="image">
+                            <img class="skill-image " src="img/skills-1.png" alt="">
+                        </div>
+                        <div class="skill">
+                            <div class="icon">
+                                <p>(1)</p>
+                            </div>
+                            <div class="">
+                                <h4>Перший дотик</h4>
+                                <ul>
+                                    <li>Заповнюєш бриф (знаємо, що не хочеться, але це дуже важливо!).</li>
+                                    <li>Спілкуєшся з акаунт-менеджером, аби ми краще виконали твій запит.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="image">
+                            <img class=" skill-image " src="img/skills-2.png" alt="">
+                        </div>
+                        <div class="skill">
+                            <div class="icon">
+                                <p>(2)</p>
+                            </div>
+                            <div class="">
+                                <h4>Погоджуємо деталі</h4>
+                                <ul>
+                                    <li>Отримуєш комерційну пропозицію з планом дій.</li>
+                                    <li>Разом погоджуємо всі паперові питання.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="image">
+                            <img class=" skill-image " src="img/skills-3.png" alt="">
+                        </div>
+                        <div class="skill">
+                            <div class="icon">
+                                <p>(3)</p>
+                            </div>
+                            <div class="">
+                                <h4>Здається, почалось!</h4>
+                                <ul>
+                                    <li>Доєднуєшся до чату з командою.</li>
+                                    <li>Ми презентуємо результати роботи та план дій.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="image">
+                            <img class="skill-image " src="img/skills-4.png" alt="">
+                        </div>
+                        <div class="skill">
+                            <div class="icon">
+                                <p>(4)</p>
+                            </div>
+                            <div class="">
+                                <h4>До роботи!</h4>
+                                <ul>
+                                    <li>Втілюємо плани у життя.</li>
+                                    <li>Наприкінці місяця збираємось на мітинг, ми звітуємо та аналізуємо результати.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-------partners section / Тому ми працюємо з:----------->
+        <section class="partners business-page" id="bl5">
+            <div class="container">
+                <h2><span class="mobile">Тому ми </span>
+                    <span class="desck">Ми </span><span> працюємо</span> з:
+                </h2>
+            </div>
+            <div class="partner-slider">
+                <img src="img/partners/Frame 1688.png" alt="">
+                <img src="img/partners/Frame 1689.png" alt="">
+                <img src="img/partners/Frame 1690.png" alt="">
+                <img src="img/partners/Frame 1691.png" alt="">
+                <img src="img/partners/Frame 1692.png" alt="">
+                <img src="img/partners/Frame 1693.png" alt="">
+                <img src="img/partners/Frame 1694.png" alt="">
+                <img src="img/partners/Frame 1695.png" alt="">
+                <img src="img/partners/Frame 1696.png" alt="">
+                <img src="img/partners/Frame 1697.png" alt="">
+                <img src="img/partners/Frame 1698.png" alt="">
+                <img src="img/partners/Frame 1700.png" alt="">
+            </div>
+        </section>
+        <!-------blog section / А це ми пишемо----------->
+        <section class="blog business-page" id="bl5">
+            <div class="container">
+                <h2>Тут може бути твій проєкт</h2>
+                <p class="sub-title">а поки подивиcь, <span>що ми зробили</span> для інших брендів</p>
+                <div class="business_blog-slider blog-slider">
+                    <!---- виводимо тут тільки три статті за макетом -->
+                    <div class="article">
+                        <div class="cover">
+                            <img src="img/article-cover-1.png" alt="">
+                        </div>
+                        <div class="article-about">
+                            <div class="tags">
+                                <p class="tag back-black">#повне ведення</p>
+                            </div>
+                            <h5 class="title">Чат-бот, котрий допомагає вибрати психолога й оформити платну підписку
+                            </h5>
+                            <a class="button-read" href="">Читати повністю <span></span></a>
+                        </div>
+                    </div>
+                    <div class="article">
+                        <div class="cover">
+                            <img src="img/article-cover-2.png" alt="">
+                        </div>
+                        <div class="article-about">
+                            <div class="tags">
+                                <p class="tag back-black">#повне ведення</p>
+                            </div>
+                            <h5 class="title">Чат-бот, котрий допомагає вибрати психолога й оформити платну підписку
+                            </h5>
+                            <a class="button-read" href="">Читати повністю <span></span></a>
+                        </div>
+                    </div>
+                    <div class="article">
+                        <div class="cover">
+                            <img src="img/article-cover-3.png" alt="">
+                        </div>
+                        <div class="article-about">
+                            <div class="tags">
+                                <p class="tag back-black">#повне ведення</p>
+                            </div>
+                            <h5 class="title">Чат-бот, котрий допомагає вибрати психолога й оформити платну підписку
+                            </h5>
+                            <a class="button-read" href="">Читати повністю <span></span></a>
+                        </div>
+                    </div>
+                </div>
+                <a class="button button-orange" href="https://forms.gle/SGtM6TCVmt1SYwBQ6">ЗАПОВНЮй БРИФ</a>
+                <a class="button button-white" href="">БІЛЬШЕ КЕЙСІВ</a>
+            </div>
+        </section>
+        <!-------- faq / питання - відповіді -------------->
+        <section class="faq business-page " id="bl7">
+            <div class="container">
+                <h2>А тут ми вже відповіли<br>на твої питання</h2>
+                <div class="faq-items">
+                    <div class="faq-item open">
+                        <div class="question">
+                            <span>01</span>
+                            <p>Яка вартість послуг? </p>
+                            <div class="icon"></div>
+                        </div>
+                        <div class="answer">
+                            <p>Ми розраховуємо вартість індивідуально під кожен проєкт, бо на це впливає багато
+                                факторів. Наприклад, час співпраці, наша залученість, ніша тощо. Залиште заявку, щоб
+                                дізнатися вартість вашого проєкту. </p>
+                        </div>
+                    </div>
+                    <div class="faq-item close">
+                        <div class="question">
+                            <span>02</span>
+                            <p>Чи працюєте ви по передплаті? </p>
+                            <div class="icon"></div>
+                        </div>
+                        <div class="answer">
+                            <p>Так, ми працюємо за 100% передплатою. </p>
+                        </div>
+                    </div>
+                    <div class="faq-item close">
+                        <div class="question">
+                            <span>03</span>
+                            <p>Чи можете ви допомогти з просуванням власного бренду? </p>
+                            <div class="icon"></div>
+                        </div>
+                        <div class="answer">
+                            <p>Так, ми просуваємо особисті бренди! Заціни наші кейси </p>
+                        </div>
+                    </div>
+                    <div class="faq-item close">
+                        <div class="question">
+                            <span>04</span>
+                            <p>Чи підписуєте ви договори? </p>
+                            <div class="icon"></div>
+                        </div>
+                        <div class="answer">
+                            <p>Так, все по договору. Всі платежі здійснюються офіційно, адже ми топимо за чесну оплату
+                                праці та підтримку держави податками. </p>
+                        </div>
+                    </div>
+                    <div class="faq-item close">
+                        <div class="question">
+                            <span>05</span>
+                            <p>Чи можу я замовити у вас послуги таргетингу? </p>
+                            <div class="icon"></div>
+                        </div>
+                        <div class="answer">
+                            <p>Ні, ми не беремо проєкти тільки на таргетовану рекламу. Ми точно знаємо, що жодна реклама
+                                не спрацює, якщо не працює нічого: стратегія, сервіс, контент тощо. Тому ми беремо на
+                                себе таргет, коли займаємося цілісним просуванням бренду в соцмережах. </p>
+                        </div>
+                    </div>
+                    <div class="faq-item close">
+                        <div class="question">
+                            <span>06</span>
+                            <p>З просуванням в яких соцмережах ви можете допомогти? </p>
+                            <div class="icon"></div>
+                        </div>
+                        <div class="answer">
+                            <p>Ми експерти з просування в Instagram, Facebook, TikTok. Але допоможемо вашому бізнесу з
+                                будь-якими соцмережами — лиш дайте знати. </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!----- brief section  / Заповнити бриф -->
+        <section class="brief " id="bl8">
+            <div class="container">
+                <div class="inner">
+                    <h3><span>Залишились питання?</span> Тоді гайда заповнювати бриф і ми з тобою зв'яжемось, щоб
+                        обговорити їх.</h3>
+                    <p>Це безкоштовно та не зобов'язує купувати послуги.</p>
+                    <a href="https://forms.gle/SGtM6TCVmt1SYwBQ6" class="button button-orange">Заповнити бриф</a>
+                </div>
+            </div>
+        </section>
+        <!--------footer-------------->
+        <footer class="footer black " id="footer">
+            <!---- class black ставимо на футорі саме на сторі-->
+            <div class="container">
+                <div class="content">
+                    <div class="left">
+                        <a href="index.html" class="logo">kukurudza</a>
+                        <ul class="nav mob">
+                            <li>
+                                <a href="study.html" class="nav-link">Навчання</a>
+                            </li>
+                            <li class="current">
+                                <a href="business.html" class="nav-link">Для бізнесу</a>
+                            </li>
+                            <li>
+                                <a href="#footer" class="nav-link">Закритий клуб</a>
+                            </li>
+                            <li>
+                                <a href="archive.html" class="nav-link">Блог</a>
+                            </li>
+                        </ul>
+                        <p>Хочеш погомоніти <br>з нашим менеджером щодо <br>навчання чи співпраці?</p>
+                        <a target="_blank" href="https://t.me/rizun_yuliia" class="button button-orange"><span>Тицяй
+                                сюди — все влаштуємо!</span></a>
+                    </div>
+                    <div class="middle">
+                        <div class="social">
+                            <a href=""><img src="img/Telegram.svg" alt=""></a>
+                            <a href=""><img src="img/Instagram.svg" alt=""></a>
+                            <a href=""><img src="img/TikTok.svg" alt=""></a>
+                        </div>
+                        <ul class="nav desck">
+                            <li>
+                                <a href="study.html" class="nav-link">Навчання</a>
+                            </li>
+                            <li class="current">
+                                <a href="business.html" class="nav-link">Для бізнесу</a>
+                            </li>
+                            <li>
+                                <a href="#footer" class="nav-link">Закритий клуб</a>
+                            </li>
+                            <li>
+                                <a href="archive.html" class="nav-link">Блог</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="right">
+                        <a href="">Особистий кабінет</a>
+                        <a href="">Договір публічної оферти</a>
+                        <a href="">Політика конфіденційності</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="js/jquery-3.7.0.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/business.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/forms.js"></script>
+    <script src="js/video.js"></script>
+    <script src="js/zoom.js"></script>
 </body>
 
 </html>

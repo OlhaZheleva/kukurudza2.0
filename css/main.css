@@ -24,11 +24,6 @@ menu {
   padding: 0;
 }
 
-img {
-  max-inline-size: 100%;
-  max-block-size: 100%;
-}
-
 table {
   border-collapse: collapse;
 }
@@ -69,6 +64,10 @@ body {
   overflow-x: hidden;
   height: 100%;
   scroll-behavior: smooth;
+}
+
+.zoom-container {
+  position: relative;
 }
 
 @font-face {
@@ -911,6 +910,68 @@ section {
   text-decoration-line: underline;
 }
 
+/*   page 404  */
+.main.non-page {
+  background-image: url(./../img/main-back.svg);
+  background-size: cover;
+  position: relative;
+  padding: 60px 0 190px 0;
+  overflow: visible;
+  z-index: 4;
+}
+.main.non-page .container {
+  padding: 0 85px;
+}
+.main.non-page h1 {
+  font-size: 115px;
+  line-height: normal;
+  letter-spacing: -1.725px;
+  text-transform: uppercase;
+  margin-bottom: 188px;
+}
+.main.non-page h1 span {
+  color: #ff6b00;
+}
+.main.non-page .content {
+  text-align: left;
+  padding-left: 565px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  z-index: 3;
+  position: relative;
+}
+.main.non-page .content p {
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 22px; /* 122.222% */
+  display: inline-block;
+  max-width: 360px;
+}
+.main.non-page .button {
+  font-size: 20px;
+  line-height: 15px; /* 75% */
+  text-transform: uppercase;
+  height: 60px;
+  width: 300px;
+}
+.main.non-page .non-page_image {
+  position: absolute;
+  left: -67px;
+  bottom: -70px;
+  max-width: 1088px;
+  width: 76vw;
+}
+.main.non-page .non-page_image img {
+  width: 100%;
+}
+.main.non-page .desck {
+  display: block;
+}
+.main.non-page .mobile {
+  display: none;
+}
+
 /* Iphone 5 */
 /* Portrait phones and smaller */
 /* Landscape phones and portrait tablets */
@@ -1207,6 +1268,7 @@ section {
   }
   .slick-arrow.slick-next::before {
     background-size: 14px;
+    background-position: 19px;
   }
   /* footer */
   .footer {
@@ -1310,6 +1372,54 @@ section {
   .black .container .content .right a:hover {
     font-weight: 500;
     color: #f7f7f7;
+  }
+  /*   page 404  */
+  .main.non-page {
+    background-image: url(./../img/main-back.svg);
+    background-size: cover;
+    position: relative;
+    padding: 60px 0 65px 0;
+    overflow: visible;
+    z-index: 4;
+  }
+  .main.non-page .container {
+    padding: 0 35px;
+  }
+  .main.non-page h1 {
+    font-size: 35px;
+    line-height: 34px; /* 77.143% */
+    letter-spacing: -0.7px;
+    text-transform: uppercase;
+    margin-bottom: 100px;
+  }
+  .main.non-page .content {
+    padding-left: 0px;
+    gap: 100px;
+  }
+  .main.non-page .content p {
+    font-size: 14px;
+    line-height: 16px; /* 114.286% */
+    max-width: 165px;
+  }
+  .main.non-page .button {
+    font-size: 16px;
+    line-height: 10px; /* 62.5% */
+    letter-spacing: -0.32px;
+    height: 50px;
+    width: 100%;
+  }
+  .main.non-page .non-page_image {
+    left: inherit;
+    right: -160px;
+    bottom: -37px;
+    max-width: 530px;
+    width: 134vw;
+  }
+  .main.non-page .desck {
+    display: none;
+  }
+  .main.non-page .mobile {
+    display: block;
   }
 }
 /* Portrait tablets and small desktops */
@@ -1538,11 +1648,16 @@ section {
   max-height: 343px;
   position: relative;
   transition: transform 0.5s;
+  position: relative;
 }
-.values .video-block .video video {
+.values .video-block .video iframe {
   width: 100%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
-.values .video-block .videop-play {
+.values .video-block .video:hover {
   transform: scale(1.1);
   transition: transform 0.5s;
   z-index: 2;
@@ -2077,6 +2192,8 @@ section {
 }
 .partners .partner-slider .slick-track {
   gap: 100px;
+  padding-left: 0;
+  padding-bottom: 0;
 }
 .partners .partner-slider .slick-track img {
   max-width: 243px;
@@ -2559,7 +2676,7 @@ section {
     position: relative;
     margin-bottom: 100px;
   }
-  .values .video-block .videop-play {
+  .values .video-block .video-play {
     transform: scale(1.1);
     transition: transform 3s;
     z-index: 2;
@@ -2957,10 +3074,10 @@ section {
     height: 150px;
   }
   .partners .partner-slider .slick-track {
-    gap: 37px;
+    gap: 0px;
   }
   .partners .partner-slider .slick-track img {
-    max-height: 50px;
+    max-height: 82px;
   }
   /* media  section */
   .medias {
@@ -3504,7 +3621,7 @@ section {
   position: absolute;
   bottom: -1px;
   left: -19px;
-  max-width: 257px;
+  max-width: 240px;
   max-height: 270px;
 }
 .mailing-block .subscription {
@@ -4155,6 +4272,7 @@ section {
 .share {
   display: flex;
   gap: 15px;
+  justify-content: end;
 }
 .share a {
   width: 31px;
@@ -4287,7 +4405,12 @@ section {
   max-width: 330px;
 }
 .promo-course::after {
-  content: url(./../img/promo-after.svg);
+  content: "";
+  background-image: url(./../img/promo-after.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 550px;
+  height: 304px;
   position: absolute;
   left: -4px;
   top: 28px;
@@ -4666,6 +4789,81 @@ section {
   line-height: 15px; /* 75% */
 }
 
+/*------- sidebar -----*/
+.sidebar .mailing {
+  position: relative;
+  border-radius: 30px;
+  border: 1px solid #e8e8e8;
+  background: #fff;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  padding: 50px 53px 60px 50px;
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+.sidebar .mailing::after {
+  content: "";
+  position: absolute;
+  background-image: url(./../img/mail-box-decor.svg);
+  width: 76px;
+  height: 72px;
+  z-index: 1;
+  bottom: 66px;
+  left: 175px;
+}
+.sidebar .mailing.mobile {
+  display: none;
+}
+.sidebar .mailing h3 {
+  font-size: 20px;
+  line-height: 20px; /* 100% */
+}
+.sidebar .mailing img {
+  position: absolute;
+  width: 167px;
+  bottom: -30px;
+  right: 8px;
+  z-index: 3;
+}
+.sidebar .mailing .button {
+  margin-top: 30px;
+  width: 153px;
+  height: 36px;
+  font-family: "Commissioner";
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 20px; /* 125% */
+  text-transform: none;
+  padding-bottom: 4px;
+  z-index: 2;
+}
+.sidebar .same-category {
+  margin-top: 220px;
+  text-align: end;
+}
+.sidebar .same-category h3 {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 30px; /* 100% */
+  margin-bottom: 30px;
+  text-align: start;
+}
+.sidebar .same-category .article {
+  margin-bottom: 20px;
+  text-align: start;
+}
+.sidebar .same-category .button {
+  margin-top: 10px;
+  height: 60px;
+  font-size: 20px;
+  line-height: 15px; /* 75% */
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  padding-left: 30px;
+  padding-right: 30px;
+  margin-left: auto;
+}
+
 /* media */
 /* Large desktops and laptops */
 /* Landscape tablets and medium desktops */
@@ -4770,8 +4968,81 @@ section {
     width: 4.08px;
     height: 3.839px;
   }
+  /*-----prormo courses  -----*/
+  .promo-course {
+    background-image: none;
+    padding: 70px 20px 156px 20px;
+    margin-bottom: 40px;
+    overflow: hidden;
+  }
+  .promo-course img {
+    max-width: 236px;
+    bottom: -43px;
+    left: 38px;
+    z-index: 1;
+  }
+  .promo-course h3 {
+    font-size: 20px;
+    line-height: 18px; /* 90% */
+    letter-spacing: -0.4px;
+    margin-bottom: 10px;
+  }
+  .promo-course p {
+    font-size: 14px;
+    line-height: 16px; /* 114.286% */
+    max-width: 220px;
+  }
+  .promo-course::after {
+    content: "";
+    left: -1px;
+    right: inherit;
+    top: 28px;
+    z-index: 1;
+    width: 390px;
+    height: 267px;
+  }
+  .promo-course .button {
+    font-size: 16px;
+    line-height: 10px; /* 62.5% */
+    letter-spacing: -0.32px;
+    margin-top: 20px;
+    height: 50px;
+    z-index: 2;
+    position: inherit;
+    max-width: 340px;
+  }
+  .sidebar {
+    display: none;
+  }
+  .sidebar .mailing.desck {
+    display: none;
+  }
+  .article-block .article-content {
+    flex: auto;
+  }
+  /* ---------other article ---------*/
+  .other-articles {
+    padding: 90px 0;
+  }
+  .other-articles .container .articles {
+    display: block;
+    margin-bottom: 55px;
+  }
+  .other-articles .container .button {
+    margin-left: 0;
+    max-width: none;
+  }
 }
 /* Portrait phones and smaller */
+@media (max-width: 480px) {
+  .promo-course::after {
+    left: inherit;
+    right: 20px;
+  }
+  .promo-course .button {
+    max-width: none;
+  }
+}
 /* Iphone 5 */
 /* colors */
 /* mixin */
@@ -5516,27 +5787,28 @@ section {
 .faq {
   padding: 100px 0 70px 0;
 }
-.faq .faq-items {
+
+.faq-items {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 0 40px;
 }
-.faq .faq-items .faq-item {
+.faq-items .faq-item {
   border-bottom: solid 2px #ddd;
 }
-.faq .faq-items .question {
+.faq-items .question {
   position: relative;
   cursor: pointer;
   padding: 30px 0;
 }
-.faq .faq-items .question p {
+.faq-items .question p {
   color: #1a1a1a;
   font-size: 16px;
   font-weight: 600;
   line-height: 22px; /* 137.5% */
   max-width: calc(100% - 100px);
 }
-.faq .faq-items .question span {
+.faq-items .question span {
   color: #1a1a1a;
   font-family: "Commissioner";
   font-size: 20px;
@@ -5548,7 +5820,7 @@ section {
   margin-bottom: 15px;
   display: inline-block;
 }
-.faq .faq-items .question .icon {
+.faq-items .question .icon {
   position: absolute;
   width: 40px;
   height: 40px;
@@ -5562,32 +5834,32 @@ section {
   background-repeat: no-repeat;
   transition: transform 0.4s ease;
 }
-.faq .faq-items .answer {
+.faq-items .answer {
   overflow: hidden;
 }
-.faq .faq-items .answer p {
+.faq-items .answer p {
   margin-bottom: 30px;
   max-width: calc(100% - 50px);
 }
-.faq .faq-items .close .answer {
+.faq-items .close .answer {
   height: 0;
   transition: height 1s ease-out;
   transform: scaleY(0);
 }
-.faq .faq-items .open {
+.faq-items .open {
   border: none;
 }
-.faq .faq-items .open .question {
+.faq-items .open .question {
   border-bottom: none;
   height: -moz-fit-content;
   height: fit-content;
 }
-.faq .faq-items .open .question .icon {
+.faq-items .open .question .icon {
   transform: rotate(180deg);
   transition: transform 0.4s ease;
   background-color: #a979ff;
 }
-.faq .faq-items .open .answer {
+.faq-items .open .answer {
   height: -moz-fit-content;
   height: fit-content;
   border-bottom: solid 2px #ddd;
@@ -6229,6 +6501,9 @@ section {
 }
 /* Portrait phones and smaller */
 /* Iphone 5 */
+.promo-block.mobile {
+  display: none;
+}
 .promo-block .promo-course {
   max-width: 820px;
 }
@@ -6237,5 +6512,3458 @@ section {
 /* Landscape tablets and medium desktops */
 /* Portrait tablets and small desktops */
 /* Landscape phones and portrait tablets */
+@media (max-width: 768px) {
+  .promo-block .container {
+    padding: 0;
+  }
+  .promo-block.desck {
+    display: none;
+  }
+  .promo-block.mobile {
+    display: block;
+  }
+}
+/* Portrait phones and smaller */
+/* Iphone 5 */
+/* colors */
+/* mixin */
+/* header bottom business page */
+.header-bottom.business-page .container {
+  align-items: start;
+  justify-content: start;
+}
+.header-bottom.business-page .nav {
+  display: flex;
+  gap: 50px;
+}
+.header-bottom.business-page .nav .current .nav-link {
+  font-weight: 600;
+}
+.header-bottom.business-page .nav .nav-link {
+  font-family: "Commissioner";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 20px; /* 125% */
+}
+.header-bottom.business-page .nav .nav-link:hover a {
+  font-weight: 600;
+}
+
+/* sub-menu  */
+.header .menu-body .nav .sub-menu {
+  margin-top: 30px;
+  text-align: right;
+}
+.header .menu-body .nav .sub-menu li .nav-link {
+  text-align: right;
+  color: #1a1a1a;
+  font-family: "Commissioner";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 18px; /* 112.5% */
+  margin-bottom: 20px;
+}
+.header .menu-body .nav .sub-menu li .current a {
+  font-weight: 600;
+}
+
+/* main section */
+.main.business-page {
+  padding-top: 100px;
+  padding-bottom: 200px;
+}
+.main.business-page .container {
+  text-align: left;
+  display: block;
+}
+.main.business-page .main-title {
+  font-size: 120px;
+  letter-spacing: -1.2px;
+  margin-bottom: 30px;
+  margin-left: -20px;
+  margin-right: -20px;
+}
+.main.business-page .sub-title {
+  display: block;
+  text-align: left;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 20px; /* 125% */
+  max-width: 450px;
+  z-index: 2;
+  position: relative;
+}
+.main.business-page .main-image {
+  position: absolute;
+  right: 73px;
+  top: 169px;
+  width: 49vw;
+  max-width: 706px;
+  z-index: 1;
+}
+.main.business-page .main-image img {
+  width: 100%;
+  height: 100%;
+}
+.main.business-page .main-image .desck {
+  display: block;
+}
+.main.business-page .main-image .mobile {
+  display: none;
+}
+.main.business-page .main-buttons {
+  flex-direction: row;
+  gap: 10px;
+  margin-top: 50px;
+  z-index: 2;
+  position: relative;
+}
+.main.business-page .main-buttons .button {
+  height: 60px;
+  font-size: 20px;
+  line-height: 15px; /* 75% */
+  width: 300px;
+}
+
+/* for-business  section */
+.for-business {
+  padding-bottom: 100px;
+  overflow: visible;
+}
+.for-business .container {
+  position: relative;
+}
+.for-business .container .image {
+  position: absolute;
+  left: calc(50% + 50px);
+  transform: translate(-50%, 0);
+  max-width: 560px;
+  bottom: -54px;
+  z-index: 2;
+}
+.for-business .container .image.mobile {
+  display: none;
+}
+.for-business .items {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px 10vw;
+  flex-wrap: wrap;
+  margin-top: 50px;
+  align-items: start;
+}
+.for-business .item {
+  width: 400px;
+  border-radius: 20px;
+  border: 2px solid #e8e8e8;
+  background: #fff;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  padding: 30px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  min-height: 100%;
+  align-self: stretch;
+}
+.for-business .item h4 {
+  font-size: 30px;
+  line-height: 30px; /* 100% */
+  margin-left: 50px;
+}
+.for-business .item .icon {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  max-width: 44px;
+}
+.for-business .item:nth-of-type(2) .icon {
+  top: 34px;
+}
+.for-business .item:nth-of-type(4) .icon {
+  top: 17px;
+}
+.for-business .item p {
+  grid-column: 1/3;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 20px; /* 125% */
+  margin-bottom: 10px;
+}
+.for-business .item p span {
+  color: #ff6b00;
+}
+.for-business .item .button {
+  grid-column: 1/3;
+  border-radius: 95.17px;
+  border: 1px solid #1a1a1a;
+  height: 36px;
+  background-color: transparent;
+  text-align: right;
+  font-family: "Commissioner";
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 20px; /* 125% */
+  text-transform: none;
+  width: 209px;
+  margin-top: 30px;
+  padding-bottom: 5px;
+  margin-top: auto;
+}
+.for-business .item .button:hover {
+  border: none;
+  background-color: #1a1a1a;
+  color: #f7f7f7;
+}
+.for-business .item .button span {
+  background-image: url(./../img/read-more.svg);
+  background-size: contain;
+  width: 15px;
+  height: 11px;
+  margin-bottom: -1px;
+  margin-left: 10px;
+  transition: all 0.3s ease;
+}
+
+/*   values  */
+.values.business-page::after {
+  display: none;
+}
+.values.business-page .faq-items {
+  display: grid;
+  grid-template-columns: 507px;
+  gap: 0;
+}
+.values.business-page .faq-items .faq-item {
+  border-bottom: solid 2px #3f3f3f;
+  padding: 20px 0;
+}
+.values.business-page .faq-items .faq-item:last-of-type {
+  border: none;
+}
+.values.business-page .faq-items .faq-item:last-of-type {
+  border: none;
+}
+.values.business-page .faq-items .question {
+  padding: 0;
+  display: flex;
+  align-items: start;
+  gap: 12px;
+}
+.values.business-page .faq-items .question p {
+  color: #ff6b00;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 30px; /* 150% */
+  display: inline-block;
+  width: calc(100% - 40px);
+}
+.values.business-page .faq-items .question span {
+  color: #ff6b00;
+  font-family: "Kukurudza";
+  font-size: 20px;
+  line-height: 20px; /* 100% */
+  opacity: 1;
+  margin-bottom: 0px;
+  display: inline;
+  margin-top: 3px;
+}
+.values.business-page .faq-items .question .icon {
+  background-color: #f7f7f7;
+  border-radius: 50%;
+  right: 0;
+  top: 0px;
+}
+.values.business-page .faq-items .answer p {
+  color: #fafafa;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 20px; /* 125% */
+  margin-bottom: 20px;
+  margin-top: 10px;
+  max-width: calc(100% - 50px);
+}
+.values.business-page .faq-items .close .answer {
+  height: 0;
+}
+.values.business-page .faq-items .open {
+  border: none;
+}
+.values.business-page .faq-items .open .question {
+  border-bottom: none;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.values.business-page .faq-items .open .question .icon {
+  background-color: #ffdcbc;
+}
+.values.business-page .faq-items .open .answer {
+  height: -moz-fit-content;
+  height: fit-content;
+  border-bottom: solid 2px #3f3f3f;
+}
+.values.business-page .faq-items .open .answer p {
+  font-size: 16px;
+}
+.values.business-page .video-block::before {
+  display: none;
+}
+.values.business-page .video-block .text {
+  width: 84%;
+  max-width: 513px;
+  height: 137px;
+  background-image: url(./../img/video-text-pc.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 300px;
+  right: -60px;
+  bottom: inherit;
+  left: inherit;
+  transform: none;
+}
+.values.business-page .button {
+  display: none;
+}
+
+/* faq section */
+.faq.business-page {
+  padding-top: 0;
+}
+.faq.business-page .faq-items .question .icon {
+  background-color: #ffdcbc;
+}
+.faq.business-page .faq-items .open .question .icon {
+  background-color: #ff6b00;
+}
+
+/* skills section */
+.skills {
+  padding: 100px 0 0 0;
+  position: relative;
+  z-index: 4;
+  overflow: visible;
+}
+.skills h2 {
+  position: relative;
+}
+.skills h2::after {
+  position: absolute;
+  content: url(./../img/skills-title-decor.svg);
+  z-index: 2;
+  margin-left: 20px;
+  margin-top: 20px;
+  width: 262px;
+}
+.skills .content {
+  border-radius: 50px;
+  background-color: #1a1a1a;
+  background-image: url(./../img/skills-back.svg);
+  margin-top: 45px;
+}
+.skills .content .left {
+  height: 100%;
+  position: relative;
+}
+.skills .content .image {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  width: 30vw;
+  height: 100%;
+  padding-bottom: 100px;
+  z-index: 1;
+}
+.skills .content .image.show {
+  z-index: 10;
+}
+.skills .content .image.hidden {
+  z-index: 1;
+}
+.skills .content .image img {
+  top: 0;
+  position: sticky;
+  width: 100%;
+}
+.skills .content .items {
+  padding: 100px 100px 100px 50px;
+  display: grid;
+  grid-template-columns: calc(100% - 30vw);
+  justify-content: end;
+  gap: 50px;
+  position: relative;
+}
+.skills .content .items::before {
+  content: "";
+  width: 2px;
+  background-color: #fff;
+  height: 100%;
+  position: absolute;
+  left: calc(30vw + 130px);
+  z-index: 0;
+  top: 0px;
+}
+.skills .content .skill {
+  display: flex;
+  gap: 30px;
+  color: #f7f7f7;
+  z-index: 3;
+  padding-left: 30px;
+}
+.skills .content .skill:not(:last-of-type) {
+  margin-bottom: 50px;
+}
+.skills .content .skill h4 {
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  color: #ff6b00;
+  margin-bottom: 20px;
+}
+.skills .content .skill li {
+  font-family: "Commissioner";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 25px; /* 125% */
+  position: relative;
+  padding-left: 26px;
+}
+.skills .content .skill li:not(:last-of-type) {
+  margin-bottom: 10px;
+}
+.skills .content .skill li::before {
+  content: url(./../img/li-after.svg);
+  position: absolute;
+  left: 0;
+  padding-top: 2px;
+}
+.skills .content .icon {
+  min-width: 100px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #f7f7f7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.skills .content .icon p {
+  font-family: "Kukurudza";
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 50px; /* 100% */
+  color: #1a1a1a;
+  margin-top: 0;
+}
+.skills .button-black {
+  margin-top: 10px;
+}
+
+/* block section   */
+.blog.business-page {
+  padding-top: 0;
+}
+.blog.business-page .sub-title span {
+  color: #ff6b00;
+}
+.blog.business-page .button-orange {
+  margin-right: 10px;
+}
+
+/* brief section   */
+.brief {
+  padding-bottom: 100px;
+}
+.brief .inner {
+  border-radius: 30px;
+  border: 1px solid #e8e8e8;
+  background: #fff;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  padding: 50px 70px;
+  background-image: url(./../img/brief-back.png);
+  background-size: cover;
+  display: grid;
+  gap: 14px;
+  grid-template-columns: 47vw auto;
+}
+.brief .inner h3 {
+  font-size: 30px;
+  line-height: 30px; /* 100% */
+  max-width: 780px;
+  grid-row: 1/3;
+}
+.brief .inner h3 span {
+  color: #ff6b00;
+}
+.brief .inner p {
+  font-family: "Kukurudza";
+  font-size: 20px;
+  line-height: 20px; /* 100% */
+}
+.brief .button {
+  width: 189px;
+  height: 36px;
+  color: #f7f7f7;
+  font-family: "Commissioner";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 20px; /* 125% */
+  text-transform: none;
+  padding-left: 33px;
+  padding-right: 33px;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding-bottom: 6px;
+}
+.brief .button:hover {
+  background-color: transparent;
+  color: #ff6b00;
+}
+
+/* partners section */
+.partners.business-page {
+  padding-top: 164px;
+  overflow: visible;
+}
+.partners.business-page h2 {
+  display: inline-block;
+  position: relative;
+  z-index: 2;
+}
+.partners.business-page h2 .desck {
+  display: inline;
+  color: #1a1a1a;
+}
+.partners.business-page h2 .mobile {
+  display: none;
+  color: #1a1a1a;
+}
+.partners.business-page h2 span:last-of-type {
+  color: #ff6b00;
+}
+.partners.business-page h2::after {
+  position: absolute;
+  content: "";
+  background-image: url(../img/light.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  bottom: -142px;
+  left: 213px;
+  width: 363px;
+}
+
+/* media */
+/* Large desktops and laptops */
+/* Landscape tablets and medium desktops */
+/* Portrait tablets and small desktops */
+/* Landscape phones and portrait tablets */
+@media (max-width: 768px) {
+  /* header bottom business page */
+  .header-bottom.business-page {
+    display: none;
+  }
+  /* main section */
+  .main.business-page {
+    padding-top: 60px;
+    padding-bottom: 90px;
+  }
+  .main.business-page .main-title {
+    font-size: 30px;
+    line-height: 27px; /* 90% */
+    letter-spacing: -1.95px;
+    margin-bottom: 20px;
+    margin-left: 0;
+    margin-right: 0;
+    text-align: left;
+  }
+  .main.business-page .sub-title {
+    font-size: 14px;
+    line-height: 16px; /* 114.286% */
+    margin-bottom: 30px;
+    font-family: "Commissioner";
+  }
+  .main.business-page .main-image {
+    position: relative;
+    right: 0;
+    left: -20px;
+    top: 0;
+    width: 86vw;
+    max-width: 450px;
+  }
+  .main.business-page .main-image .desck {
+    display: none;
+  }
+  .main.business-page .main-image .mobile {
+    display: block;
+  }
+  .main.business-page .main-buttons {
+    flex-direction: column;
+    gap: 5px;
+    margin-top: 20px;
+  }
+  .main.business-page .main-buttons .button {
+    height: 50px;
+    font-size: 16px;
+    line-height: 10px; /* 62.5% */
+    letter-spacing: -0.32px;
+    width: 100%;
+  }
+  /* for-business  section */
+  .for-business {
+    padding-bottom: 0px;
+    overflow: visible;
+  }
+  .for-business .container {
+    padding-bottom: 310px;
+  }
+  .for-business .container .image {
+    bottom: -40px;
+    width: 103vw;
+    left: 15px;
+    transform: none;
+    max-width: 370px;
+  }
+  .for-business .container .image.desck {
+    display: none;
+  }
+  .for-business .container .image.mobile {
+    display: block;
+  }
+  .for-business .horizontal-section {
+    background-color: pink;
+    position: relative;
+  }
+  .for-business .sticky-wrapper {
+    position: sticky;
+    top: 100px;
+    width: 100%;
+    overflow: hidden;
+  }
+  .for-business .element-wrapper {
+    position: relative;
+    display: flex;
+    flex-wrap: nowrap;
+  }
+  .for-business .items {
+    margin-top: 30px;
+  }
+  .for-business .item {
+    flex-shrink: 0;
+    width: 100%;
+    padding: 25px 20px 20px 20px;
+    border: 1px solid #e8e8e8;
+    gap: 10px;
+    margin-bottom: 5px;
+  }
+  .for-business .item h4 {
+    font-size: 20px;
+    line-height: 18px; /* 90% */
+    letter-spacing: -0.4px;
+    margin-left: 40px;
+  }
+  .for-business .item .icon {
+    position: absolute;
+    top: 25px;
+    left: 20px;
+    max-width: 33px;
+  }
+  .for-business .item:nth-of-type(2) .icon {
+    top: 28px;
+  }
+  .for-business .item:nth-of-type(4) .icon {
+    top: 10px;
+  }
+  .for-business .item p {
+    font-size: 14px;
+    line-height: 16px; /* 114.286% */
+  }
+  .for-business .item .button {
+    border-radius: 100px;
+    height: 30px;
+    font-size: 14px;
+    line-height: 16px; /* 114.286% */
+    width: 137px;
+    margin-top: 20px;
+    padding-bottom: 3px;
+    margin-top: auto;
+  }
+  .for-business .item .button span {
+    width: 14px;
+    height: 10px;
+    margin-left: 5px;
+  }
+  /* skills section */
+  .skills {
+    padding: 100px 0 0 0;
+    position: relative;
+    z-index: 4;
+    overflow: visible;
+  }
+  .skills h2 {
+    position: relative;
+  }
+  .skills h2::after {
+    position: absolute;
+    content: url(./../img/skills-title-decor.svg);
+    z-index: 2;
+    margin-left: 20px;
+    margin-top: 20px;
+    width: 262px;
+  }
+  .skills .content {
+    border-radius: 50px;
+    background-color: #1a1a1a;
+    background-image: url(./../img/skills-back.svg);
+    margin-top: 45px;
+    padding: 50px 100px 100px 50px;
+    display: grid;
+    grid-template-columns: 30vw 1fr;
+    gap: 30px;
+    position: relative;
+  }
+  .skills .content .left {
+    height: 100%;
+    position: relative;
+  }
+  .skills .content .image {
+    top: 0;
+    z-index: 3;
+  }
+  .skills .content .image .show {
+    opacity: 1;
+  }
+  .skills .content .image .hidden {
+    opacity: 0;
+  }
+  .skills .content .image img {
+    width: 100%;
+  }
+  .skills .content .items {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    position: relative;
+    padding-top: 50px;
+  }
+  .skills .content .items::before {
+    content: "";
+    width: 2px;
+    background-color: #fff;
+    height: calc(100% + 204px);
+    position: absolute;
+    left: 49px;
+    z-index: 0;
+    top: -101px;
+  }
+  .skills .content .skill {
+    display: flex;
+    gap: 30px;
+    color: #f7f7f7;
+    z-index: 3;
+  }
+  .skills .content .skill:not(:last-of-type) {
+    margin-bottom: 50px;
+  }
+  .skills .content .skill h4 {
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    color: #ff6b00;
+    margin-bottom: 20px;
+  }
+  .skills .content .skill li {
+    font-family: "Commissioner";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 25px; /* 125% */
+    position: relative;
+    padding-left: 26px;
+  }
+  .skills .content .skill li:not(:last-of-type) {
+    margin-bottom: 10px;
+  }
+  .skills .content .skill li::before {
+    content: url(./../img/li-after.svg);
+    position: absolute;
+    left: 0;
+    padding-top: 2px;
+  }
+  .skills .content .icon {
+    min-width: 100px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #f7f7f7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .skills .content .icon p {
+    font-family: "Kukurudza";
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 50px; /* 100% */
+    color: #1a1a1a;
+    margin-top: 0;
+  }
+  .skills .button-black {
+    margin-top: 10px;
+  }
+  /*   values  */
+  .values.business-page .faq-items {
+    grid-template-columns: 100%;
+  }
+  .values.business-page .faq-items .question {
+    padding: 0;
+    display: flex;
+    align-items: start;
+  }
+  .values.business-page .faq-items .question p {
+    font-size: 16px;
+    line-height: 18px; /* 112.5% */
+  }
+  .values.business-page .faq-items .question span {
+    font-size: 25px;
+    line-height: 25px; /* 100% */
+    margin-top: 3px;
+  }
+  .values.business-page .faq-items .question .icon {
+    width: 35px;
+    height: 35px;
+    top: 0px;
+  }
+  .values.business-page .faq-items .answer p {
+    font-size: 14px;
+    line-height: 16px;
+    max-width: calc(100% - 35px);
+  }
+  .values.business-page .faq-items .open {
+    border: none;
+  }
+  .values.business-page .faq-items .open .question {
+    border-bottom: none;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .values.business-page .faq-items .open .question .icon {
+    background-color: #ffdcbc;
+  }
+  .values.business-page .faq-items .open .answer {
+    height: -moz-fit-content;
+    height: fit-content;
+    border-bottom: solid 2px #3f3f3f;
+  }
+  .values.business-page .faq-items .open .answer p {
+    font-size: 14px;
+    line-height: 16px;
+    max-width: calc(100% - 35px);
+  }
+  .values.business-page .video-block {
+    padding-top: 30px;
+  }
+  .values.business-page .video-block .text {
+    width: 84%;
+    max-width: 513px;
+    height: 137px;
+    background-image: url(./../img/video-text-pc.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 300px;
+    right: -60px;
+    bottom: inherit;
+    left: inherit;
+    transform: none;
+  }
+  .values.business-page .button {
+    display: flex;
+  }
+  /* brief section   */
+  .brief {
+    padding-bottom: 90px;
+  }
+  .brief .inner {
+    border-radius: 20px;
+    border: 1px solid #e8e8e8;
+    padding: 60px 19px;
+    background-image: url(./../img/brief-back-mob.svg);
+    gap: 10px;
+    grid-template-columns: 100%;
+  }
+  .brief .inner h3 {
+    font-size: 20px;
+    line-height: 20px; /* 90% */
+    letter-spacing: -0.4px;
+    grid-row: inherit;
+  }
+  .brief .inner p {
+    font-size: 14px;
+    line-height: 18px; /* 114.286% */
+  }
+  .brief .button {
+    width: -moz-fit-content;
+    width: fit-content;
+    height: 30px;
+    font-size: 14px;
+    line-height: 16px; /* 114.286% */
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-top: 20px;
+  }
+  /* partners section */
+  .partners.business-page {
+    padding-top: 110px;
+    overflow: visible;
+  }
+  .partners.business-page h2 {
+    max-width: 250px;
+  }
+  .partners.business-page h2 .desck {
+    display: none;
+  }
+  .partners.business-page h2 .mobile {
+    display: inline;
+  }
+  .partners.business-page h2::after {
+    background-image: url(../img/light-mob.svg);
+    width: 230px;
+    bottom: 0;
+    left: 54px;
+    height: 142px;
+    background-size: cover;
+  }
+}
+/* Portrait phones and smaller */
+/* Iphone 5 */
+/* colors */
+/* mixin */
+/* main section */
+.main.consulting-page {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+.main.consulting-page .container {
+  text-align: left;
+  display: block;
+}
+.main.consulting-page .main-title {
+  font-size: 55px;
+  line-height: 50px; /* 90.909% */
+  text-align: left;
+  margin-left: 0;
+  margin-bottom: 30px;
+  text-transform: none;
+  z-index: 2;
+  position: relative;
+}
+.main.consulting-page .sub-title {
+  display: block;
+  text-align: left;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 20px; /* 125% */
+  max-width: 550px;
+  z-index: 2;
+  position: relative;
+}
+.main.consulting-page .main-image {
+  position: absolute;
+  right: 70px;
+  top: -47px;
+  width: 55vw;
+  max-width: 796px;
+  z-index: 1;
+}
+.main.consulting-page .main-image img {
+  width: 100%;
+  height: 100%;
+}
+.main.consulting-page .main-image .desck {
+  display: block;
+}
+.main.consulting-page .main-image .mobile {
+  display: none;
+}
+.main.consulting-page .main-buttons {
+  flex-direction: row;
+  gap: 10px;
+  margin-top: 50px;
+  z-index: 2;
+  position: relative;
+}
+.main.consulting-page .main-buttons .button {
+  height: 60px;
+  font-size: 20px;
+  line-height: 15px; /* 75% */
+  width: 300px;
+}
+
+/*   values  */
+.values.consulting-page {
+  padding: 120px 0 100px 0;
+}
+.values.consulting-page .container {
+  display: block;
+  z-index: 3;
+}
+.values.consulting-page .container h2 {
+  max-width: 600px;
+}
+.values.consulting-page .faq-items {
+  display: grid;
+  grid-template-columns: 507px;
+  gap: 0;
+}
+.values.consulting-page .faq-items .faq-item {
+  border-bottom: solid 2px #3f3f3f;
+  padding: 15px 0;
+}
+.values.consulting-page .faq-items .faq-item:last-of-type {
+  border: none;
+}
+.values.consulting-page .faq-items .faq-item:last-of-type {
+  border: none;
+}
+.values.consulting-page .faq-items .question {
+  padding: 0;
+  display: flex;
+  align-items: start;
+  gap: 12px;
+}
+.values.consulting-page .faq-items .question p {
+  color: #ff6b00;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 30px; /* 150% */
+  display: inline-block;
+  width: calc(100% - 40px);
+}
+.values.consulting-page .faq-items .question span {
+  opacity: 1;
+}
+.values.consulting-page .faq-items .question .icon {
+  background-color: #f7f7f7;
+  border-radius: 50%;
+  right: 0;
+  top: 0px;
+}
+.values.consulting-page .faq-items .answer p {
+  color: #fafafa;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 20px; /* 125% */
+  margin-bottom: 20px;
+  margin-top: 10px;
+  max-width: calc(100% - 50px);
+  padding-left: 41px;
+}
+.values.consulting-page .faq-items .close .answer {
+  height: 0;
+}
+.values.consulting-page .faq-items .open {
+  border: none;
+}
+.values.consulting-page .faq-items .open .question {
+  border-bottom: none;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.values.consulting-page .faq-items .open .question .icon {
+  background-color: #ffdcbc;
+}
+.values.consulting-page .faq-items .open .answer {
+  height: -moz-fit-content;
+  height: fit-content;
+  border-bottom: solid 2px #3f3f3f;
+}
+.values.consulting-page .faq-items .open .answer p {
+  font-size: 16px;
+}
+.values.consulting-page .button {
+  max-width: 300px;
+  margin-top: 35px;
+  height: 60px;
+  font-size: 20px;
+  line-height: 15px; /* 75% */
+}
+.values.consulting-page .image-block {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  right: 0;
+  top: 50%;
+  transform: translate(0, -50%);
+  z-index: 1;
+}
+.values.consulting-page .image-block .back {
+  position: absolute;
+  top: 0;
+  right: 100px;
+  height: 100%;
+  z-index: 1;
+}
+.values.consulting-page .image-block .back.back-desck {
+  display: block;
+}
+.values.consulting-page .image-block .back.back-mob {
+  display: none;
+}
+.values.consulting-page .image-block .image {
+  width: 47vw;
+  right: -46px;
+  max-width: 687px;
+  z-index: 2;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+/* skills section */
+.skills.consulting-page .content {
+  padding: 0;
+  display: grid;
+  grid-template-columns: 35vw 1fr;
+  gap: 0px;
+  position: relative;
+}
+.skills.consulting-page .content .left {
+  height: 100%;
+  position: relative;
+}
+.skills.consulting-page .content .image { /* Safari */
+  position: sticky;
+  top: 0;
+  z-index: 3;
+  text-align: center;
+}
+.skills.consulting-page .content .image img {
+  width: 95%;
+}
+.skills.consulting-page .content .items {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  position: relative;
+  padding: 100px 100px 100px 0px;
+}
+.skills.consulting-page .content .items::before {
+  content: "";
+  width: 2px;
+  background-color: #fff;
+  height: 100%;
+  position: absolute;
+  left: 49px;
+  z-index: 0;
+  top: 0px;
+}
+.skills.consulting-page .content .skill {
+  display: flex;
+  gap: 30px;
+  color: #f7f7f7;
+  z-index: 3;
+}
+.skills.consulting-page .content .skill:not(:last-of-type) {
+  margin-bottom: 50px;
+}
+.skills.consulting-page .content .skill h4 {
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  color: #ff6b00;
+  margin-bottom: 20px;
+}
+.skills.consulting-page .content .skill li {
+  font-family: "Commissioner";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 25px; /* 125% */
+  position: relative;
+  padding-left: 26px;
+}
+.skills.consulting-page .content .skill li:not(:last-of-type) {
+  margin-bottom: 10px;
+}
+.skills.consulting-page .content .skill li::before {
+  content: "";
+  background-image: url(./../img/li-after.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  width: 16px;
+  height: 14px;
+  left: 0;
+  padding-top: 2px;
+}
+.skills.consulting-page .content .icon {
+  min-width: 100px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #f7f7f7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.skills.consulting-page .content .icon p {
+  font-family: "Kukurudza";
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 50px; /* 100% */
+  color: #1a1a1a;
+  margin-top: 0;
+}
+.skills.consulting-page .button-black {
+  margin-top: 10px;
+}
+
+/* faq section */
+.faq.consulting-page {
+  padding-top: 0;
+}
+.faq.consulting-page .faq-items .question .icon {
+  background-color: #ffdcbc;
+}
+.faq.consulting-page .faq-items .open .question .icon {
+  background-color: #ff6b00;
+}
+
+/* partners section */
+.partners.consulting-page {
+  padding-top: 164px;
+  overflow: visible;
+}
+.partners.consulting-page h2 {
+  display: inline-block;
+  position: relative;
+  z-index: 2;
+}
+.partners.consulting-page h2 .desck {
+  display: inline;
+  color: #1a1a1a;
+}
+.partners.consulting-page h2 .mobile {
+  display: none;
+  color: #1a1a1a;
+}
+.partners.consulting-page h2 span:last-of-type {
+  color: #ff6b00;
+}
+.partners.consulting-page h2::after {
+  position: absolute;
+  content: "";
+  background-image: url(../img/light.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  bottom: -142px;
+  left: 213px;
+  width: 363px;
+}
+
+/* block section   */
+.blog.consulting-page {
+  padding-top: 100px;
+}
+.blog.consulting-page .sub-title span {
+  color: #ff6b00;
+}
+.blog.consulting-page .button-orange {
+  margin-right: 10px;
+}
+
+/* media */
+/* Large desktops and laptops */
+/* Landscape tablets and medium desktops */
+/* Portrait tablets and small desktops */
+/* Landscape phones and portrait tablets */
+@media (max-width: 768px) {
+  /* header bottom business page */
+  .header-bottom.consulting-page {
+    display: none;
+  }
+  /* main section */
+  .main.consulting-page {
+    padding-top: 60px;
+    padding-bottom: 100px;
+  }
+  .main.consulting-page .main-title {
+    font-size: 30px;
+    line-height: 27px; /* 90% */
+    margin-bottom: 10px;
+  }
+  .main.consulting-page .sub-title {
+    font-family: "Commissioner";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 16px; /* 114.286% */
+  }
+  .main.consulting-page .main-image {
+    position: inherit;
+    right: 0px;
+    top: 0px;
+    width: 110%;
+    max-width: 350px;
+    margin-top: 34px;
+    margin-left: -10px;
+  }
+  .main.consulting-page .main-image .desck {
+    display: none;
+  }
+  .main.consulting-page .main-image .mobile {
+    display: block;
+  }
+  .main.consulting-page .main-buttons {
+    flex-direction: column;
+    gap: 5px;
+    margin-top: 30px;
+  }
+  .main.consulting-page .main-buttons .button {
+    height: 50px;
+    font-size: 16px;
+    line-height: 10px; /* 62.5% */
+    letter-spacing: -0.32px;
+    width: 100%;
+  }
+  /*   values  */
+  .values.consulting-page {
+    padding: 100px 0 35px 0;
+  }
+  .values.consulting-page .faq-items {
+    grid-template-columns: 100%;
+  }
+  .values.consulting-page .faq-items .question {
+    padding: 0;
+    display: flex;
+    gap: 8px;
+  }
+  .values.consulting-page .faq-items .question p {
+    font-size: 16px;
+    line-height: 18px; /* 112.5% */
+    max-width: 150px;
+  }
+  .values.consulting-page .faq-items .question span {
+    width: 28px;
+    height: 30px;
+    opacity: 1;
+  }
+  .values.consulting-page .faq-items .question .icon {
+    width: 35px;
+    height: 35px;
+    top: 0px;
+  }
+  .values.consulting-page .faq-items .answer p {
+    font-size: 14px;
+    line-height: 16px;
+    max-width: calc(100% - 35px);
+  }
+  .values.consulting-page .faq-items .open {
+    border: none;
+  }
+  .values.consulting-page .faq-items .open .question {
+    border-bottom: none;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .values.consulting-page .faq-items .open .question .icon {
+    background-color: #ffdcbc;
+  }
+  .values.consulting-page .faq-items .open .answer {
+    height: -moz-fit-content;
+    height: fit-content;
+    border-bottom: solid 2px #3f3f3f;
+  }
+  .values.consulting-page .faq-items .open .answer p {
+    font-size: 14px;
+    line-height: 16px;
+    max-width: calc(100% - 10px);
+    padding: 0;
+  }
+  .values.consulting-page .button {
+    height: 50px;
+    width: 100%;
+    max-width: none;
+    font-size: 16px;
+    line-height: 10px; /* 62.5% */
+    letter-spacing: -0.32px;
+    margin-top: 20px;
+  }
+  .values.consulting-page .image-block {
+    position: relative;
+    height: auto;
+    width: 100%;
+    right: inherit;
+    top: inherit;
+    transform: none;
+    z-index: 1;
+    padding-top: 80px;
+    text-align: center;
+  }
+  .values.consulting-page .image-block .back {
+    width: 100%;
+    height: auto;
+    top: 30px;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+  .values.consulting-page .image-block .back.back-desck {
+    display: none;
+  }
+  .values.consulting-page .image-block .back.back-mob {
+    display: block;
+  }
+  .values.consulting-page .image-block .image {
+    position: relative;
+    width: 110vw;
+    right: inherit;
+    max-width: 400px;
+    z-index: 2;
+    top: inherit;
+    transform: none;
+    left: 13px;
+  }
+  /* skills section */
+  .skills.consulting-page h2::after {
+    content: url(./../img/skills-title-decor-mob.svg);
+    margin-left: 0px;
+    margin-top: 10px;
+    width: 136px;
+    left: 140px;
+  }
+  .skills.consulting-page .content {
+    display: flex;
+    flex-direction: column-reverse;
+    width: 100%;
+    border-radius: 20px 20px 20px 29px;
+  }
+  .skills.consulting-page .content .left {
+    height: 100%;
+    position: relative;
+  }
+  .skills.consulting-page .content .image {
+    position: inherit;
+    top: 0;
+    padding-right: 10px;
+    margin-bottom: -25px;
+    max-width: 400px;
+  }
+  .skills.consulting-page .content .image img {
+    width: 100%;
+  }
+  .skills.consulting-page .content .items {
+    padding: 50px 17px 0px 15px;
+    gap: 0;
+  }
+  .skills.consulting-page .content .items::before {
+    content: "";
+    width: 1px;
+    height: 135%;
+    left: 35px;
+  }
+  .skills.consulting-page .content .skill {
+    gap: 13px;
+  }
+  .skills.consulting-page .content .skill:not(:last-of-type) {
+    margin-bottom: 30px;
+  }
+  .skills.consulting-page .content .skill h4 {
+    font-size: 20px;
+    line-height: 18px; /* 90% */
+    letter-spacing: -0.4px;
+    margin-bottom: 10px;
+    margin-top: 11px;
+  }
+  .skills.consulting-page .content .skill li {
+    font-size: 14px;
+    line-height: 16px; /* 114.286% */
+    padding-left: 0px;
+  }
+  .skills.consulting-page .content .skill li:not(:last-of-type) {
+    margin-bottom: 10px;
+  }
+  .skills.consulting-page .content .skill li::before {
+    width: 10px;
+    height: 10px;
+    left: -15px;
+    top: 3px;
+  }
+  .skills.consulting-page .content .icon {
+    min-width: 41px;
+    width: 41px;
+    height: 41px;
+    padding-bottom: 5px;
+  }
+  .skills.consulting-page .content .icon p {
+    font-size: 25px;
+    line-height: 16.735px; /* 66.939% */
+  }
+  .skills.consulting-page .button-black {
+    margin-top: 10px;
+  }
+  /* partners section */
+  .partners.consulting-page {
+    padding-top: 110px;
+    overflow: visible;
+  }
+  .partners.consulting-page h2 {
+    max-width: 250px;
+  }
+  .partners.consulting-page h2 .desck {
+    display: none;
+  }
+  .partners.consulting-page h2 .mobile {
+    display: inline;
+  }
+  .partners.consulting-page h2::after {
+    background-image: url(../img/light-mob.svg);
+    width: 230px;
+    bottom: 0;
+    left: 54px;
+    height: 142px;
+    background-size: cover;
+  }
+  /* block section   */
+  .blog.consulting-page {
+    padding-top: 90px;
+  }
+  .blog.consulting-page .sub-title span {
+    color: #ff6b00;
+  }
+  .blog.consulting-page .slick-arrow {
+    bottom: 0;
+  }
+  .blog.consulting-page .button-orange {
+    margin-right: 0px;
+    margin-top: 35px;
+  }
+  .blog.consulting-page .button-white {
+    margin-top: 5px;
+  }
+}
+/* Portrait phones and smaller */
+/* Iphone 5 */
+/* colors */
+/* mixin */
+/* main section */
+.main.management-page {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+.main.management-page .container {
+  text-align: left;
+  display: block;
+}
+.main.management-page .main-title {
+  font-size: 55px;
+  line-height: 50px; /* 90.909% */
+  text-align: left;
+  margin-left: 0;
+  margin-bottom: 30px;
+  text-transform: none;
+  z-index: 2;
+  position: relative;
+}
+.main.management-page .sub-title {
+  display: block;
+  text-align: left;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 20px; /* 125% */
+  max-width: 380px;
+  z-index: 2;
+  position: relative;
+}
+.main.management-page .main-image {
+  position: absolute;
+  right: 70px;
+  top: -47px;
+  width: 55vw;
+  max-width: 735px;
+  z-index: 1;
+}
+.main.management-page .main-image img {
+  width: 100%;
+  height: 100%;
+}
+.main.management-page .main-image .desck {
+  display: block;
+}
+.main.management-page .main-image .mobile {
+  display: none;
+}
+.main.management-page .main-buttons {
+  flex-direction: row;
+  gap: 10px;
+  margin-top: 50px;
+  z-index: 2;
+  position: relative;
+}
+.main.management-page .main-buttons .button {
+  height: 60px;
+  font-size: 20px;
+  line-height: 15px; /* 75% */
+  width: 300px;
+}
+
+/*   values  */
+.values.management-page {
+  padding: 120px 0 100px 0;
+}
+.values.management-page .container {
+  display: block;
+  z-index: 3;
+  position: relative;
+}
+.values.management-page .container h2 {
+  max-width: 700px;
+}
+.values.management-page .faq-items {
+  display: grid;
+  grid-template-columns: 507px;
+  gap: 0;
+}
+.values.management-page .faq-items .faq-item {
+  border-bottom: solid 2px #3f3f3f;
+  padding: 15px 0;
+}
+.values.management-page .faq-items .faq-item:last-of-type {
+  border: none;
+}
+.values.management-page .faq-items .faq-item:last-of-type {
+  border: none;
+}
+.values.management-page .faq-items .question {
+  padding: 0;
+  display: flex;
+  align-items: start;
+  gap: 12px;
+}
+.values.management-page .faq-items .question p {
+  color: #ff6b00;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 30px; /* 150% */
+  display: inline-block;
+  width: calc(100% - 40px);
+}
+.values.management-page .faq-items .question span {
+  opacity: 1;
+  margin-bottom: 0;
+}
+.values.management-page .faq-items .question .icon {
+  background-color: #f7f7f7;
+  border-radius: 50%;
+  right: 0;
+  top: 0px;
+}
+.values.management-page .faq-items .answer p {
+  padding-left: 40px;
+}
+.values.management-page .faq-items .answer ol {
+  list-style: inherit;
+  margin-bottom: 30px;
+  padding-left: 40px;
+  list-style-type: decimal;
+  list-style-position: inside;
+}
+.values.management-page .faq-items .answer ol li {
+  font-family: "Commissioner";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 20px; /* 125% */
+  margin-bottom: 5px;
+  max-width: 90%;
+}
+.values.management-page .faq-items .close .answer {
+  height: 0;
+}
+.values.management-page .faq-items .open {
+  border: none;
+  padding-bottom: 0;
+}
+.values.management-page .faq-items .open .question {
+  border-bottom: none;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.values.management-page .faq-items .open .question .icon {
+  background-color: #ffdcbc;
+}
+.values.management-page .faq-items .open .answer {
+  height: -moz-fit-content;
+  height: fit-content;
+  border-bottom: solid 2px #3f3f3f;
+}
+.values.management-page .faq-items .open .answer p {
+  font-size: 16px;
+}
+.values.management-page .button {
+  max-width: 300px;
+  margin-top: 35px;
+  height: 60px;
+  font-size: 20px;
+  line-height: 15px; /* 75% */
+}
+.values.management-page .image-block {
+  position: absolute;
+  height: 44vw;
+  width: 44vw;
+  max-width: 630px;
+  max-height: 630px;
+  right: 100px;
+  top: 140px;
+}
+.values.management-page .image-block img {
+  width: 100%;
+  height: auto;
+}
+.values.management-page .image-block .desck {
+  display: block;
+}
+.values.management-page .image-block .mobile {
+  display: none;
+}
+
+/* skills section */
+.skills.management-page .content {
+  padding: 0;
+  display: grid;
+  grid-template-columns: 35vw 1fr;
+  gap: 0px;
+  position: relative;
+}
+.skills.management-page .content .left {
+  height: 100%;
+  position: relative;
+}
+.skills.management-page .content .image { /* Safari */
+  position: sticky;
+  top: 0px;
+  z-index: 3;
+  text-align: center;
+  padding: 50px 0;
+}
+.skills.management-page .content .image img {
+  width: 95%;
+}
+.skills.management-page .content .items {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  position: relative;
+  padding: 100px 100px 100px 0px;
+}
+.skills.management-page .content .items::before {
+  content: "";
+  width: 2px;
+  background-color: #fff;
+  height: 100%;
+  position: absolute;
+  left: 49px;
+  z-index: 0;
+  top: 0px;
+}
+.skills.management-page .content .skill {
+  display: flex;
+  gap: 30px;
+  color: #f7f7f7;
+  z-index: 3;
+}
+.skills.management-page .content .skill:not(:last-of-type) {
+  margin-bottom: 50px;
+}
+.skills.management-page .content .skill h4 {
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  color: #ff6b00;
+  margin-bottom: 20px;
+}
+.skills.management-page .content .skill li {
+  font-family: "Commissioner";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 25px; /* 125% */
+  position: relative;
+  padding-left: 26px;
+}
+.skills.management-page .content .skill li:not(:last-of-type) {
+  margin-bottom: 10px;
+}
+.skills.management-page .content .skill li::before {
+  content: "";
+  background-image: url(./../img/li-after.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  width: 16px;
+  height: 14px;
+  left: 0;
+  padding-top: 2px;
+}
+.skills.management-page .content .icon {
+  min-width: 100px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #f7f7f7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.skills.management-page .content .icon p {
+  font-family: "Kukurudza";
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 50px; /* 100% */
+  color: #1a1a1a;
+  margin-top: 0;
+}
+.skills.management-page .button-black {
+  margin-top: 10px;
+}
+
+/* faq section */
+.faq.management-page {
+  padding-top: 0;
+}
+.faq.management-page .faq-items .question .icon {
+  background-color: #ffdcbc;
+}
+.faq.management-page .faq-items .open .question .icon {
+  background-color: #ff6b00;
+}
+
+/* partners section */
+.partners.management-page {
+  padding-top: 164px;
+  overflow: visible;
+}
+.partners.management-page h2 {
+  display: inline-block;
+  position: relative;
+  z-index: 2;
+}
+.partners.management-page h2 .desck {
+  display: inline;
+  color: #1a1a1a;
+}
+.partners.management-page h2 .mobile {
+  display: none;
+  color: #1a1a1a;
+}
+.partners.management-page h2 span:last-of-type {
+  color: #ff6b00;
+}
+.partners.management-page h2::after {
+  position: absolute;
+  content: "";
+  background-image: url(../img/light.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  bottom: -142px;
+  left: 213px;
+  width: 363px;
+}
+
+/* block section   */
+.blog.management-page {
+  padding-top: 100px;
+}
+.blog.management-page .sub-title span {
+  color: #ff6b00;
+}
+.blog.management-page .button-orange {
+  margin-right: 10px;
+}
+
+/* media */
+/* Large desktops and laptops */
+/* Landscape tablets and medium desktops */
+/* Portrait tablets and small desktops */
+/* Landscape phones and portrait tablets */
+@media (max-width: 768px) {
+  /* header bottom business page */
+  .header-bottom.management-page {
+    display: none;
+  }
+  /* main section */
+  .main.management-page {
+    padding-top: 60px;
+    padding-bottom: 100px;
+  }
+  .main.management-page .main-title {
+    font-size: 30px;
+    line-height: 27px; /* 90% */
+    margin-bottom: 10px;
+  }
+  .main.management-page .sub-title {
+    font-family: "Commissioner";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 16px; /* 114.286% */
+  }
+  .main.management-page .main-image {
+    position: inherit;
+    right: 0px;
+    top: 0px;
+    width: 110%;
+    max-width: 350px;
+    margin-top: 34px;
+    margin-left: -10px;
+  }
+  .main.management-page .main-image .desck {
+    display: none;
+  }
+  .main.management-page .main-image .mobile {
+    display: block;
+  }
+  .main.management-page .main-buttons {
+    flex-direction: column;
+    gap: 5px;
+    margin-top: 30px;
+  }
+  .main.management-page .main-buttons .button {
+    height: 50px;
+    font-size: 16px;
+    line-height: 10px; /* 62.5% */
+    letter-spacing: -0.32px;
+    width: 100%;
+  }
+  /*   values  */
+  .values.management-page {
+    padding: 100px 0;
+  }
+  .values.management-page h2 {
+    font-size: 30px;
+    line-height: 25px; /* 83.333% */
+    letter-spacing: -0.6px;
+    margin-right: -5px;
+  }
+  .values.management-page .faq-items {
+    grid-template-columns: 100%;
+  }
+  .values.management-page .faq-items .faq-item {
+    border-bottom: solid 1px #3f3f3f;
+    padding: 20px 0;
+  }
+  .values.management-page .faq-items .question {
+    align-items: center;
+    gap: 7px;
+  }
+  .values.management-page .faq-items .question p {
+    font-size: 16px;
+    line-height: 18px; /* 112.5% */
+    width: calc(100% - 65px);
+  }
+  .values.management-page .faq-items .question span {
+    max-width: 27px;
+    line-height: 0;
+  }
+  .values.management-page .faq-items .question .icon {
+    background-color: #f7f7f7;
+    border-radius: 50%;
+    right: 0;
+    top: 0px;
+    width: 35px;
+    height: 35px;
+    min-width: 35px;
+  }
+  .values.management-page .faq-items .answer p {
+    padding-left: 0px;
+    font-size: 14px;
+    line-height: 16px; /* 114.286% */
+    margin-top: 10px;
+  }
+  .values.management-page .faq-items .answer ol {
+    margin-bottom: 20px;
+    padding-left: 0px;
+    margin-top: 10px;
+  }
+  .values.management-page .faq-items .answer ol li {
+    font-size: 14px;
+    line-height: 16px; /* 114.286% */
+    margin-bottom: 3px;
+    max-width: 90%;
+  }
+  .values.management-page .faq-items .close .answer {
+    height: 0;
+  }
+  .values.management-page .faq-items .open {
+    border: none;
+    padding-bottom: 0;
+  }
+  .values.management-page .faq-items .open .question {
+    border-bottom: none;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .values.management-page .faq-items .open .question .icon {
+    background-color: #ffdcbc;
+  }
+  .values.management-page .faq-items .open .answer {
+    height: -moz-fit-content;
+    height: fit-content;
+    border-bottom: solid 1px #3f3f3f;
+  }
+  .values.management-page .faq-items .open .answer p {
+    font-size: 14px;
+  }
+  .values.management-page .button {
+    max-width: none;
+    margin-top: 20px;
+    height: 50px;
+    font-size: 16px;
+    line-height: 10px; /* 62.5% */
+    letter-spacing: -0.32px;
+    text-transform: uppercase;
+  }
+  .values.management-page .image-block {
+    position: inherit;
+    width: calc(100% + 70px);
+    margin-left: -35px;
+    margin-right: -35px;
+    height: 100%;
+    max-width: none;
+    top: 0;
+    margin-top: 20px;
+    text-align: center;
+    right: 0;
+  }
+  .values.management-page .image-block img {
+    height: 113vw;
+    width: 113vw;
+    max-width: 400px;
+    max-height: 400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .values.management-page .image-block .desck {
+    display: none;
+  }
+  .values.management-page .image-block .mobile {
+    display: block;
+  }
+  /* skills section */
+  .skills.management-page h2::after {
+    content: url(./../img/skills-title-decor-mob.svg);
+    margin-left: 0px;
+    margin-top: 10px;
+    width: 136px;
+    left: 140px;
+  }
+  .skills.management-page .content {
+    display: flex;
+    flex-direction: column-reverse;
+    width: 100%;
+    border-radius: 20px;
+  }
+  .skills.management-page .content .left {
+    height: 100%;
+    position: relative;
+  }
+  .skills.management-page .content .image {
+    position: inherit;
+    top: 0;
+    padding-right: 0px;
+    margin-bottom: 0px;
+    width: 100%;
+    max-width: 400px;
+    left: -8px;
+    padding: 50px 0 15px 0;
+  }
+  .skills.management-page .content .image img {
+    width: 100%;
+  }
+  .skills.management-page .content .items {
+    padding: 50px 17px 0px 15px;
+    gap: 0;
+  }
+  .skills.management-page .content .items::before {
+    content: "";
+    width: 1px;
+    height: 135%;
+    left: 35px;
+  }
+  .skills.management-page .content .skill {
+    gap: 13px;
+  }
+  .skills.management-page .content .skill:not(:last-of-type) {
+    margin-bottom: 30px;
+  }
+  .skills.management-page .content .skill h4 {
+    font-size: 20px;
+    line-height: 18px; /* 90% */
+    letter-spacing: -0.4px;
+    margin-bottom: 10px;
+    margin-top: 11px;
+  }
+  .skills.management-page .content .skill li {
+    font-size: 14px;
+    line-height: 16px; /* 114.286% */
+    padding-left: 0px;
+  }
+  .skills.management-page .content .skill li:not(:last-of-type) {
+    margin-bottom: 10px;
+  }
+  .skills.management-page .content .skill li::before {
+    width: 10px;
+    height: 10px;
+    left: -15px;
+    top: 3px;
+  }
+  .skills.management-page .content .icon {
+    min-width: 41px;
+    width: 41px;
+    height: 41px;
+    padding-bottom: 5px;
+  }
+  .skills.management-page .content .icon p {
+    font-size: 25px;
+    line-height: 16.735px; /* 66.939% */
+  }
+  .skills.management-page .button-black {
+    margin-top: 10px;
+  }
+  /* partners section */
+  .partners.management-page {
+    padding-top: 110px;
+    overflow: visible;
+  }
+  .partners.management-page h2 {
+    max-width: 250px;
+  }
+  .partners.management-page h2 .desck {
+    display: none;
+  }
+  .partners.management-page h2 .mobile {
+    display: inline;
+  }
+  .partners.management-page h2::after {
+    background-image: url(../img/light-mob.svg);
+    width: 230px;
+    bottom: 0;
+    left: 54px;
+    height: 142px;
+    background-size: cover;
+  }
+  /* block section   */
+  .blog.management-page {
+    padding-top: 90px;
+  }
+  .blog.management-page .sub-title span {
+    color: #ff6b00;
+  }
+  .blog.management-page .slick-arrow {
+    bottom: 0;
+  }
+  .blog.management-page .button-orange {
+    margin-right: 0px;
+    margin-top: 35px;
+  }
+  .blog.management-page .button-white {
+    margin-top: 5px;
+  }
+  /* faq section */
+  .faq.management-page {
+    padding-top: 0;
+    padding-bottom: 60px;
+  }
+}
+/* Portrait phones and smaller */
+/* Iphone 5 */
+/* colors */
+/* mixin */
+/* main section */
+.main.branding-page {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+.main.branding-page .container {
+  text-align: left;
+  display: block;
+}
+.main.branding-page .main-title {
+  font-size: 55px;
+  line-height: 50px; /* 90.909% */
+  text-align: left;
+  margin-left: 0;
+  margin-bottom: 30px;
+  text-transform: none;
+  z-index: 2;
+  position: relative;
+}
+.main.branding-page .sub-title {
+  display: block;
+  text-align: left;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 20px; /* 125% */
+  max-width: 580px;
+  z-index: 2;
+  position: relative;
+}
+.main.branding-page .main-image {
+  position: absolute;
+  right: 60px;
+  top: -26px;
+  width: 55vw;
+  max-width: 797px;
+  z-index: 1;
+}
+.main.branding-page .main-image img {
+  width: 100%;
+  height: 100%;
+}
+.main.branding-page .main-image .desck {
+  display: block;
+}
+.main.branding-page .main-image .mobile {
+  display: none;
+}
+.main.branding-page .main-buttons {
+  flex-direction: row;
+  gap: 10px;
+  margin-top: 50px;
+  z-index: 2;
+  position: relative;
+}
+.main.branding-page .main-buttons .button {
+  height: 60px;
+  font-size: 20px;
+  line-height: 15px; /* 75% */
+  width: 300px;
+}
+
+/*   values  */
+.values.branding-page {
+  padding: 120px 0 100px 0;
+}
+.values.branding-page .container {
+  display: block;
+  z-index: 3;
+  position: relative;
+}
+.values.branding-page .container h2 {
+  max-width: 700px;
+}
+.values.branding-page .faq-items {
+  display: grid;
+  grid-template-columns: 507px;
+  gap: 0;
+}
+.values.branding-page .faq-items .faq-item {
+  border-bottom: solid 2px #3f3f3f;
+  padding: 15px 0;
+}
+.values.branding-page .faq-items .faq-item:last-of-type {
+  border: none;
+}
+.values.branding-page .faq-items .faq-item:last-of-type {
+  border: none;
+}
+.values.branding-page .faq-items .question {
+  padding: 0;
+  display: flex;
+  align-items: start;
+  gap: 12px;
+}
+.values.branding-page .faq-items .question p {
+  color: #ff6b00;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 30px; /* 150% */
+  display: inline-block;
+  width: calc(100% - 40px);
+}
+.values.branding-page .faq-items .question span {
+  opacity: 1;
+  margin-bottom: 0;
+}
+.values.branding-page .faq-items .question .icon {
+  background-color: #f7f7f7;
+  border-radius: 50%;
+  right: 0;
+  top: 0px;
+}
+.values.branding-page .faq-items .answer p {
+  padding-left: 40px;
+}
+.values.branding-page .faq-items .answer ol {
+  list-style: inherit;
+  margin-bottom: 30px;
+  padding-left: 40px;
+  list-style-type: decimal;
+  list-style-position: inside;
+}
+.values.branding-page .faq-items .answer ol li {
+  font-family: "Commissioner";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 20px; /* 125% */
+  margin-bottom: 5px;
+  max-width: 90%;
+}
+.values.branding-page .faq-items .close .answer {
+  height: 0;
+}
+.values.branding-page .faq-items .open {
+  border: none;
+  padding-bottom: 0;
+}
+.values.branding-page .faq-items .open .question {
+  border-bottom: none;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.values.branding-page .faq-items .open .question .icon {
+  background-color: #ffdcbc;
+}
+.values.branding-page .faq-items .open .answer {
+  height: -moz-fit-content;
+  height: fit-content;
+  border-bottom: solid 2px #3f3f3f;
+}
+.values.branding-page .faq-items .open .answer p {
+  font-size: 16px;
+}
+.values.branding-page .button {
+  max-width: 300px;
+  margin-top: 35px;
+  height: 60px;
+  font-size: 20px;
+  line-height: 15px; /* 75% */
+}
+.values.branding-page .image-block {
+  position: absolute;
+  width: 59vw;
+  max-width: 854px;
+  max-height: 825px;
+  right: 0;
+  top: inherit;
+  bottom: 0px;
+}
+.values.branding-page .image-block img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  max-width: 100%;
+  max-height: 100%;
+}
+.values.branding-page .image-block .desck {
+  display: block;
+}
+.values.branding-page .image-block .mobile {
+  display: none;
+}
+
+/* skills section */
+.skills.branding-page .content {
+  padding: 0;
+  display: grid;
+  grid-template-columns: 35vw 1fr;
+  gap: 0px;
+  position: relative;
+}
+.skills.branding-page .content .left {
+  height: 100%;
+  position: relative;
+}
+.skills.branding-page .content .image { /* Safari */
+  position: sticky;
+  top: 0px;
+  z-index: 3;
+  text-align: center;
+  padding: 50px 50px;
+}
+.skills.branding-page .content .image img {
+  width: 100%;
+}
+.skills.branding-page .content .items {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  position: relative;
+  padding: 100px 100px 100px 0px;
+}
+.skills.branding-page .content .items::before {
+  content: "";
+  width: 2px;
+  background-color: #fff;
+  height: 100%;
+  position: absolute;
+  left: 49px;
+  z-index: 0;
+  top: 0px;
+}
+.skills.branding-page .content .skill {
+  display: flex;
+  gap: 30px;
+  color: #f7f7f7;
+  z-index: 3;
+}
+.skills.branding-page .content .skill:not(:last-of-type) {
+  margin-bottom: 50px;
+}
+.skills.branding-page .content .skill h4 {
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  color: #ff6b00;
+  margin-bottom: 20px;
+}
+.skills.branding-page .content .skill li {
+  font-family: "Commissioner";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 25px; /* 125% */
+  position: relative;
+  padding-left: 26px;
+}
+.skills.branding-page .content .skill li:not(:last-of-type) {
+  margin-bottom: 10px;
+}
+.skills.branding-page .content .skill li::before {
+  content: "";
+  background-image: url(./../img/li-after.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  width: 16px;
+  height: 14px;
+  left: 0;
+  padding-top: 2px;
+}
+.skills.branding-page .content .icon {
+  min-width: 100px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #f7f7f7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.skills.branding-page .content .icon p {
+  font-family: "Kukurudza";
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 50px; /* 100% */
+  color: #1a1a1a;
+  margin-top: 0;
+}
+.skills.branding-page .button-black {
+  margin-top: 10px;
+}
+
+/* faq section */
+.faq.branding-page {
+  padding-top: 0;
+}
+.faq.branding-page .faq-items .question .icon {
+  background-color: #ffdcbc;
+}
+.faq.branding-page .faq-items .open .question .icon {
+  background-color: #ff6b00;
+}
+
+/* partners section */
+.partners.branding-page {
+  padding-top: 164px;
+  overflow: visible;
+}
+.partners.branding-page h2 {
+  display: inline-block;
+  position: relative;
+  z-index: 2;
+}
+.partners.branding-page h2 .desck {
+  display: inline;
+  color: #1a1a1a;
+}
+.partners.branding-page h2 .mobile {
+  display: none;
+  color: #1a1a1a;
+}
+.partners.branding-page h2 span:last-of-type {
+  color: #ff6b00;
+}
+.partners.branding-page h2::after {
+  position: absolute;
+  content: "";
+  background-image: url(../img/light.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  bottom: -142px;
+  left: 213px;
+  width: 363px;
+}
+
+/* block section   */
+.blog.branding-page {
+  padding-top: 100px;
+}
+.blog.branding-page .sub-title span {
+  color: #ff6b00;
+}
+.blog.branding-page .button-orange {
+  margin-right: 10px;
+}
+
+/* media */
+/* Large desktops and laptops */
+/* Landscape tablets and medium desktops */
+/* Portrait tablets and small desktops */
+/* Landscape phones and portrait tablets */
+@media (max-width: 768px) {
+  /* header bottom business page */
+  .header-bottom.branding-page {
+    display: none;
+  }
+  /* main section */
+  .main.branding-page {
+    padding-top: 60px;
+    padding-bottom: 100px;
+  }
+  .main.branding-page .main-title {
+    font-size: 30px;
+    line-height: 27px; /* 90% */
+    margin-bottom: 10px;
+  }
+  .main.branding-page .sub-title {
+    font-family: "Commissioner";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 16px; /* 114.286% */
+  }
+  .main.branding-page .main-image {
+    position: inherit;
+    right: 0px;
+    top: 0px;
+    width: 110%;
+    max-width: 350px;
+    margin-top: 34px;
+    margin-left: -10px;
+  }
+  .main.branding-page .main-image .desck {
+    display: none;
+  }
+  .main.branding-page .main-image .mobile {
+    display: block;
+  }
+  .main.branding-page .main-buttons {
+    flex-direction: column;
+    gap: 5px;
+    margin-top: 30px;
+  }
+  .main.branding-page .main-buttons .button {
+    height: 50px;
+    font-size: 16px;
+    line-height: 10px; /* 62.5% */
+    letter-spacing: -0.32px;
+    width: 100%;
+  }
+  /*   values  */
+  .values.branding-page {
+    padding: 100px 0 50px 0;
+  }
+  .values.branding-page h2 {
+    font-size: 30px;
+    line-height: 25px; /* 83.333% */
+    letter-spacing: -0.6px;
+    margin-right: -5px;
+  }
+  .values.branding-page .faq-items {
+    grid-template-columns: 100%;
+  }
+  .values.branding-page .faq-items .faq-item {
+    border-bottom: solid 1px #3f3f3f;
+    padding: 20px 0;
+  }
+  .values.branding-page .faq-items .question {
+    align-items: center;
+    gap: 5px;
+  }
+  .values.branding-page .faq-items .question p {
+    font-size: 16px;
+    line-height: 18px; /* 112.5% */
+    width: calc(100% - 65px);
+  }
+  .values.branding-page .faq-items .question span {
+    max-width: 27px;
+    line-height: 0;
+  }
+  .values.branding-page .faq-items .question span img {
+    width: 100%;
+  }
+  .values.branding-page .faq-items .question .icon {
+    background-color: #f7f7f7;
+    border-radius: 50%;
+    right: 0;
+    top: 0px;
+    width: 35px;
+    height: 35px;
+    min-width: 35px;
+  }
+  .values.branding-page .faq-items .answer p {
+    padding-left: 0px;
+    font-size: 14px;
+    line-height: 16px; /* 114.286% */
+    margin-top: 10px;
+  }
+  .values.branding-page .faq-items .answer ol {
+    margin-bottom: 20px;
+    padding-left: 0px;
+    margin-top: 10px;
+  }
+  .values.branding-page .faq-items .answer ol li {
+    font-size: 14px;
+    line-height: 16px; /* 114.286% */
+    margin-bottom: 3px;
+    max-width: 90%;
+  }
+  .values.branding-page .faq-items .close .answer {
+    height: 0;
+  }
+  .values.branding-page .faq-items .open {
+    border: none;
+    padding-bottom: 0;
+  }
+  .values.branding-page .faq-items .open .question {
+    border-bottom: none;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .values.branding-page .faq-items .open .question .icon {
+    background-color: #ffdcbc;
+  }
+  .values.branding-page .faq-items .open .answer {
+    height: -moz-fit-content;
+    height: fit-content;
+    border-bottom: solid 1px #3f3f3f;
+  }
+  .values.branding-page .faq-items .open .answer p {
+    font-size: 14px;
+  }
+  .values.branding-page .button {
+    max-width: none;
+    margin-top: 535px;
+    height: 50px;
+    font-size: 16px;
+    line-height: 10px; /* 62.5% */
+    letter-spacing: -0.32px;
+    text-transform: uppercase;
+  }
+  .values.branding-page .image-block {
+    width: 100vw;
+    height: auto;
+    max-width: 430px;
+    margin-left: auto;
+    text-align: center;
+    left: 0;
+  }
+  .values.branding-page .image-block img {
+    width: 100%;
+    height: auto;
+  }
+  .values.branding-page .image-block .desck {
+    display: none;
+  }
+  .values.branding-page .image-block .mobile {
+    display: block;
+  }
+  /* skills section */
+  .skills.branding-page h2::after {
+    content: url(./../img/skills-title-decor-mob.svg);
+    margin-left: 0px;
+    margin-top: 10px;
+    width: 136px;
+    left: 140px;
+  }
+  .skills.branding-page .content {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 5px;
+    width: 100%;
+    background-image: none;
+    background-color: transparent;
+  }
+  .skills.branding-page .content .left {
+    height: 100%;
+    position: relative;
+  }
+  .skills.branding-page .content .image {
+    position: inherit;
+    top: 0;
+    padding-right: 0px;
+    margin-bottom: 0px;
+    width: 100%;
+    max-width: 400px;
+    padding: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .skills.branding-page .content .image img {
+    width: 100%;
+  }
+  .skills.branding-page .content .items {
+    padding: 50px 17px 30px 15px;
+    gap: 0;
+    border-radius: 20px;
+    background-color: #1A1A1A;
+    background-image: url(./../img/skills-back.svg);
+  }
+  .skills.branding-page .content .items::before {
+    content: "";
+    width: 1px;
+    height: 135%;
+    left: 35px;
+  }
+  .skills.branding-page .content .skill {
+    gap: 13px;
+  }
+  .skills.branding-page .content .skill:not(:last-of-type) {
+    margin-bottom: 30px;
+  }
+  .skills.branding-page .content .skill h4 {
+    font-size: 20px;
+    line-height: 18px; /* 90% */
+    letter-spacing: -0.4px;
+    margin-bottom: 10px;
+    margin-top: 11px;
+  }
+  .skills.branding-page .content .skill li {
+    font-size: 14px;
+    line-height: 16px; /* 114.286% */
+    padding-left: 0px;
+  }
+  .skills.branding-page .content .skill li:not(:last-of-type) {
+    margin-bottom: 10px;
+  }
+  .skills.branding-page .content .skill li::before {
+    width: 10px;
+    height: 10px;
+    left: -15px;
+    top: 3px;
+  }
+  .skills.branding-page .content .icon {
+    min-width: 41px;
+    width: 41px;
+    height: 41px;
+    padding-bottom: 5px;
+  }
+  .skills.branding-page .content .icon p {
+    font-size: 25px;
+    line-height: 16.735px; /* 66.939% */
+  }
+  .skills.branding-page .button-black {
+    margin-top: 10px;
+  }
+  /* partners section */
+  .partners.branding-page {
+    padding-top: 110px;
+    overflow: visible;
+  }
+  .partners.branding-page h2 {
+    max-width: 250px;
+  }
+  .partners.branding-page h2 .desck {
+    display: none;
+  }
+  .partners.branding-page h2 .mobile {
+    display: inline;
+  }
+  .partners.branding-page h2::after {
+    background-image: url(../img/light-mob.svg);
+    width: 230px;
+    bottom: 0;
+    left: 54px;
+    height: 142px;
+    background-size: cover;
+  }
+  /* block section   */
+  .blog.branding-page {
+    padding-top: 90px;
+  }
+  .blog.branding-page .sub-title span {
+    color: #ff6b00;
+  }
+  .blog.branding-page .slick-arrow {
+    bottom: 0;
+  }
+  .blog.branding-page .button-orange {
+    margin-right: 0px;
+    margin-top: 35px;
+  }
+  .blog.branding-page .button-white {
+    margin-top: 5px;
+  }
+  /* faq section */
+  .faq.branding-page {
+    padding-top: 0;
+    padding-bottom: 60px;
+  }
+}
+/* Portrait phones and smaller */
+/* Iphone 5 */
+/* colors */
+/* mixin */
+/* main section */
+.main.strategy-page {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+.main.strategy-page .container {
+  text-align: left;
+  display: block;
+}
+.main.strategy-page .main-title {
+  font-size: 55px;
+  line-height: 50px; /* 90.909% */
+  text-align: left;
+  margin-left: 0;
+  margin-bottom: 30px;
+  text-transform: none;
+  z-index: 2;
+  position: relative;
+}
+.main.strategy-page .sub-title {
+  display: block;
+  text-align: left;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 20px; /* 125% */
+  max-width: 500px;
+  z-index: 2;
+  position: relative;
+}
+.main.strategy-page .main-image {
+  position: absolute;
+  right: 60px;
+  top: -26px;
+  width: 55vw;
+  max-width: 797px;
+  z-index: 1;
+}
+.main.strategy-page .main-image img {
+  width: 100%;
+  height: 100%;
+}
+.main.strategy-page .main-image .desck {
+  display: block;
+}
+.main.strategy-page .main-image .mobile {
+  display: none;
+}
+.main.strategy-page .main-buttons {
+  flex-direction: row;
+  gap: 10px;
+  margin-top: 50px;
+  z-index: 2;
+  position: relative;
+}
+.main.strategy-page .main-buttons .button {
+  height: 60px;
+  font-size: 20px;
+  line-height: 15px; /* 75% */
+  width: 300px;
+}
+
+/*   values  */
+.values.strategy-page {
+  padding: 120px 0 100px 0;
+}
+.values.strategy-page .container {
+  display: block;
+  z-index: 3;
+  position: relative;
+}
+.values.strategy-page .container h2 {
+  max-width: 700px;
+}
+.values.strategy-page .faq-items {
+  display: grid;
+  grid-template-columns: 507px;
+  gap: 0;
+}
+.values.strategy-page .faq-items .faq-item {
+  border-bottom: solid 2px #3f3f3f;
+  padding: 15px 0;
+}
+.values.strategy-page .faq-items .faq-item:last-of-type {
+  border: none;
+}
+.values.strategy-page .faq-items .faq-item:last-of-type {
+  border: none;
+}
+.values.strategy-page .faq-items .question {
+  padding: 0;
+  display: flex;
+  align-items: start;
+  gap: 12px;
+}
+.values.strategy-page .faq-items .question p {
+  color: #ff6b00;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 30px; /* 150% */
+  display: inline-block;
+  width: calc(100% - 40px);
+}
+.values.strategy-page .faq-items .question span {
+  opacity: 1;
+  margin-bottom: 0;
+}
+.values.strategy-page .faq-items .question .icon {
+  background-color: #f7f7f7;
+  border-radius: 50%;
+  right: 0;
+  top: 0px;
+}
+.values.strategy-page .faq-items .answer p {
+  padding-left: 40px;
+}
+.values.strategy-page .faq-items .answer p b {
+  font-weight: 600;
+}
+.values.strategy-page .faq-items .answer ol {
+  list-style: inherit;
+  margin-bottom: 30px;
+  padding-left: 40px;
+  list-style-type: decimal;
+  list-style-position: inside;
+}
+.values.strategy-page .faq-items .answer ol li {
+  font-family: "Commissioner";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 20px; /* 125% */
+  margin-bottom: 5px;
+  max-width: 90%;
+}
+.values.strategy-page .faq-items .close .answer {
+  height: 0;
+}
+.values.strategy-page .faq-items .open {
+  border: none;
+  padding-bottom: 0;
+}
+.values.strategy-page .faq-items .open .question {
+  border-bottom: none;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.values.strategy-page .faq-items .open .question .icon {
+  background-color: #ffdcbc;
+}
+.values.strategy-page .faq-items .open .answer {
+  height: -moz-fit-content;
+  height: fit-content;
+  border-bottom: solid 2px #3f3f3f;
+}
+.values.strategy-page .faq-items .open .answer p {
+  font-size: 16px;
+}
+.values.strategy-page .button {
+  max-width: 300px;
+  margin-top: 35px;
+  height: 60px;
+  font-size: 20px;
+  line-height: 15px; /* 75% */
+}
+.values.strategy-page .image-block {
+  position: absolute;
+  width: auto;
+  max-width: 700px;
+  height: 100%;
+  max-height: 100%;
+  right: 0;
+  top: 0;
+  bottom: inherit;
+}
+.values.strategy-page .image-block img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  max-width: 100%;
+  max-height: 100%;
+}
+.values.strategy-page .image-block .desck {
+  display: block;
+}
+.values.strategy-page .image-block .mobile {
+  display: none;
+}
+
+/* skills section */
+.skills.strategy-page .content {
+  padding: 0;
+  display: grid;
+  grid-template-columns: 35vw 1fr;
+  gap: 0px;
+  position: relative;
+}
+.skills.strategy-page .content .left {
+  height: 100%;
+  position: relative;
+}
+.skills.strategy-page .content .image { /* Safari */
+  position: sticky;
+  top: 0px;
+  z-index: 3;
+  text-align: center;
+  padding: 24px 15px 24px 50px;
+}
+.skills.strategy-page .content .image img {
+  width: 100%;
+}
+.skills.strategy-page .content .items {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  position: relative;
+  padding: 100px 100px 100px 0px;
+}
+.skills.strategy-page .content .items::before {
+  content: "";
+  width: 2px;
+  background-color: #fff;
+  height: 100%;
+  position: absolute;
+  left: 49px;
+  z-index: 0;
+  top: 0px;
+}
+.skills.strategy-page .content .skill {
+  display: flex;
+  gap: 30px;
+  color: #f7f7f7;
+  z-index: 3;
+}
+.skills.strategy-page .content .skill:not(:last-of-type) {
+  margin-bottom: 50px;
+}
+.skills.strategy-page .content .skill h4 {
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  color: #ff6b00;
+  margin-bottom: 20px;
+}
+.skills.strategy-page .content .skill li {
+  font-family: "Commissioner";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 25px; /* 125% */
+  position: relative;
+  padding-left: 26px;
+}
+.skills.strategy-page .content .skill li:not(:last-of-type) {
+  margin-bottom: 10px;
+}
+.skills.strategy-page .content .skill li::before {
+  content: "";
+  background-image: url(./../img/li-after.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  width: 16px;
+  height: 14px;
+  left: 0;
+  padding-top: 2px;
+}
+.skills.strategy-page .content .icon {
+  min-width: 100px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #f7f7f7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.skills.strategy-page .content .icon p {
+  font-family: "Kukurudza";
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 50px; /* 100% */
+  color: #1a1a1a;
+  margin-top: 0;
+}
+.skills.strategy-page .button-black {
+  margin-top: 10px;
+}
+
+/* faq section */
+.faq.strategy-page {
+  padding-top: 0;
+}
+.faq.strategy-page .faq-items .question .icon {
+  background-color: #ffdcbc;
+}
+.faq.strategy-page .faq-items .open .question .icon {
+  background-color: #ff6b00;
+}
+
+/* partners section */
+.partners.strategy-page {
+  padding-top: 164px;
+  overflow: visible;
+}
+.partners.strategy-page h2 {
+  display: inline-block;
+  position: relative;
+  z-index: 2;
+}
+.partners.strategy-page h2 .desck {
+  display: inline;
+  color: #1a1a1a;
+}
+.partners.strategy-page h2 .mobile {
+  display: none;
+  color: #1a1a1a;
+}
+.partners.strategy-page h2 span:last-of-type {
+  color: #ff6b00;
+}
+.partners.strategy-page h2::after {
+  position: absolute;
+  content: "";
+  background-image: url(../img/light.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  bottom: -142px;
+  left: 213px;
+  width: 363px;
+}
+
+/* block section   */
+.blog.strategy-page {
+  padding-top: 100px;
+}
+.blog.strategy-page .sub-title span {
+  color: #ff6b00;
+}
+.blog.strategy-page .button-orange {
+  margin-right: 10px;
+}
+
+/* media */
+/* Large desktops and laptops */
+/* Landscape tablets and medium desktops */
+/* Portrait tablets and small desktops */
+/* Landscape phones and portrait tablets */
+@media (max-width: 768px) {
+  /* header bottom business page */
+  .header-bottom.strategy-page {
+    display: none;
+  }
+  /* main section */
+  .main.strategy-page {
+    padding-top: 60px;
+    padding-bottom: 100px;
+  }
+  .main.strategy-page .main-title {
+    font-size: 30px;
+    line-height: 27px; /* 90% */
+    margin-bottom: 10px;
+  }
+  .main.strategy-page .sub-title {
+    font-family: "Commissioner";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 16px; /* 114.286% */
+  }
+  .main.strategy-page .main-image {
+    position: inherit;
+    right: 0px;
+    top: 0px;
+    width: 110%;
+    max-width: 350px;
+    margin-top: 34px;
+    margin-left: -10px;
+  }
+  .main.strategy-page .main-image .desck {
+    display: none;
+  }
+  .main.strategy-page .main-image .mobile {
+    display: block;
+  }
+  .main.strategy-page .main-buttons {
+    flex-direction: column;
+    gap: 5px;
+    margin-top: 30px;
+  }
+  .main.strategy-page .main-buttons .button {
+    height: 50px;
+    font-size: 16px;
+    line-height: 10px; /* 62.5% */
+    letter-spacing: -0.32px;
+    width: 100%;
+  }
+  /*   values  */
+  .values.strategy-page {
+    padding: 100px 0 35px 0;
+  }
+  .values.strategy-page h2 {
+    font-size: 30px;
+    line-height: 25px; /* 83.333% */
+    letter-spacing: -0.6px;
+    margin-right: -5px;
+  }
+  .values.strategy-page .faq-items {
+    grid-template-columns: 100%;
+  }
+  .values.strategy-page .faq-items .faq-item {
+    border-bottom: solid 1px #3f3f3f;
+    padding: 20px 0;
+  }
+  .values.strategy-page .faq-items .question {
+    align-items: center;
+    gap: 5px;
+  }
+  .values.strategy-page .faq-items .question p {
+    font-size: 16px;
+    line-height: 18px; /* 112.5% */
+    width: calc(100% - 65px);
+  }
+  .values.strategy-page .faq-items .question span {
+    max-width: 27px;
+    line-height: 0;
+  }
+  .values.strategy-page .faq-items .question span img {
+    width: 100%;
+  }
+  .values.strategy-page .faq-items .question .icon {
+    background-color: #f7f7f7;
+    border-radius: 50%;
+    right: 0;
+    top: 0px;
+    width: 35px;
+    height: 35px;
+    min-width: 35px;
+  }
+  .values.strategy-page .faq-items .answer p {
+    padding-left: 0px;
+    font-size: 14px;
+    line-height: 16px; /* 114.286% */
+    margin-top: 10px;
+  }
+  .values.strategy-page .faq-items .answer ol {
+    margin-bottom: 20px;
+    padding-left: 0px;
+    margin-top: 10px;
+  }
+  .values.strategy-page .faq-items .answer ol li {
+    font-size: 14px;
+    line-height: 16px; /* 114.286% */
+    margin-bottom: 3px;
+    max-width: 90%;
+  }
+  .values.strategy-page .faq-items .close .answer {
+    height: 0;
+  }
+  .values.strategy-page .faq-items .open {
+    border: none;
+    padding-bottom: 0;
+  }
+  .values.strategy-page .faq-items .open .question {
+    border-bottom: none;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .values.strategy-page .faq-items .open .question .icon {
+    background-color: #ffdcbc;
+  }
+  .values.strategy-page .faq-items .open .answer {
+    height: -moz-fit-content;
+    height: fit-content;
+    border-bottom: solid 1px #3f3f3f;
+  }
+  .values.strategy-page .faq-items .open .answer p {
+    font-size: 14px;
+  }
+  .values.strategy-page .button {
+    max-width: none;
+    margin-top: -37px;
+    height: 50px;
+    font-size: 16px;
+    line-height: 10px; /* 62.5% */
+    letter-spacing: -0.32px;
+    text-transform: uppercase;
+  }
+  .values.strategy-page .image-block {
+    position: relative;
+    width: 116vw;
+    height: auto;
+    left: -12px;
+    max-width: 430px;
+  }
+  .values.strategy-page .image-block img {
+    width: 100%;
+    height: auto;
+  }
+  .values.strategy-page .image-block .desck {
+    display: none;
+  }
+  .values.strategy-page .image-block .mobile {
+    display: block;
+  }
+  /* skills section */
+  .skills.strategy-page h2::after {
+    content: url(./../img/skills-title-decor-mob.svg);
+    margin-left: 0px;
+    margin-top: 10px;
+    width: 136px;
+    left: 140px;
+  }
+  .skills.strategy-page .content {
+    display: flex;
+    flex-direction: column-reverse;
+    width: 100%;
+    border-radius: 20px;
+  }
+  .skills.strategy-page .content .left {
+    height: 100%;
+    position: relative;
+  }
+  .skills.strategy-page .content .image {
+    position: inherit;
+    top: 0;
+    padding-right: 0px;
+    margin-bottom: 0px;
+    width: 100%;
+    max-width: 400px;
+    left: 0px;
+    padding: 0px 12px 25px 15px;
+  }
+  .skills.strategy-page .content .image img {
+    width: 100%;
+  }
+  .skills.strategy-page .content .items {
+    padding: 50px 17px 0px 15px;
+    gap: 0;
+  }
+  .skills.strategy-page .content .items::before {
+    content: "";
+    width: 1px;
+    height: 125%;
+    left: 35px;
+  }
+  .skills.strategy-page .content .skill {
+    gap: 13px;
+  }
+  .skills.strategy-page .content .skill:not(:last-of-type) {
+    margin-bottom: 30px;
+  }
+  .skills.strategy-page .content .skill h4 {
+    font-size: 20px;
+    line-height: 18px; /* 90% */
+    letter-spacing: -0.4px;
+    margin-bottom: 10px;
+    margin-top: 11px;
+  }
+  .skills.strategy-page .content .skill li {
+    font-size: 14px;
+    line-height: 16px; /* 114.286% */
+    padding-left: 0px;
+  }
+  .skills.strategy-page .content .skill li:not(:last-of-type) {
+    margin-bottom: 10px;
+  }
+  .skills.strategy-page .content .skill li::before {
+    width: 10px;
+    height: 10px;
+    left: -15px;
+    top: 3px;
+  }
+  .skills.strategy-page .content .icon {
+    min-width: 41px;
+    width: 41px;
+    height: 41px;
+    padding-bottom: 5px;
+  }
+  .skills.strategy-page .content .icon p {
+    font-size: 25px;
+    line-height: 16.735px; /* 66.939% */
+  }
+  .skills.strategy-page .button-black {
+    margin-top: 10px;
+  }
+  /* partners section */
+  .partners.strategy-page {
+    padding-top: 110px;
+    overflow: visible;
+  }
+  .partners.strategy-page h2 {
+    max-width: 250px;
+  }
+  .partners.strategy-page h2 .desck {
+    display: none;
+  }
+  .partners.strategy-page h2 .mobile {
+    display: inline;
+  }
+  .partners.strategy-page h2::after {
+    background-image: url(../img/light-mob.svg);
+    width: 230px;
+    bottom: 0;
+    left: 54px;
+    height: 142px;
+    background-size: cover;
+  }
+  /* block section   */
+  .blog.strategy-page {
+    padding-top: 90px;
+  }
+  .blog.strategy-page .sub-title span {
+    color: #ff6b00;
+  }
+  .blog.strategy-page .slick-arrow {
+    bottom: 0;
+  }
+  .blog.strategy-page .button-orange {
+    margin-right: 0px;
+    margin-top: 35px;
+  }
+  .blog.strategy-page .button-white {
+    margin-top: 5px;
+  }
+  /* faq section */
+  .faq.strategy-page {
+    padding-top: 0;
+    padding-bottom: 60px;
+  }
+}
 /* Portrait phones and smaller */
 /* Iphone 5 *//*# sourceMappingURL=main.css.map */

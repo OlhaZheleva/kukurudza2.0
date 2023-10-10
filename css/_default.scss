@@ -23,8 +23,6 @@ menu {
 }
 
 img {
-  max-inline-size: 100%;
-  max-block-size: 100%;
 }
 table {
   border-collapse: collapse;
@@ -57,6 +55,9 @@ body {
   scroll-behavior: smooth;
 }
 
+.zoom-container   { 
+  position: relative;
+}
 @font-face {
   font-family: "Commissioner";
   src: url("../fonts/Commissioner-Light.eot");
@@ -525,7 +526,6 @@ section {
       }
     }
     .current {
-      
       .nav-link {
         transform: scale(1.1);
         color: $orange;
@@ -717,6 +717,7 @@ section {
     width: auto;
   }
 }
+
 /* header bottom on other pages   */
 
 .header-bottom {
@@ -1075,6 +1076,85 @@ section {
     }
   }
 }
+
+/*   page 404  */
+
+.main {
+
+  &.non-page {
+    background-image: url(./../img/main-back.svg);
+    background-size: cover;
+    position: relative;
+    padding: 60px 0 190px 0;
+    overflow: visible;
+    z-index: 4;
+
+    .container {
+      padding: 0 85px;
+    }
+
+    h1 {
+      font-size: 115px;
+      line-height: normal;
+      letter-spacing: -1.725px;
+      text-transform: uppercase;
+      margin-bottom: 188px;
+
+      span {
+        color: $orange;
+      }
+    }
+    .content {
+      text-align: left;
+      padding-left: 565px;
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
+      z-index: 3;
+      position: relative;
+
+
+      p {
+        font-size: 18px;
+        font-weight: 300;
+        line-height: 22px; /* 122.222% */
+        display: inline-block;
+        max-width: 360px;
+      }
+    }
+    .button {
+      font-size: 20px;
+      line-height: 15px; /* 75% */
+      text-transform: uppercase;
+      height: 60px;
+      width: 300px;
+    }
+
+    .non-page_image{
+      position: absolute;
+      left: -67px;
+      bottom: -70px;
+      max-width: 1088px;
+      width: 76vw;
+    
+      img { 
+        width: 100%;
+      }
+    }
+    .desck {
+      display: block;
+    
+    }
+    .mobile {
+      display: none;
+    }
+  }
+
+}
+
+
+
+
 
 /* Iphone 5 */
 @media (max-width: 320px) {
@@ -1449,6 +1529,7 @@ section {
 
     &::before {
       background-size: 14px;
+      background-position: 19px;
     }
   }
 
@@ -1584,6 +1665,72 @@ section {
       }
     }
   }
+
+
+
+  /*   page 404  */
+
+.main {
+
+  &.non-page {
+    background-image: url(./../img/main-back.svg);
+    background-size: cover;
+    position: relative;
+    padding: 60px 0  65px 0;
+    overflow: visible;
+    z-index: 4;
+
+    .container {
+      padding: 0 35px;
+    }
+
+    h1 {
+      font-size: 35px;
+      line-height: 34px; /* 77.143% */
+      letter-spacing: -0.7px;
+      text-transform: uppercase;
+      margin-bottom: 100px;
+    }
+    .content {
+      padding-left: 0px;
+      gap: 100px;
+  
+
+
+      p {
+        font-size: 14px;
+        line-height: 16px; /* 114.286% */
+        max-width: 165px;
+      }
+    }
+    .button {
+      font-size: 16px;
+      line-height: 10px; /* 62.5% */
+      letter-spacing: -0.32px;
+      height: 50px;
+      width: 100%;
+    }
+
+    .non-page_image{
+      left: inherit;
+      right: -160px;
+      bottom: -37px;
+      max-width: 530px;
+      width: 134vw;
+    
+    }
+    .desck {
+      display: none;
+    
+    }
+    .mobile {
+      display: block;
+    }
+  }
+
+}
+
+
 }
 /* Portrait tablets and small desktops */
 @media (min-width: 769px) and (max-width: 991px) {

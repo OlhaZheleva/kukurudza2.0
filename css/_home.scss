@@ -177,17 +177,24 @@ $grey: #b9b9b9;
       max-height: 343px;
       position: relative;
       transition: transform 0.5s;
+      position: relative;
 
-      video {
+      iframe {
         width: 100%;
+        position: absolute;
+        left: 50%;
+        top:50%;
+        transform: translate(-50%, -50%);
       }
+
+      &:hover{
+        transform: scale(1.1);
+        transition: transform 0.5s;
+        z-index: 2;
+      }
+  
     }
 
-    .videop-play {
-      transform: scale(1.1);
-      transition: transform 0.5s;
-      z-index: 2;
-    }
 
     .text {
       width: 78.5%;
@@ -804,6 +811,8 @@ $grey: #b9b9b9;
 
     .slick-track {
       gap: 100px;
+      padding-left: 0;
+      padding-bottom: 0;
 
       img {
         max-width: 243px;
@@ -1412,7 +1421,7 @@ $grey: #b9b9b9;
         margin-bottom: 100px;
       }
 
-      .videop-play {
+      .video-play {
         transform: scale(1.1);
         transition: transform 3s;
         z-index: 2;
@@ -1900,10 +1909,10 @@ $grey: #b9b9b9;
       height: 150px;
 
       .slick-track {
-        gap: 37px;
+        gap: 0px;
 
         img {
-          max-height: 50px;
+         max-height: 82px;
         }
       }
     }

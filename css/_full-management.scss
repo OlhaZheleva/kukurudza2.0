@@ -1,0 +1,819 @@
+/* colors */
+
+$black: #1a1a1a;
+$orange: #ff6b00;
+$purple: #6736d0;
+$white: #f7f7f7;
+$blue: #5668e6;
+$grey: #b9b9b9;
+$light-purple: #c7b4ff;
+
+/* mixin */
+
+@mixin flexible() {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* main section */
+.main {
+  &.management-page {
+    padding-top: 120px;
+    padding-bottom: 120px;
+
+    .container {
+      text-align: left;
+      display: block;
+    }
+
+    .main-title {
+      font-size: 55px;
+      line-height: 50px; /* 90.909% */
+      text-align: left;
+      margin-left: 0;
+      margin-bottom: 30px;
+      text-transform: none;
+      z-index: 2;
+      position: relative;
+    }
+
+    .sub-title {
+      display: block;
+      text-align: left;
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 20px; /* 125% */
+      max-width: 380px;
+      z-index: 2;
+      position: relative;
+    }
+
+    .main-image {
+      position: absolute;
+      right: 70px;
+      top: -47px;
+      width: 55vw;
+      max-width: 735px;
+      z-index: 1;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+
+      .desck {
+        display: block;
+      }
+      .mobile {
+        display: none;
+      }
+    }
+
+    .main-buttons {
+      flex-direction: row;
+      gap: 10px;
+      margin-top: 50px;
+      z-index: 2;
+      position: relative;
+
+      .button {
+        height: 60px;
+        font-size: 20px;
+        line-height: 15px; /* 75% */
+        width: 300px;
+      }
+    }
+  }
+}
+
+/*   values  */
+
+.values {
+  &.management-page {
+    padding: 120px 0 100px 0;
+
+    .container {
+      display: block;
+      z-index: 3;
+      position: relative;
+
+      h2 {
+        max-width: 700px;
+      }
+    }
+
+    .faq-items {
+      display: grid;
+      grid-template-columns: 507px;
+      gap: 0;
+
+      .faq-item {
+        border-bottom: solid 2px #3f3f3f;
+        padding: 15px 0;
+
+        &:last-of-type {
+          border: none;
+        }
+
+        &:last-of-type {
+          border: none;
+        }
+      }
+
+      .question {
+        padding: 0;
+        display: flex;
+        align-items: start;
+        gap: 12px;
+
+        p {
+          color: #ff6b00;
+          font-size: 20px;
+          font-weight: 600;
+          line-height: 30px; /* 150% */
+          display: inline-block;
+          width: calc(100% - 40px);
+        }
+        span {
+          opacity: 1;
+          margin-bottom: 0;
+        }
+
+        .icon {
+          background-color: #f7f7f7;
+          border-radius: 50%;
+          right: 0;
+          top: 0px;
+        }
+      }
+      .answer {
+        p {
+          padding-left: 40px;
+        }
+        ol {
+          list-style: inherit;
+          margin-bottom: 30px;
+          padding-left: 40px;
+          list-style-type: decimal;
+          list-style-position: inside;
+
+          li {
+            font-family: "Commissioner";
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: 20px; /* 125% */
+            margin-bottom: 5px;
+            max-width: 90%;
+          }
+        }
+      }
+
+      .close {
+        .question {
+        }
+        .answer {
+          height: 0;
+        }
+      }
+
+      .open {
+        border: none;
+        padding-bottom: 0;
+
+        .question {
+          border-bottom: none;
+          height: fit-content;
+
+          .icon {
+            background-color: #ffdcbc;
+          }
+        }
+        .answer {
+          height: fit-content;
+          border-bottom: solid 2px #3f3f3f;
+
+          p {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+
+    .button {
+      max-width: 300px;
+      margin-top: 35px;
+      height: 60px;
+      font-size: 20px;
+      line-height: 15px; /* 75% */
+    }
+
+    .image-block {
+      position: absolute;
+      height: 44vw;
+      width: 44vw;
+      max-width: 630px;
+      max-height: 630px;
+      right: 100px;
+      top: 140px;
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+
+      .desck {
+        display: block;
+      }
+      .mobile {
+        display: none;
+      }
+    }
+  }
+}
+
+/* skills section */
+.skills {
+  &.management-page {
+    .content {
+      padding: 0;
+      display: grid;
+      grid-template-columns: 35vw 1fr;
+      gap: 0px;
+      position: relative;
+
+      .left {
+        height: 100%;
+        position: relative;
+      }
+
+      .image {
+        position: -webkit-sticky; /* Safari */
+        position: sticky;
+        top: 0px;
+        z-index: 3;
+        text-align: center;
+        padding: 50px 0;
+
+        img {
+          width: 95%;
+        }
+      }
+      .items {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        position: relative;
+        padding: 100px 100px 100px 0px;
+
+        &::before {
+          content: "";
+          width: 2px;
+          background-color: #fff;
+          height: 100%;
+          position: absolute;
+          left: 49px;
+          z-index: 0;
+          top: 0px;
+        }
+      }
+      .skill {
+        display: flex;
+        gap: 30px;
+        color: $white;
+        z-index: 3;
+
+        &:not(:last-of-type) {
+          margin-bottom: 50px;
+        }
+
+        h4 {
+          font-size: 30px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: normal;
+          color: $orange;
+          margin-bottom: 20px;
+        }
+        li {
+          font-family: "Commissioner";
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 300;
+          line-height: 25px; /* 125% */
+          position: relative;
+          padding-left: 26px;
+
+          &:not(:last-of-type) {
+            margin-bottom: 10px;
+          }
+
+          &::before {
+            content: "";
+            background-image: url(./../img/li-after.svg);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            position: absolute;
+            width: 16px;
+            height: 14px;
+            left: 0;
+            padding-top: 2px;
+          }
+        }
+      }
+      .icon {
+        min-width: 100px;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background-color: $white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        p {
+          font-family: "Kukurudza";
+          font-size: 50px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 50px; /* 100% */
+          color: $black;
+          margin-top: 0;
+        }
+      }
+    }
+
+    .button-black {
+      margin-top: 10px;
+    }
+  }
+}
+
+/* faq section */
+.faq {
+  &.management-page {
+    padding-top: 0;
+    .faq-items {
+      .question {
+        .icon {
+          background-color: #ffdcbc;
+        }
+      }
+      .open {
+        .question {
+          .icon {
+            background-color: #ff6b00;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* partners section */
+.partners {
+  &.management-page {
+    padding-top: 164px;
+    overflow: visible;
+
+    h2 {
+      display: inline-block;
+      position: relative;
+      z-index: 2;
+
+      .desck {
+        display: inline;
+        color: $black;
+      }
+
+      .mobile {
+        display: none;
+        color: $black;
+      }
+      span {
+        &:last-of-type {
+          color: $orange;
+        }
+      }
+
+      &::after {
+        position: absolute;
+        content: "";
+        background-image: url(../img/light.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        bottom: -142px;
+        left: 213px;
+        width: 363px;
+      }
+    }
+  }
+}
+
+/* block section   */
+.blog {
+  &.management-page {
+    padding-top: 100px;
+
+    .sub-title {
+      span {
+        color: $orange;
+      }
+    }
+    .button-orange {
+      margin-right: 10px;
+    }
+  }
+}
+
+/* media */
+
+@media (min-width: 1650px) {
+}
+
+/* Large desktops and laptops */
+@media (min-width: 1200px) {
+}
+
+@media (max-width: 1040px) {
+}
+
+/* Landscape tablets and medium desktops */
+@media (min-width: 992px) and (max-width: 1199px) {
+}
+
+/* Portrait tablets and small desktops */
+@media (min-width: 769px) {
+}
+
+/* Landscape phones and portrait tablets */
+@media (max-width: 768px) {
+  /* header bottom business page */
+  .header-bottom {
+    &.management-page {
+      display: none;
+    }
+  }
+  /* main section */
+  .main {
+    &.management-page {
+      padding-top: 60px;
+      padding-bottom: 100px;
+
+      .main-title {
+        font-size: 30px;
+        line-height: 27px; /* 90% */
+        margin-bottom: 10px;
+      }
+
+      .sub-title {
+        font-family: "Commissioner";
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 16px; /* 114.286% */
+      }
+
+      .main-image {
+        position: inherit;
+        right: 0px;
+        top: 0px;
+        width: 110%;
+        max-width: 350px;
+        margin-top: 34px;
+        margin-left: -10px;
+
+        .desck {
+          display: none;
+        }
+        .mobile {
+          display: block;
+        }
+      }
+
+      .main-buttons {
+        flex-direction: column;
+        gap: 5px;
+        margin-top: 30px;
+
+        .button {
+          height: 50px;
+          font-size: 16px;
+          line-height: 10px; /* 62.5% */
+          letter-spacing: -0.32px;
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  /*   values  */
+
+  .values {
+    &.management-page {
+      padding: 100px 0;
+
+      h2 {
+        font-size: 30px;
+        line-height: 25px; /* 83.333% */
+        letter-spacing: -0.6px;
+        margin-right: -5px;
+      }
+
+      .faq-items {
+        grid-template-columns: 100%;
+
+        .faq-item {
+          border-bottom: solid 1px #3f3f3f;
+          padding: 20px 0;
+        }
+
+        .question {
+          align-items: center;
+          gap: 7px;
+
+          p {
+            font-size: 16px;
+            line-height: 18px; /* 112.5% */
+            width: calc(100% - 65px);
+          }
+          span {
+            max-width: 27px;
+            line-height: 0;
+          }
+
+          .icon {
+            background-color: #f7f7f7;
+            border-radius: 50%;
+            right: 0;
+            top: 0px;
+
+            width: 35px;
+            height: 35px;
+            min-width: 35px;
+          }
+        }
+        .answer {
+          p {
+            padding-left: 0px;
+            font-size: 14px;
+            line-height: 16px; /* 114.286% */
+            margin-top: 10px;
+          }
+          ol {
+            margin-bottom: 20px;
+            padding-left: 0px;
+            margin-top: 10px;
+
+            li {
+              font-size: 14px;
+              line-height: 16px; /* 114.286% */
+              margin-bottom: 3px;
+              max-width: 90%;
+            }
+          }
+        }
+
+        .close {
+          .question {
+          }
+          .answer {
+            height: 0;
+          }
+        }
+
+        .open {
+          border: none;
+          padding-bottom: 0;
+
+          .question {
+            border-bottom: none;
+            height: fit-content;
+
+            .icon {
+              background-color: #ffdcbc;
+            }
+          }
+          .answer {
+            height: fit-content;
+            border-bottom: solid 1px #3f3f3f;
+
+            p {
+              font-size: 14px;
+            }
+          }
+        }
+      }
+
+      .button {
+        max-width: none;
+        margin-top: 20px;
+        height: 50px;
+        font-size: 16px;
+        line-height: 10px; /* 62.5% */
+        letter-spacing: -0.32px;
+        text-transform: uppercase;
+      }
+
+      .image-block {
+        position: inherit;
+        width: calc(100% + 70px);
+        margin-left: -35px;
+        margin-right: -35px;
+        height: 100%;
+        max-width: none;
+        top: 0;
+        margin-top: 20px;
+        text-align: center;
+        right: 0;
+
+        img {
+          height: 113vw;
+          width: 113vw;
+          max-width: 400px;
+          max-height: 400px;
+          margin-left: auto;
+          margin-right: auto;
+        }
+
+        .desck {
+          display: none;
+        }
+        .mobile {
+          display: block;
+        }
+      }
+    }
+  }
+  /* skills section */
+  .skills {
+    &.management-page {
+      h2 {
+        &::after {
+          content: url(./../img/skills-title-decor-mob.svg);
+          margin-left: 0px;
+          margin-top: 10px;
+          width: 136px;
+          left: 140px;
+        }
+      }
+      .content {
+        display: flex;
+        flex-direction: column-reverse;
+        width: 100%;
+        border-radius: 20px ;
+
+        .left {
+          height: 100%;
+          position: relative;
+        }
+
+        .image {
+          position: inherit;
+          top: 0;
+          padding-right: 0px;
+          margin-bottom: 0px;
+          width: calc(100% );
+          max-width: 400px;
+          left: -8px;
+          padding: 50px 0 15px 0;
+
+
+          img {
+            width: 100%;
+          }
+        }
+        .items {
+          padding: 50px 17px 0px 15px;
+          gap: 0;
+
+          &::before {
+            content: "";
+            width: 1px;
+            height: 135%;
+            left: 35px;
+          }
+        }
+        .skill {
+          gap: 13px;
+
+          &:not(:last-of-type) {
+            margin-bottom: 30px;
+          }
+
+          h4 {
+            font-size: 20px;
+            line-height: 18px; /* 90% */
+            letter-spacing: -0.4px;
+            margin-bottom: 10px;
+            margin-top: 11px;
+          }
+          li {
+            font-size: 14px;
+            line-height: 16px; /* 114.286% */
+            padding-left: 0px;
+
+            &:not(:last-of-type) {
+              margin-bottom: 10px;
+            }
+            &::before {
+              width: 10px;
+              height: 10px;
+              left: -15px;
+              top: 3px;
+            }
+          }
+        }
+        .icon {
+          min-width: 41px;
+          width: 41px;
+          height: 41px;
+          padding-bottom: 5px;
+
+          p {
+            font-size: 25px;
+            line-height: 16.735px; /* 66.939% */
+          }
+        }
+      }
+
+      .button-black {
+        margin-top: 10px;
+      }
+    }
+  }
+
+  /* partners section */
+  .partners {
+    &.management-page {
+      padding-top: 110px;
+      overflow: visible;
+
+      h2 {
+        max-width: 250px;
+        .desck {
+          display: none;
+        }
+
+        .mobile {
+          display: inline;
+        }
+
+        &::after {
+          background-image: url(../img/light-mob.svg);
+          width: 230px;
+          bottom: 0;
+          left: 54px;
+          height: 142px;
+          background-size: cover;
+        }
+      }
+    }
+  }
+
+  /* block section   */
+  .blog {
+    &.management-page {
+      padding-top: 90px;
+
+      .sub-title {
+        span {
+          color: $orange;
+        }
+      }
+      .slick-arrow {
+        bottom: 0;
+      }
+      .button-orange {
+        margin-right: 0px;
+        margin-top: 35px;
+      }
+      .button-white {
+        margin-top: 5px;
+      }
+    }
+  }
+
+
+/* faq section */
+.faq {
+    &.management-page {
+      padding-top: 0;
+      padding-bottom: 60px;
+
+    }
+  }
+
+
+}
+
+/* Portrait phones and smaller */
+
+@media (max-width: 480px) {
+}
+
+/* Iphone 5 */
+@media (max-width: 330px) {
+}

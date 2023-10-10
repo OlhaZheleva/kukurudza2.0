@@ -35,7 +35,7 @@ if (navLinks) {
 
 // When the user scrolls the page, execute myFunction
 $(window).scroll(function () {
-  var ratio =
+  let ratio =
     $(document).scrollTop() /
     (($(document).height() - $(window).height()) / 100);
   $("#myBar").width(ratio + "%");
@@ -46,7 +46,7 @@ const videos = document.querySelectorAll(".video");
 
 videos.forEach((video) => {
   video.addEventListener("click", function () {
-    video.classList.toggle("videop-play");
+    video.classList.toggle("video-play");
   });
 });
 
@@ -91,6 +91,15 @@ $(document).ready(function () {
     pauseOnHover: false,
     cssEase: "linear",
     arrows: false,
+    responsive: [
+      {
+        breakpoint: 769,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+    ],
+
   });
 
   // blog
@@ -108,6 +117,16 @@ $(document).ready(function () {
       },
     ],
   });
+
+    // blog on business pages 
+    $(".business_blog-slider").slick({
+      variableWidth: true,
+      autoplaySpeed: 2000,
+      pauseOnHover: true,
+      slidesToScroll: 1,
+      autoplay: false,
+      infinite: true,
+    });
 
   $(".popular-slider").slick({
     variableWidth: true,
@@ -137,25 +156,38 @@ $(document).ready(function () {
     responsive: [
       {
         breakpoint: 769,
-        settings: { 
-        }
+        settings: {},
       },
     ],
   });
 
-    // courses
-    $(".speakers-slider").slick({
-      slidesToScroll: 1,
-      variableWidth: true,
-      autoplay: false,
-      infinite: true,
-      autoplaySpeed: 2000,
-    });
+  // courses
+  $(".speakers-slider").slick({
+    slidesToScroll: 1,
+    variableWidth: true,
+    autoplay: false,
+    infinite: true,
+    autoplaySpeed: 2000,
+  });
 
-    
+  // blog
+  $(".other-articles_slider").slick({
+    settings: "unslick",
+    responsive: [
+      {
+        breakpoint: 769,
+        settings: {
+          variableWidth: true,
+          autoplaySpeed: 2000,
+          pauseOnHover: true,
+          slidesToScroll: 1,
+          autoplay: false,
+          infinite: true,
+        },
+      },
+    ],
+  });
 });
-
-
 
 // faq section
 
@@ -176,10 +208,10 @@ function toggleItem() {
   }
 }
 
+/**
+ * animation
+ */
 
-
-
-// animation
 const callback = (entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
@@ -195,4 +227,56 @@ const observer = new IntersectionObserver(callback);
 const animationItems = document.querySelectorAll(".animate");
 animationItems.forEach((item) => {
   observer.observe(item);
+});
+
+// window.onscroll = function() { changeImage() }
+
+// function changeImage() {
+//   let scroll = window.scrollY + (window.innerHeight/3);
+
+//   [...document.querySelectorAll('.skill-image')].forEach(el => {
+//     el.classList.remove('show');
+
+//     if(el.offsetTop <= scroll && el.offsetTop + el.offsetHeight > scroll) {
+//       el.classList.add('show');
+//     }
+//   })
+// } changeImage();
+
+/**
+ * horizontal scroll
+ */
+
+var array = document.querySelectorAll(".horizontal-section");
+
+if (screen.width < 769) {
+  window.onscroll = function () {
+    var windowWidth = window.innerWidth;
+    var scrollTop = window.pageYOffset;
+
+    array.forEach((el) => {
+      var wrap = document.querySelector(el);
+      var elWrap = wrap.querySelector(".element-wrapper");
+
+      var horLength = elWrap.scrollWidth;
+      var distFromTop = wrap.offsetTop;
+
+      var scrollDistance = distFromTop + horLength - windowWidth;
+
+      wrap.style.height = horLength + "px";
+
+      if (scrollTop >= distFromTop && scrollTop <= scrollDistance) {
+        elWrap.style.transform =
+          "translateX(-" + (scrollTop - distFromTop) + "px)";
+      }
+    });
+  };
+}
+
+
+var offset = 200;
+$(window).on("load scroll", function () {
+  if ($(window).scrollTop() > offset) {
+    $("body").addClass("show");
+  }
 });

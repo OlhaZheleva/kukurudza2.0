@@ -872,112 +872,111 @@ $light-purple: #c7b4ff;
 .faq {
   padding: 100px 0 70px 0;
 
-  .faq-items {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0 40px;
+}
+.faq-items {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 40px;
 
-    .faq-item {
-      border-bottom: solid 2px #ddd;
+  .faq-item {
+    border-bottom: solid 2px #ddd;
+  }
+
+  .question {
+    position: relative;
+    cursor: pointer;
+    padding: 30px 0;
+
+    p {
+      color: #1a1a1a;
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 22px; /* 137.5% */
+      max-width: calc(100% - 100px);
     }
+    span {
+      color: #1a1a1a;
+      font-family: "Commissioner";
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 170%; /* 34px */
+      text-transform: uppercase;
+      opacity: 0.35;
+      margin-bottom: 15px;
+      display: inline-block;
+    }
+    .icon {
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      background-color: #c7b4ff;
+      border-radius: 50%;
+      top: 60px;
+      right: 0;
+      background-image: url(./../img/faq-arrow.svg);
+      background-position: center;
+      background-size: 21px;
+      background-repeat: no-repeat;
+      transition: transform 0.4s ease;
+    }
+  }
+  .answer {
+    overflow: hidden;
+
+    p {
+      margin-bottom: 30px;
+      max-width: calc(100% - 50px);
+    }
+  }
+
+  .close {
+    .question {
+    }
+    .answer {
+      height: 0;
+      transition: height 1s ease-out;
+      -webkit-transform: scaleY(0);
+      -o-transform: scaleY(0);
+      -ms-transform: scaleY(0);
+      transform: scaleY(0);
+    }
+  }
+
+  .open {
+    border: none;
 
     .question {
-      position: relative;
-      cursor: pointer;
-      padding: 30px 0;
+      border-bottom: none;
+      height: fit-content;
 
-      p {
-        color: #1a1a1a;
-        font-size: 16px;
-        font-weight: 600;
-        line-height: 22px; /* 137.5% */
-        max-width: calc(100% - 100px);
-      }
-      span {
-        color: #1a1a1a;
-        font-family: "Commissioner";
-        font-size: 20px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: 170%; /* 34px */
-        text-transform: uppercase;
-        opacity: 0.35;
-        margin-bottom: 15px;
-        display: inline-block;
-      }
       .icon {
-        position: absolute;
-        width: 40px;
-        height: 40px;
-        background-color: #c7b4ff;
-        border-radius: 50%;
-        top: 60px;
-        right: 0;
-        background-image: url(./../img/faq-arrow.svg);
-        background-position: center;
-        background-size: 21px;
-        background-repeat: no-repeat;
+        transform: rotate(180deg);
         transition: transform 0.4s ease;
+        background-color: #a979ff;
       }
     }
     .answer {
-      overflow: hidden;
+      height: fit-content;
+      border-bottom: solid 2px #ddd;
+      transition: height 0.5s ease-out;
 
-      p {
-        margin-bottom: 30px;
-        max-width: calc(100% - 50px);
-      }
-    }
+      -webkit-transform: scaleY(1);
+      -o-transform: scaleY(1);
+      -ms-transform: scaleY(1);
+      transform: scaleY(1);
+      -webkit-transform-origin: top;
+      -o-transform-origin: top;
+      -ms-transform-origin: top;
+      transform-origin: top;
 
-    .close {
-      .question {
-      }
-      .answer {
-        height: 0;
-        transition: height 1s ease-out;
-        -webkit-transform: scaleY(0);
-        -o-transform: scaleY(0);
-        -ms-transform: scaleY(0);
-        transform: scaleY(0);
-      }
-    }
-
-    .open {
-      border: none;
-
-      .question {
-        border-bottom: none;
-        height: fit-content;
-
-        .icon {
-          transform: rotate(180deg);
-          transition: transform 0.4s ease;
-          background-color: #a979ff;
-        }
-      }
-      .answer {
-        height: fit-content;
-        border-bottom: solid 2px #ddd;
-        transition: height 0.5s ease-out;
-
-        -webkit-transform: scaleY(1);
-        -o-transform: scaleY(1);
-        -ms-transform: scaleY(1);
-        transform: scaleY(1);
-        -webkit-transform-origin: top;
-        -o-transform-origin: top;
-        -ms-transform-origin: top;
-        transform-origin: top;
-
-        -webkit-transition: -webkit-transform 0.4s ease-out;
-        -o-transition: -o-transform 0.4s ease;
-        -ms-transition: -ms-transform 0.4s ease;
-        transition: transform 0.4s ease;
-      }
+      -webkit-transition: -webkit-transform 0.4s ease-out;
+      -o-transition: -o-transform 0.4s ease;
+      -ms-transition: -ms-transform 0.4s ease;
+      transition: transform 0.4s ease;
     }
   }
 }
-
 /*--------------------------------- media ----------------------------------------*/
 
 @media (min-width: 1650px) {
